@@ -49,22 +49,20 @@
 		try {
 			const formDataToSend = new FormData();
 			
-			// Required fields
+			// Required API fields
 			formDataToSend.append('name', `${formData.firstName} ${formData.lastName}`);
 			formDataToSend.append('email', formData.email);
-			formDataToSend.append('message', formData.motivation || 'Not provided');
+			formDataToSend.append('message', formData.motivation || 'No motivation provided');
 			formDataToSend.append('file', formData.cvFile);
 			
-			// Additional fields - API will format these as a table
-			formDataToSend.append('First Name', formData.firstName);
-			formDataToSend.append('Last Name', formData.lastName);
+			// Application-specific fields (will be formatted as HTML table in email)
 			formDataToSend.append('KOD ID', formData.kodId);
 			formDataToSend.append('Degree Programme', formData.degreeProgram);
 			formDataToSend.append('Year of Study', formData.yearOfStudy);
-			formDataToSend.append('English Level', formData.englishLevel);
-			formDataToSend.append('Erasmus+ Participation', formData.erasmusParticipation);
+			formDataToSend.append('English Level (CEFR)', formData.englishLevel);
+			formDataToSend.append('Erasmus+ Participation (Winter 2026/2027)', formData.erasmusParticipation);
 			
-			// Configuration
+			// Email configuration
 			formDataToSend.append('subject', 'IPW 2026 Application');
 			formDataToSend.append('recipientEmail', 'ipw@cvut.cz');
 
