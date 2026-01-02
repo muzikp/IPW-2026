@@ -239,6 +239,9 @@
 			<a href="https://www.renault-trucks.com/" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center p-6 transition-all duration-300 hover:scale-110">
 				<img src="{base}/images/companies/logo-renault-trucks.svg" alt="Renault Trucks" class="max-h-16 w-auto" />
 			</a>
+			<a href="https://www.rheagroup.com/" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center p-6 transition-all duration-300 hover:scale-110">
+				<img src="{base}/images/companies/logo-rhea-group.png" alt="Rhea Group" class="max-h-16 w-auto" />
+			</a>
 		</div>
 		
 		<div class="text-center mt-12">

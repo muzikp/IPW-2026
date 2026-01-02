@@ -25,8 +25,8 @@
 		{ name: 'Dagmar Skokanová', affiliation: 'MIAS', universityLogo: 'mias_logo.png', linkedin: 'https://www.linkedin.com/in/dagmar-skokanova-047546235/', photo: 'dagmar-skokanova.jpg' },
 		{ name: 'Falk Maiwald', affiliation: 'Görlitz', universityLogo: 'logo-gorlitz.svg', linkedin: null, photo: 'falk-maiwald.jpeg' },
 		{ name: 'Tinno Schütte', affiliation: 'Görlitz', universityLogo: 'logo-gorlitz.svg', linkedin: null, photo: 'tino-schutte.jpg' },
-		{ name: 'Sophie Putcrabey', affiliation: 'La Mache', universityLogo: 'logo-lamace.png', linkedin: 'https://www.linkedin.com/in/sophie-putcrabey-146515155/', photo: 'sophie-putcrabey.jpg' },
-		{ name: 'Jean-François Couvé', affiliation: 'La Mache', universityLogo: 'logo-lamace.png', linkedin: 'https://www.linkedin.com/in/jfcouve/', photo: 'jean-francois-couve.jpg' },
+		{ name: 'Sophie Putcrabey', affiliation: 'La Mache', universityLogo: 'logo-la-mache.jpg', linkedin: 'https://www.linkedin.com/in/sophie-putcrabey-146515155/', photo: 'sophie-putcrabey.jpg' },
+		{ name: 'Jean-François Couvé', affiliation: 'La Mache', universityLogo: 'logo-la-mache.jpg', linkedin: 'https://www.linkedin.com/in/jfcouve/', photo: 'jean-francois-couve.jpg' },
 		{ name: 'Pavel Mužík', affiliation: 'MIAS', universityLogo: 'mias_logo.png', linkedin: 'https://www.linkedin.com/in/pavel-muzik-341a8620/', photo: 'pavel-muzik.jpg' }
 	];
 </script>
