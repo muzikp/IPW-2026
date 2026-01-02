@@ -7,26 +7,26 @@
 			name: 'Vincent Blaise Montenero',
 			role: 'IPW Founder',
 			bio: 'Vincent was the one who came up with the idea years ago to connect universities and corporate partners, aiming to bring students an authentic experience of a small consulting team providing services to leading global brands; for companies, his concept brings fresh perspectives on challenges and connects businesses with talented potential employees.',
-			photo: 'placeholder-vincent',
+		photo: 'vincent-montenero.jpg',
 			linkedin: 'https://www.linkedin.com/in/vincentmontenero/'
 		},
 		{
 			name: 'Pavel Mužík',
 			role: 'Project Manager',
 			bio: 'Pavel is responsible for project organization and also serves as a tutor. He started as a statistician in education, then led media analysts at the largest Czech media agency for over 10 years. In 2018, he co-founded the successful Czech startup Testuj.to, where he held a position on the Board of Directors until his exit. He specializes in research and data analytics and is co-author of several patents in biomedicine. He has been teaching at MIAS since 2025, including courses in statistics, management fundamentals, How to Build a Startup, and Agile Bootcamp.',
-			photo: 'placeholder-pavel',
+		photo: 'pavel-muzik.jpg',
 			linkedin: 'https://www.linkedin.com/in/pavel-muzik-341a8620/'
 		}
 	];
 
 	const currentTutors = [
-		{ name: 'Petr Fanta', affiliation: 'MIAS', linkedin: 'https://www.linkedin.com/in/petr-fanta-7a36162a/' },
-		{ name: 'Petra Jílková', affiliation: 'MIAS', linkedin: 'https://www.linkedin.com/in/petra-j%C3%ADlkov%C3%A1-2229a8123/' },
-		{ name: 'Falk Maiwald', affiliation: 'Görlitz', linkedin: null },
-		{ name: 'Tinno Schütte', affiliation: 'Görlitz', linkedin: null },
-		{ name: 'Sophie Putcrabey', affiliation: 'La Mache', linkedin: 'https://www.linkedin.com/in/sophie-putcrabey-146515155/' },
-		{ name: 'Jean-François Couvé', affiliation: 'La Mache', linkedin: 'https://www.linkedin.com/in/jfcouve/' },
-		{ name: 'Pavel Mužík', affiliation: 'MIAS', linkedin: 'https://www.linkedin.com/in/pavel-muzik-341a8620/' }
+		{ name: 'Petr Fanta', affiliation: 'MIAS', linkedin: 'https://www.linkedin.com/in/petr-fanta-7a36162a/', photo: 'petr-fanta.jpg' },
+		{ name: 'Petra Jílková', affiliation: 'MIAS', linkedin: 'https://www.linkedin.com/in/petra-j%C3%ADlkov%C3%A1-2229a8123/', photo: 'petra-jilkova.jpg' },
+		{ name: 'Falk Maiwald', affiliation: 'Görlitz', linkedin: null, photo: null },
+		{ name: 'Tinno Schütte', affiliation: 'Görlitz', linkedin: null, photo: null },
+		{ name: 'Sophie Putcrabey', affiliation: 'La Mache', linkedin: 'https://www.linkedin.com/in/sophie-putcrabey-146515155/', photo: 'sophie-putcrabey.jpg' },
+		{ name: 'Jean-François Couvé', affiliation: 'La Mache', linkedin: 'https://www.linkedin.com/in/jfcouve/', photo: null },
+		{ name: 'Pavel Mužík', affiliation: 'MIAS', linkedin: 'https://www.linkedin.com/in/pavel-muzik-341a8620/', photo: 'pavel-muzik.jpg' }
 	];
 </script>
 
@@ -77,36 +77,45 @@
 			{#each organizers as organizer, index}
 				<Card class="overflow-hidden">
 					<div class="grid md:grid-cols-[300px_1fr] gap-8 items-start">
-						<!-- Photo placeholder -->
+						<!-- Photo -->
 						<div class="relative group">
 							<div class="aspect-square rounded-2xl bg-gradient-to-br from-primary-100 to-accent-100 overflow-hidden relative">
-								<!-- Decorative pattern -->
-								<div class="absolute inset-0 opacity-10">
-									<svg class="w-full h-full" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-										<defs>
-											<pattern id="grid-{organizer.photo}" x="0" y="0" width="10" height="10" patternUnits="userSpaceOnUse">
-												<circle cx="5" cy="5" r="1" fill="currentColor"/>
-											</pattern>
-										</defs>
-										<rect width="100" height="100" fill="url(#grid-{organizer.photo})"/>
-									</svg>
-								</div>
-								
-								<!-- Icon placeholder -->
-								<div class="absolute inset-0 flex items-center justify-center">
-									<div class="w-32 h-32 bg-gradient-to-br from-primary-500 to-accent-500 rounded-full flex items-center justify-center shadow-2xl group-hover:scale-110 transition-transform duration-300">
-										<svg class="w-16 h-16 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-											<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
+								{#if organizer.photo && !organizer.photo.startsWith('placeholder')}
+									<!-- Real photo -->
+									<img 
+										src="{base}/images/team/{organizer.photo}" 
+										alt={organizer.name}
+										class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+									/>
+								{:else}
+									<!-- Decorative pattern -->
+									<div class="absolute inset-0 opacity-10">
+										<svg class="w-full h-full" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+											<defs>
+												<pattern id="grid-{organizer.photo}" x="0" y="0" width="10" height="10" patternUnits="userSpaceOnUse">
+													<circle cx="5" cy="5" r="1" fill="currentColor"/>
+												</pattern>
+											</defs>
+											<rect width="100" height="100" fill="url(#grid-{organizer.photo})"/>
 										</svg>
 									</div>
-								</div>
-								
-								<!-- Photo coming soon badge -->
-								<div class="absolute bottom-4 left-4 right-4">
-									<div class="bg-white/90 backdrop-blur-sm rounded-lg px-3 py-2 text-center">
-										<span class="text-xs font-medium text-gray-600">Photo coming soon</span>
+									
+									<!-- Icon placeholder -->
+									<div class="absolute inset-0 flex items-center justify-center">
+										<div class="w-32 h-32 bg-gradient-to-br from-primary-500 to-accent-500 rounded-full flex items-center justify-center shadow-2xl group-hover:scale-110 transition-transform duration-300">
+											<svg class="w-16 h-16 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+												<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
+											</svg>
+										</div>
 									</div>
-								</div>
+									
+									<!-- Photo coming soon badge -->
+									<div class="absolute bottom-4 left-4 right-4">
+										<div class="bg-white/90 backdrop-blur-sm rounded-lg px-3 py-2 text-center">
+											<span class="text-xs font-medium text-gray-600">Photo coming soon</span>
+										</div>
+									</div>
+								{/if}
 							</div>
 						</div>
 
@@ -174,13 +183,21 @@
 				{#each currentTutors as tutor}
 					<Card class="group hover:border-primary-300 transition-all">
 						<div class="flex items-start gap-4">
-							<!-- Avatar placeholder -->
+							<!-- Avatar -->
 							<div class="flex-shrink-0">
 								<div class="w-16 h-16 bg-gradient-to-br from-primary-100 to-accent-100 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 relative overflow-hidden">
-									<div class="absolute inset-0 bg-gradient-to-br from-primary-400 to-accent-400 opacity-10"></div>
-									<svg class="w-8 h-8 text-primary-600 relative z-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
-									</svg>
+									{#if tutor.photo}
+										<img 
+											src="{base}/images/team/{tutor.photo}" 
+											alt={tutor.name}
+											class="w-full h-full object-cover rounded-2xl"
+										/>
+									{:else}
+										<div class="absolute inset-0 bg-gradient-to-br from-primary-400 to-accent-400 opacity-10"></div>
+										<svg class="w-8 h-8 text-primary-600 relative z-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+											<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
+										</svg>
+									{/if}
 								</div>
 							</div>
 							
