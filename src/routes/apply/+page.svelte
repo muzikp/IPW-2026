@@ -52,26 +52,36 @@
 			// Required API fields
 			formDataToSend.append('name', `${formData.firstName} ${formData.lastName}`);
 			formDataToSend.append('email', formData.email);
-			formDataToSend.append('message', formData.motivation || 'No motivation provided');
+			formDataToSend.append('message', formData.motivation || 'Not provided');
 			formDataToSend.append('file', formData.cvFile);
 			
 			// Application-specific fields (will be formatted as HTML table in email)
-			formDataToSend.append('KOD ID', formData.kodId);
-			formDataToSend.append('Degree Programme', formData.degreeProgram);
-			formDataToSend.append('Year of Study', formData.yearOfStudy);
-			formDataToSend.append('English Level (CEFR)', formData.englishLevel);
-			formDataToSend.append('Erasmus+ Participation (Winter 2026/2027)', formData.erasmusParticipation);
+			formDataToSend.append('KOD_ID', formData.kodId);
+			formDataToSend.append('Degree_Programme', formData.degreeProgram);
+			formDataToSend.append('Year_of_Study', formData.yearOfStudy);
+			formDataToSend.append('English_Level', formData.englishLevel);
+			formDataToSend.append('Erasmus_Participation', formData.erasmusParticipation);
 			
 			// Email configuration
 			formDataToSend.append('subject', 'IPW 2026 Application');
 			formDataToSend.append('recipientEmail', 'ipw@cvut.cz');
+
+			console.log('Submitting form data:', {
+				name: formDataToSend.get('name'),
+				email: formDataToSend.get('email'),
+				message: formDataToSend.get('message'),
+				file: formData.cvFile?.name,
+				fileSize: formData.cvFile?.size
+			});
 
 			const response = await fetch('https://5dsrywp9e5.execute-api.eu-central-1.amazonaws.com/submit', {
 				method: 'POST',
 				body: formDataToSend
 			});
 
+			console.log('Response status:', response.status);
 			const result = await response.json();
+			console.log('Response result:', result);
 
 			if (response.ok && result.success) {
 				submitSuccess = true;
