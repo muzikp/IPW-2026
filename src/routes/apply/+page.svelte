@@ -29,16 +29,19 @@
 		    !formData.degreeProgram || !formData.yearOfStudy || !formData.englishLevel || 
 		    !formData.erasmusParticipation || !formData.cvFile) {
 			submitError = 'Please fill in all required fields and upload your CV.';
+			scrollToMessage();
 			return;
 		}
 
 		if (formData.cvFile && formData.cvFile.type !== 'application/pdf') {
 			submitError = 'CV must be a PDF file.';
+			scrollToMessage();
 			return;
 		}
 
 		if (formData.cvFile && formData.cvFile.size > 5 * 1024 * 1024) {
 			submitError = 'CV file size must not exceed 5 MB.';
+			scrollToMessage();
 			return;
 		}
 
@@ -101,8 +104,8 @@
 
 			if (response.ok && result.success) {
 				submitSuccess = true;
-				// Scroll to top to show success message
-				window.scrollTo({ top: 0, behavior: 'smooth' });
+				// Scroll to message
+				scrollToMessage();
 				// Reset form
 				formData = {
 					firstName: '',
@@ -121,14 +124,19 @@
 				if (fileInput) fileInput.value = '';
 			} else {
 				submitError = result.message || 'Failed to submit application. Please try again.';
-				// Scroll to top to show error message
-				window.scrollTo({ top: 0, behavior: 'smooth' });
+				// Scroll to error message
+				scrollToMessage();
 			}
 		} catch (error) {
 			console.error('Submission error:', error);
-			submitError = 'An error occurred while submitting your application. Please try again.';
-			// Scroll to top to show error message
-			window.scrollTo({ top: 0, behavior: 'smooth' });
+			// Check if it's a CORS error
+			if (error instanceof TypeError && error.message.includes('fetch')) {
+				submitError = 'There is a temporary technical issue with the submission system. Please try again later or contact ipw@cvut.cz directly.';
+			} else {
+				submitError = 'An error occurred while submitting your application. Please try again.';
+			}
+			// Scroll to error message
+			scrollToMessage();
 		} finally {
 			isSubmitting = false;
 		}
@@ -139,6 +147,16 @@
 		if (target.files && target.files[0]) {
 			formData.cvFile = target.files[0];
 		}
+	}
+
+	function scrollToMessage() {
+		// Use setTimeout to ensure DOM is updated
+		setTimeout(() => {
+			const messageEl = document.getElementById('form-message');
+			if (messageEl) {
+				messageEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+			}
+		}, 100);
 	}
 </script>
 
@@ -194,6 +212,7 @@
 						<p class="text-gray-600">Fields marked with an asterisk (*) are required.</p>
 					</div>
 
+					<div id="form-message">
 					{#if submitSuccess}
 						<div class="mb-6 p-4 bg-green-50 border border-green-200 rounded-xl">
 							<div class="flex items-start gap-3">
@@ -221,6 +240,7 @@
 							</div>
 						</div>
 					{/if}
+					</div>
 
 					<div class="space-y-6">
 						<!-- First Name -->
