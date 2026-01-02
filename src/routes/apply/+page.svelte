@@ -47,36 +47,52 @@
 		submitSuccess = false;
 
 		try {
-			const formDataToSend = new FormData();
-			
-			// Required API fields
-			formDataToSend.append('name', `${formData.firstName} ${formData.lastName}`);
-			formDataToSend.append('email', formData.email);
-			formDataToSend.append('message', formData.motivation || 'Not provided');
-			formDataToSend.append('file', formData.cvFile);
-			
-			// Application-specific fields (will be formatted as HTML table in email)
-			formDataToSend.append('KOD_ID', formData.kodId);
-			formDataToSend.append('Degree_Programme', formData.degreeProgram);
-			formDataToSend.append('Year_of_Study', formData.yearOfStudy);
-			formDataToSend.append('English_Level', formData.englishLevel);
-			formDataToSend.append('Erasmus_Participation', formData.erasmusParticipation);
-			
-			// Email configuration
-			formDataToSend.append('subject', 'IPW 2026 Application');
-			formDataToSend.append('recipientEmail', 'ipw@cvut.cz');
+			// Convert file to base64
+			const fileBase64 = await new Promise<string>((resolve, reject) => {
+				const reader = new FileReader();
+				reader.onload = () => {
+					const base64 = (reader.result as string).split(',')[1]; // Remove data:application/pdf;base64, prefix
+					resolve(base64);
+				};
+				reader.onerror = reject;
+				reader.readAsDataURL(formData.cvFile!);
+			});
 
-			console.log('Submitting form data:', {
-				name: formDataToSend.get('name'),
-				email: formDataToSend.get('email'),
-				message: formDataToSend.get('message'),
-				file: formData.cvFile?.name,
-				fileSize: formData.cvFile?.size
+			// Prepare JSON payload according to API specification
+			const payload = {
+				fields: [
+					{ rank: 1, property: 'recipientEmail', value: 'ipw@cvut.cz' },
+					{ rank: 2, property: 'subject', value: 'IPW 2026 Application' },
+					{ rank: 3, property: 'name', label: 'Name', value: `${formData.firstName} ${formData.lastName}` },
+					{ rank: 4, property: 'email', label: 'Email', value: formData.email },
+					{ rank: 5, property: 'kodId', label: 'KOD ID', value: formData.kodId },
+					{ rank: 6, property: 'degreeProgram', label: 'Degree Programme', value: formData.degreeProgram },
+					{ rank: 7, property: 'yearOfStudy', label: 'Year of Study', value: formData.yearOfStudy },
+					{ rank: 8, property: 'englishLevel', label: 'English Level (CEFR)', value: formData.englishLevel },
+					{ rank: 9, property: 'erasmusParticipation', label: 'Erasmus+ Participation (Winter 2026/2027)', value: formData.erasmusParticipation },
+					{ rank: 10, property: 'message', label: 'Motivation', value: formData.motivation || 'Not provided' }
+				],
+				attachments: [
+					{
+						name: formData.cvFile.name,
+						value: fileBase64
+					}
+				]
+			};
+
+			console.log('Submitting application:', {
+				name: `${formData.firstName} ${formData.lastName}`,
+				email: formData.email,
+				fileName: formData.cvFile.name,
+				fileSize: formData.cvFile.size
 			});
 
 			const response = await fetch('https://5dsrywp9e5.execute-api.eu-central-1.amazonaws.com/submit', {
 				method: 'POST',
-				body: formDataToSend
+				headers: {
+					'Content-Type': 'application/json'
+				},
+				body: JSON.stringify(payload)
 			});
 
 			console.log('Response status:', response.status);
@@ -105,10 +121,14 @@
 				if (fileInput) fileInput.value = '';
 			} else {
 				submitError = result.message || 'Failed to submit application. Please try again.';
+				// Scroll to top to show error message
+				window.scrollTo({ top: 0, behavior: 'smooth' });
 			}
 		} catch (error) {
 			console.error('Submission error:', error);
 			submitError = 'An error occurred while submitting your application. Please try again.';
+			// Scroll to top to show error message
+			window.scrollTo({ top: 0, behavior: 'smooth' });
 		} finally {
 			isSubmitting = false;
 		}
