@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { base } from '$app/paths';
 	import { Container, Section, Card, Tag } from '$lib/components';
 
 	const projects2025 = [
@@ -182,7 +183,7 @@
 				Companies interested in submitting a challenge for IPW teams can reach out to learn about the process and timelines.
 			</p>
 			<a 
-				href="/contact" 
+				href="{base}/contact" 
 				class="inline-flex items-center gap-2 px-8 py-4 bg-white text-primary-600 font-bold rounded-lg hover:shadow-2xl hover:scale-105 transition-all duration-300"
 			>
 				Contact Us
