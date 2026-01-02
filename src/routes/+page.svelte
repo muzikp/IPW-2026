@@ -81,6 +81,21 @@
 				<span class="font-semibold text-primary-700">Erasmus+ mobility</span> element.
 			</p>
 			
+			<!-- Main CTA Button -->
+			<div class="mb-10">
+				<a 
+					href="https://forms.office.com/e/ZJHCPwNAq5"
+					target="_blank"
+					rel="noopener noreferrer"
+					class="inline-flex items-center gap-3 px-10 py-5 bg-gradient-to-r from-primary-600 to-accent-600 text-white text-xl font-bold rounded-2xl shadow-2xl hover:shadow-primary-500/50 hover:scale-105 transition-all duration-300 group"
+				>
+					<span>Chci se zapojit</span>
+					<svg class="w-6 h-6 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+					</svg>
+				</a>
+			</div>
+			
 			<div class="flex flex-col sm:flex-row gap-4 justify-center mb-12">
 				<Button href="{base}/students" size="lg" variant="gradient">
 					<span class="flex items-center gap-2">
