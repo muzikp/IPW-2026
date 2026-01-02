@@ -170,79 +170,56 @@
 			<p class="text-lg text-gray-600">Faculty members guiding students through their IPW journey</p>
 		</div>
 
-		<!-- Current Tutors -->
-		<div class="mb-16">
-			<h3 class="text-2xl font-bold text-gray-900 mb-8 flex items-center gap-3">
-				<div class="w-10 h-10 bg-gradient-to-br from-primary-500 to-accent-500 rounded-xl flex items-center justify-center">
-					<span class="text-xl">👨‍🏫</span>
-				</div>
-				Current Team
-			</h3>
-			
-			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-				{#each currentTutors as tutor}
-					<Card class="group hover:border-primary-300 transition-all">
-						<div class="flex items-start gap-4">
-							<!-- Avatar -->
-							<div class="flex-shrink-0">
-							<div class="w-16 h-16 bg-gradient-to-br from-primary-100 to-accent-100 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300 relative overflow-hidden">
-								{#if tutor.photo}
-									<img 
-										src="{base}/images/team/{tutor.photo}" 
-										alt={tutor.name}
-										class="w-full h-full object-cover rounded-full"
-										/>
-									{:else}
-										<div class="absolute inset-0 bg-gradient-to-br from-primary-400 to-accent-400 opacity-10"></div>
-										<svg class="w-8 h-8 text-primary-600 relative z-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-											<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
-										</svg>
-									{/if}
-								</div>
-							</div>
-							
-							<div class="flex-1">
-								<div class="flex items-center justify-between gap-2 mb-1">
-									<h4 class="text-lg font-bold text-gray-900 group-hover:text-primary-600 transition-colors">
-										{tutor.name}
-									</h4>
-									{#if tutor.linkedin}
-										<a 
-											href={tutor.linkedin}
-											target="_blank"
-											rel="noopener noreferrer"
-											class="flex-shrink-0 text-primary-600 hover:text-primary-700 hover:scale-110 transition-all"
-											aria-label="LinkedIn profile"
-										>
-											<svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-												<path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-											</svg>
-										</a>
-									{/if}
-								</div>
-								<div class="inline-block">
-									<span class="px-3 py-1 bg-primary-50 text-primary-700 text-sm font-medium rounded-full border border-primary-100">
-										{tutor.affiliation}
-									</span>
-								</div>
+		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+			{#each currentTutors as tutor}
+				<Card class="group hover:border-primary-300 transition-all">
+					<div class="flex items-start gap-4">
+						<!-- Avatar -->
+						<div class="flex-shrink-0">
+						<div class="w-16 h-16 bg-gradient-to-br from-primary-100 to-accent-100 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300 relative overflow-hidden">
+							{#if tutor.photo}
+								<img 
+									src="{base}/images/team/{tutor.photo}" 
+									alt={tutor.name}
+									class="w-full h-full object-cover rounded-full"
+									/>
+								{:else}
+									<div class="absolute inset-0 bg-gradient-to-br from-primary-400 to-accent-400 opacity-10"></div>
+									<svg class="w-8 h-8 text-primary-600 relative z-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
+									</svg>
+								{/if}
 							</div>
 						</div>
-					</Card>
-				{/each}
-			</div>
-		</div>
-
-		<!-- Past Tutors -->
-		<div class="text-center">
-			<div class="inline-block p-8 bg-white rounded-2xl shadow-lg border border-gray-100">
-				<h3 class="text-xl font-bold text-gray-900 mb-2 flex items-center gap-3 justify-center">
-					<span class="text-2xl">🏆</span>
-					Past Contributors
-				</h3>
-				<p class="text-gray-600">
-					We thank all former tutors for their valuable contributions to IPW
-				</p>
-			</div>
+						
+						<div class="flex-1">
+							<div class="flex items-center justify-between gap-2 mb-1">
+								<h4 class="text-lg font-bold text-gray-900 group-hover:text-primary-600 transition-colors">
+									{tutor.name}
+								</h4>
+								{#if tutor.linkedin}
+									<a 
+										href={tutor.linkedin}
+										target="_blank"
+										rel="noopener noreferrer"
+										class="flex-shrink-0 text-primary-600 hover:text-primary-700 hover:scale-110 transition-all"
+										aria-label="LinkedIn profile"
+									>
+										<svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+											<path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+										</svg>
+									</a>
+								{/if}
+							</div>
+							<div class="inline-block">
+								<span class="px-3 py-1 bg-primary-50 text-primary-700 text-sm font-medium rounded-full border border-primary-100">
+									{tutor.affiliation}
+								</span>
+							</div>
+						</div>
+					</div>
+				</Card>
+			{/each}
 		</div>
 	</Container>
 </Section>
