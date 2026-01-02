@@ -15,9 +15,10 @@
 				Partner with IPW as a company
 			</h1>
 			<p class="text-xl md:text-2xl text-gray-700 mb-8 max-w-3xl mx-auto">
-				Bring a real business challenge. We will match you with an international student team
-				supported by academic supervision—so you receive a structured analysis and actionable
-				recommendations.
+				Get a consulting-style team of carefully selected international students to tackle your challenge—and meet potential future hires along the way.
+			</p>
+			<p class="text-lg text-gray-700 mb-8 max-w-4xl mx-auto leading-relaxed">
+				IPW gives you fresh perspectives from carefully selected, highly motivated students from across Europe. Your challenge is tackled by a small, consulting-style team—typically five students from at least three universities—supported by academic tutors and a company mentor. The team works fast, thinks independently, and delivers a structured analysis with actionable recommendations you can use. And because you meet the teams directly and see how they operate under real constraints, IPW often becomes a natural talent pipeline—your next hire might be in the room.
 			</p>
 			<Button href="{base}/contact">Propose a project</Button>
 		</div>
