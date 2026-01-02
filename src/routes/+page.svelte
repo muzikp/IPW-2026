@@ -84,9 +84,7 @@
 			<!-- Main CTA Button -->
 			<div class="mb-10">
 				<a 
-					href="https://forms.office.com/e/ZJHCPwNAq5"
-					target="_blank"
-					rel="noopener noreferrer"
+					href="{base}/apply"
 					class="inline-flex items-center gap-3 px-10 py-5 bg-gradient-to-r from-primary-600 to-accent-600 text-white text-xl font-bold rounded-2xl shadow-2xl hover:shadow-primary-500/50 hover:scale-105 transition-all duration-300 group"
 				>
 					<span>Apply Now</span>
