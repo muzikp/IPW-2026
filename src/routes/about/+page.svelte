@@ -7,7 +7,8 @@
 			name: 'Vincent Blaise Montenero',
 			role: 'IPW Founder',
 			bio: 'Vincent was the one who came up with the idea years ago to connect universities and corporate partners, aiming to bring students an authentic experience of a small consulting team providing services to leading global brands; for companies, his concept brings fresh perspectives on challenges and connects businesses with talented potential employees.',
-			photo: 'placeholder-vincent'
+			photo: 'placeholder-vincent',
+			linkedin: 'https://www.linkedin.com/in/vincentmontenero/'
 		},
 		{
 			name: 'Pavel Mužík',
