@@ -120,6 +120,112 @@ The following templates should be in `resources/partners/`:
 
 ## 📝 Content Updates
 
+### Content Configuration (Annual Cycle Management)
+
+The `content-config.json` file in the root directory controls what content is visible throughout the IPW annual cycle. This allows you to easily switch between different phases of the program without editing individual components.
+
+#### Configuration Structure
+
+```json
+{
+  "currentPhase": "program-running",
+  "academicYear": "2025-2026",
+  "phases": {
+    "recruitment": { "active": false },
+    "application": { "active": false },
+    "program-running": { "active": true },
+    "final-presentations": { "active": false },
+    "archive": { "active": false }
+  },
+  "visibility": {
+    "homepage": { ... },
+    "pages": { ... },
+    "callToActions": { ... },
+    "banners": { ... }
+  }
+}
+```
+
+#### IPW Annual Cycle Phases
+
+1. **Recruitment** (September-October)
+   - Set `currentPhase: "recruitment"`
+   - Enable `heroRecruitmentCTA`, `recruitmentFocused`
+   - Show student application CTAs prominently
+
+2. **Application** (October-November)
+   - Set `currentPhase: "application"`
+   - Enable `applicationDeadlineBanner`, `showDeadlineCountdown`
+   - Show urgency messages for application deadline
+
+3. **Program Running** (December-April) - *Current*
+   - Set `currentPhase: "program-running"`
+   - Enable `currentProjectsShowcase`, `highlightActiveProjects`
+   - Show company partnership opportunities
+
+4. **Final Presentations** (May)
+   - Set `currentPhase: "final-presentations"`
+   - Enable final presentations banner
+   - Highlight upcoming evaluation events
+
+5. **Archive** (June-August)
+   - Set `currentPhase: "archive"`
+   - Prepare for next year, showcase past results
+   - Update historical cohort data
+
+#### Key Visibility Controls
+
+**Homepage Elements:**
+- `heroRecruitmentCTA`: Show "Apply Now" CTA in hero
+- `heroGeneralInfo`: Show general program information
+- `applicationDeadlineBanner`: Urgent application deadline banner
+- `currentProjectsShowcase`: Display active projects
+- `partnerCompaniesSection`: Show partner company logos
+
+**Pages:**
+- `apply.showForm`: Enable/disable application form
+- `apply.showDeadlineCountdown`: Display countdown to deadline
+- `projects.highlightActiveProjects`: Highlight current year projects
+- `companies.acceptingNewProjects`: Show project proposal form
+
+**Call-to-Actions:**
+- `studentApplication`: Student recruitment CTAs
+- `companyPartnership`: Company partnership CTAs
+- `universityPartnership`: University partnership CTAs
+
+**Banners:**
+- Configure temporary announcements with urgency levels
+- Control visibility of phase-specific messages
+
+#### Usage
+
+To update for a new phase:
+
+1. Open `content-config.json`
+2. Change `currentPhase` to the appropriate phase
+3. Update `academicYear` if needed
+4. Toggle visibility flags for the current phase
+5. Commit and push - changes apply immediately
+
+Example for recruitment period:
+```json
+{
+  "currentPhase": "recruitment",
+  "visibility": {
+    "homepage": {
+      "heroRecruitmentCTA": true,
+      "applicationDeadlineBanner": false
+    },
+    "pages": {
+      "apply": {
+        "showForm": true,
+        "showDeadlineCountdown": false
+      }
+    }
+  }
+}
+```
+
 ### Adding New Projects
 
 Edit `src/routes/projects/+page.svelte` and add to `projects2025` array.
