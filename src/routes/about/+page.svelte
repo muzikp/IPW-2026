@@ -25,7 +25,7 @@
 		{ name: 'Falk Maiwald', affiliation: 'Görlitz', linkedin: null, photo: null },
 		{ name: 'Tinno Schütte', affiliation: 'Görlitz', linkedin: null, photo: null },
 		{ name: 'Sophie Putcrabey', affiliation: 'La Mache', linkedin: 'https://www.linkedin.com/in/sophie-putcrabey-146515155/', photo: 'sophie-putcrabey.jpg' },
-		{ name: 'Jean-François Couvé', affiliation: 'La Mache', linkedin: 'https://www.linkedin.com/in/jfcouve/', photo: null },
+		{ name: 'Jean-François Couvé', affiliation: 'La Mache', linkedin: 'https://www.linkedin.com/in/jfcouve/', photo: 'jean-francois-couve.jpg' },
 		{ name: 'Pavel Mužík', affiliation: 'MIAS', linkedin: 'https://www.linkedin.com/in/pavel-muzik-341a8620/', photo: 'pavel-muzik.jpg' }
 	];
 </script>
