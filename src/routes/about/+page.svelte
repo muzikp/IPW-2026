@@ -23,8 +23,8 @@
 		{ name: 'Petr Fanta', affiliation: 'MIAS', linkedin: 'https://www.linkedin.com/in/petr-fanta-7a36162a/', photo: 'petr-fanta.jpg' },
 		{ name: 'Petra Jílková', affiliation: 'MIAS', linkedin: 'https://www.linkedin.com/in/petra-j%C3%ADlkov%C3%A1-2229a8123/', photo: 'petra-jilkova.jpg' },
 		{ name: 'Dagmar Skokanová', affiliation: 'MIAS', linkedin: 'https://www.linkedin.com/in/dagmar-skokanova-047546235/', photo: 'dagmar-skokanova.jpg' },
-		{ name: 'Falk Maiwald', affiliation: 'Görlitz', linkedin: null, photo: null },
-		{ name: 'Tinno Schütte', affiliation: 'Görlitz', linkedin: null, photo: null },
+		{ name: 'Falk Maiwald', affiliation: 'Görlitz', linkedin: null, photo: 'falk-maiwald.jpeg' },
+		{ name: 'Tinno Schütte', affiliation: 'Görlitz', linkedin: null, photo: 'tino-schutte.jpg' },
 		{ name: 'Sophie Putcrabey', affiliation: 'La Mache', linkedin: 'https://www.linkedin.com/in/sophie-putcrabey-146515155/', photo: 'sophie-putcrabey.jpg' },
 		{ name: 'Jean-François Couvé', affiliation: 'La Mache', linkedin: 'https://www.linkedin.com/in/jfcouve/', photo: 'jean-francois-couve.jpg' },
 		{ name: 'Pavel Mužík', affiliation: 'MIAS', linkedin: 'https://www.linkedin.com/in/pavel-muzik-341a8620/', photo: 'pavel-muzik.jpg' }
