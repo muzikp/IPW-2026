@@ -19,7 +19,11 @@ Thumbs.db
 !.env.test
 
 # Generated files
+# (but include static/downloads/partners for production)
 static/downloads
+!static/downloads/partners
+!static/downloads/partners/*.docx
+!static/downloads/partners/*.zip
 
 # Resources (source files, synced to static during build)
 resources
