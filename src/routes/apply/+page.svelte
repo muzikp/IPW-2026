@@ -67,6 +67,7 @@ Erasmus+ Participation: ${formData.erasmusParticipation}
 			formDataToSend.append('message', message);
 			formDataToSend.append('file', formData.cvFile);
 			formDataToSend.append('subject', 'IPW 2026 Application');
+			formDataToSend.append('recipientEmail', 'ipw@cvut.cz');
 
 			const response = await fetch('https://5dsrywp9e5.execute-api.eu-central-1.amazonaws.com/submit', {
 				method: 'POST',
