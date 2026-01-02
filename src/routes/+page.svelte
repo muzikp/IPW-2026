@@ -65,6 +65,17 @@
 	</div>
 
 	<Container class="relative z-10">
+		<!-- Common Header -->
+		<div class="text-center mb-12 animate-fade-in-up">
+			<h1 class="text-5xl md:text-6xl lg:text-7xl font-extrabold mb-4 leading-tight">
+				<span class="block text-gray-900">International Project</span>
+				<span class="block text-gradient mt-2">Workshop</span>
+			</h1>
+			<p class="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto">
+				Fresh ideas for companies, real experience for students.
+			</p>
+		</div>
+
 		<div class="grid md:grid-cols-2 gap-12 items-start">
 			<!-- Left: Students Section -->
 			<div class="text-center md:text-left animate-fade-in-up">
@@ -81,11 +92,6 @@
 				<div class="inline-block mb-6 px-6 py-2 bg-white/80 backdrop-blur-sm rounded-full shadow-lg border border-primary-100">
 					<span class="text-sm font-semibold text-primary-700">🎓 6 ECTS • 🌍 International • 🚀 Real Projects</span>
 				</div>
-				
-				<h1 class="text-4xl md:text-5xl font-extrabold mb-6 leading-tight">
-					<span class="block text-gray-900">International Project</span>
-					<span class="block text-gradient mt-2">Workshop</span>
-				</h1>
 				
 				<p class="text-lg md:text-xl text-gray-600 mb-8 leading-relaxed">
 					Join an <span class="font-semibold text-primary-700">elite international student team</span> for one semester, 
