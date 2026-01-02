@@ -304,12 +304,12 @@
 						</div>
 
 						<!-- Degree Programme -->
-						<div>
-							<label class="block text-sm font-semibold text-gray-900 mb-2">
+						<div class="p-4 border border-gray-200 rounded-xl">
+							<label class="block text-base font-semibold text-gray-900 mb-3">
 								5. Degree programme *
 							</label>
 							<div class="space-y-2">
-								<label class="flex items-center gap-3 p-3 border border-gray-300 rounded-xl cursor-pointer hover:bg-gray-50 transition-colors">
+								<label class="flex items-center gap-3 p-2 cursor-pointer hover:bg-gray-50 rounded-lg transition-colors">
 									<input
 										type="radio"
 										bind:group={formData.degreeProgram}
@@ -317,9 +317,9 @@
 										required
 										class="w-4 h-4 text-primary-600 focus:ring-primary-500"
 									/>
-									<span class="text-gray-900">Bachelor's</span>
+									<span class="text-sm text-gray-700">Bachelor's</span>
 								</label>
-								<label class="flex items-center gap-3 p-3 border border-gray-300 rounded-xl cursor-pointer hover:bg-gray-50 transition-colors">
+								<label class="flex items-center gap-3 p-2 cursor-pointer hover:bg-gray-50 rounded-lg transition-colors">
 									<input
 										type="radio"
 										bind:group={formData.degreeProgram}
@@ -327,18 +327,18 @@
 										required
 										class="w-4 h-4 text-primary-600 focus:ring-primary-500"
 									/>
-									<span class="text-gray-900">Master's</span>
+									<span class="text-sm text-gray-700">Master's</span>
 								</label>
 							</div>
 						</div>
 
 						<!-- Year of Study -->
-						<div>
-							<label class="block text-sm font-semibold text-gray-900 mb-2">
+						<div class="p-4 border border-gray-200 rounded-xl">
+							<label class="block text-base font-semibold text-gray-900 mb-3">
 								6. Year of study *
 							</label>
 							<div class="space-y-2">
-								<label class="flex items-center gap-3 p-3 border border-gray-300 rounded-xl cursor-pointer hover:bg-gray-50 transition-colors">
+								<label class="flex items-center gap-3 p-2 cursor-pointer hover:bg-gray-50 rounded-lg transition-colors">
 									<input
 										type="radio"
 										bind:group={formData.yearOfStudy}
@@ -346,9 +346,9 @@
 										required
 										class="w-4 h-4 text-primary-600 focus:ring-primary-500"
 									/>
-									<span class="text-gray-900">1st year</span>
+									<span class="text-sm text-gray-700">1st year</span>
 								</label>
-								<label class="flex items-center gap-3 p-3 border border-gray-300 rounded-xl cursor-pointer hover:bg-gray-50 transition-colors">
+								<label class="flex items-center gap-3 p-2 cursor-pointer hover:bg-gray-50 rounded-lg transition-colors">
 									<input
 										type="radio"
 										bind:group={formData.yearOfStudy}
@@ -356,9 +356,9 @@
 										required
 										class="w-4 h-4 text-primary-600 focus:ring-primary-500"
 									/>
-									<span class="text-gray-900">2nd year</span>
+									<span class="text-sm text-gray-700">2nd year</span>
 								</label>
-								<label class="flex items-center gap-3 p-3 border border-gray-300 rounded-xl cursor-pointer hover:bg-gray-50 transition-colors">
+								<label class="flex items-center gap-3 p-2 cursor-pointer hover:bg-gray-50 rounded-lg transition-colors">
 									<input
 										type="radio"
 										bind:group={formData.yearOfStudy}
@@ -366,18 +366,18 @@
 										required
 										class="w-4 h-4 text-primary-600 focus:ring-primary-500"
 									/>
-									<span class="text-gray-900">3rd year or higher</span>
+									<span class="text-sm text-gray-700">3rd year or higher</span>
 								</label>
 							</div>
 						</div>
 
 						<!-- English Level -->
-						<div>
-							<label class="block text-sm font-semibold text-gray-900 mb-2">
+						<div class="p-4 border border-gray-200 rounded-xl">
+							<label class="block text-base font-semibold text-gray-900 mb-3">
 								7. What is your English level? * <span class="text-sm font-normal text-gray-600">(CEFR)</span>
 							</label>
 							<div class="space-y-2">
-								<label class="flex items-start gap-3 p-3 border border-gray-300 rounded-xl cursor-pointer hover:bg-gray-50 transition-colors">
+								<label class="flex items-start gap-3 p-2 cursor-pointer hover:bg-gray-50 rounded-lg transition-colors">
 									<input
 										type="radio"
 										bind:group={formData.englishLevel}
@@ -386,11 +386,11 @@
 										class="w-4 h-4 text-primary-600 focus:ring-primary-500 mt-1"
 									/>
 									<div>
-										<div class="font-medium text-gray-900">B1 (Intermediate)</div>
-										<div class="text-sm text-gray-600">Can handle everyday situations, write simple texts, follow the main points of clear standard speech</div>
+										<div class="text-sm font-medium text-gray-900">B1 (Intermediate)</div>
+										<div class="text-xs text-gray-600">Can handle everyday situations, write simple texts, follow the main points of clear standard speech</div>
 									</div>
 								</label>
-								<label class="flex items-start gap-3 p-3 border border-gray-300 rounded-xl cursor-pointer hover:bg-gray-50 transition-colors">
+								<label class="flex items-start gap-3 p-2 cursor-pointer hover:bg-gray-50 rounded-lg transition-colors">
 									<input
 										type="radio"
 										bind:group={formData.englishLevel}
@@ -399,11 +399,11 @@
 										class="w-4 h-4 text-primary-600 focus:ring-primary-500 mt-1"
 									/>
 									<div>
-										<div class="font-medium text-gray-900">B2 (Upper-intermediate)</div>
-										<div class="text-sm text-gray-600">Can communicate fluently in most situations, understand complex texts, write clear detailed texts</div>
+										<div class="text-sm font-medium text-gray-900">B2 (Upper-intermediate)</div>
+										<div class="text-xs text-gray-600">Can communicate fluently in most situations, understand complex texts, write clear detailed texts</div>
 									</div>
 								</label>
-								<label class="flex items-start gap-3 p-3 border border-gray-300 rounded-xl cursor-pointer hover:bg-gray-50 transition-colors">
+								<label class="flex items-start gap-3 p-2 cursor-pointer hover:bg-gray-50 rounded-lg transition-colors">
 									<input
 										type="radio"
 										bind:group={formData.englishLevel}
@@ -412,11 +412,11 @@
 										class="w-4 h-4 text-primary-600 focus:ring-primary-500 mt-1"
 									/>
 									<div>
-										<div class="font-medium text-gray-900">C1 (Advanced)</div>
-										<div class="text-sm text-gray-600">Can use English effectively for academic/professional purposes, understand demanding texts, express ideas fluently</div>
+										<div class="text-sm font-medium text-gray-900">C1 (Advanced)</div>
+										<div class="text-xs text-gray-600">Can use English effectively for academic/professional purposes, understand demanding texts, express ideas fluently</div>
 									</div>
 								</label>
-								<label class="flex items-start gap-3 p-3 border border-gray-300 rounded-xl cursor-pointer hover:bg-gray-50 transition-colors">
+								<label class="flex items-start gap-3 p-2 cursor-pointer hover:bg-gray-50 rounded-lg transition-colors">
 									<input
 										type="radio"
 										bind:group={formData.englishLevel}
@@ -425,8 +425,8 @@
 										class="w-4 h-4 text-primary-600 focus:ring-primary-500 mt-1"
 									/>
 									<div>
-										<div class="font-medium text-gray-900">C2 (Proficient)</div>
-										<div class="text-sm text-gray-600">Near-native level, can understand virtually everything heard/read and express meaning precisely</div>
+										<div class="text-sm font-medium text-gray-900">C2 (Proficient)</div>
+										<div class="text-xs text-gray-600">Near-native level, can understand virtually everything heard/read and express meaning precisely</div>
 									</div>
 								</label>
 							</div>
@@ -447,12 +447,12 @@
 						</div>
 
 						<!-- Erasmus Participation -->
-						<div>
-							<label class="block text-sm font-semibold text-gray-900 mb-2">
+						<div class="p-4 border border-gray-200 rounded-xl">
+							<label class="block text-base font-semibold text-gray-900 mb-3">
 								9. Do you expect to participate in another Erasmus+ programme during the winter semester of the academic year 2026/2027? *
 							</label>
 							<div class="space-y-2">
-								<label class="flex items-center gap-3 p-3 border border-gray-300 rounded-xl cursor-pointer hover:bg-gray-50 transition-colors">
+								<label class="flex items-center gap-3 p-2 cursor-pointer hover:bg-gray-50 rounded-lg transition-colors">
 									<input
 										type="radio"
 										bind:group={formData.erasmusParticipation}
@@ -460,9 +460,9 @@
 										required
 										class="w-4 h-4 text-primary-600 focus:ring-primary-500"
 									/>
-									<span class="text-gray-900">No</span>
+									<span class="text-sm text-gray-700">No</span>
 								</label>
-								<label class="flex items-center gap-3 p-3 border border-gray-300 rounded-xl cursor-pointer hover:bg-gray-50 transition-colors">
+								<label class="flex items-center gap-3 p-2 cursor-pointer hover:bg-gray-50 rounded-lg transition-colors">
 									<input
 										type="radio"
 										bind:group={formData.erasmusParticipation}
@@ -470,7 +470,7 @@
 										required
 										class="w-4 h-4 text-primary-600 focus:ring-primary-500"
 									/>
-									<span class="text-gray-900">Yes</span>
+									<span class="text-sm text-gray-700">Yes</span>
 								</label>
 							</div>
 						</div>
