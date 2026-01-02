@@ -1,0 +1,116 @@
+{
+  "currentPhase": "program-running",
+  "academicYear": "2025-2026",
+  "lastUpdated": "2026-01-02",
+  
+  "phases": {
+    "recruitment": {
+      "active": false,
+      "description": "Student recruitment period",
+      "typicalMonths": ["September", "October"]
+    },
+    "application": {
+      "active": false,
+      "description": "Application deadline approaching",
+      "typicalMonths": ["October", "November"]
+    },
+    "program-running": {
+      "active": true,
+      "description": "Projects in progress",
+      "typicalMonths": ["December", "January", "February", "March", "April"]
+    },
+    "final-presentations": {
+      "active": false,
+      "description": "Final presentations and evaluation",
+      "typicalMonths": ["May"]
+    },
+    "archive": {
+      "active": false,
+      "description": "Archive and preparation for next year",
+      "typicalMonths": ["June", "July", "August"]
+    }
+  },
+  
+  "visibility": {
+    "homepage": {
+      "heroRecruitmentCTA": false,
+      "heroGeneralInfo": true,
+      "applicationDeadlineBanner": false,
+      "currentProjectsShowcase": true,
+      "partnerCompaniesSection": true,
+      "upcomingEventsSection": false
+    },
+    
+    "navigation": {
+      "applyPage": true,
+      "projectsPage": true,
+      "archivePage": true
+    },
+    
+    "pages": {
+      "apply": {
+        "visible": true,
+        "showForm": true,
+        "showDeadlineCountdown": false,
+        "recruitmentClosedMessage": false
+      },
+      "projects": {
+        "showCurrentYear": true,
+        "showPreviousYears": true,
+        "highlightActiveProjects": true
+      },
+      "students": {
+        "recruitmentFocused": false,
+        "showTestimonials": true,
+        "showCurrentTeams": true
+      },
+      "companies": {
+        "acceptingNewProjects": true,
+        "showProjectProposalForm": true
+      }
+    },
+    
+    "callToActions": {
+      "studentApplication": true,
+      "companyPartnership": true,
+      "universityPartnership": true
+    },
+    
+    "banners": {
+      "applicationDeadline": {
+        "show": false,
+        "message": "Applications close on October 31, 2025",
+        "urgency": "high"
+      },
+      "programAnnouncement": {
+        "show": false,
+        "message": "IPW 2025-2026 projects have been announced!"
+      },
+      "finalPresentations": {
+        "show": false,
+        "message": "Join us for final presentations in May 2026"
+      }
+    }
+  },
+  
+  "content": {
+    "featuredProjects": {
+      "year": 2025,
+      "showOnHomepage": true
+    },
+    "testimonials": {
+      "showRecent": true,
+      "maxCount": 6
+    },
+    "news": {
+      "enabled": true,
+      "items": []
+    }
+  },
+  
+  "notes": {
+    "description": "This file controls content visibility throughout the IPW annual cycle",
+    "usage": "Update 'currentPhase' and individual visibility flags as the program progresses",
+    "phases-guide": "recruitment → application → program-running → final-presentations → archive"
+  }
+}
