@@ -76,9 +76,10 @@
 			</h1>
 			
 			<p class="text-xl md:text-2xl text-gray-600 mb-10 max-w-4xl mx-auto leading-relaxed">
-				Solve <span class="font-semibold text-primary-700">real company challenges</span> in international teams—starting with a 
-				kick‑off week in <span class="font-semibold text-accent-700">Prague</span> and including an 
-				<span class="font-semibold text-primary-700">Erasmus+ mobility</span> element.
+				Join an <span class="font-semibold text-primary-700">elite international student team</span> for one semester, 
+				tackling <span class="font-semibold text-accent-700">real business challenges</span> from global brands. 
+				With <span class="font-semibold text-primary-700">Erasmus+</span>, spend two weeks in two European cities 
+				and earn <span class="font-semibold text-accent-700">6 ECTS</span>.
 			</p>
 			
 			<!-- Main CTA Button -->
