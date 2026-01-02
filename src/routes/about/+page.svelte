@@ -20,14 +20,14 @@
 	];
 
 	const currentTutors = [
-		{ name: 'Petr Fanta', affiliation: 'MIAS', linkedin: 'https://www.linkedin.com/in/petr-fanta-7a36162a/', photo: 'petr-fanta.jpg' },
-		{ name: 'Petra Jílková', affiliation: 'MIAS', linkedin: 'https://www.linkedin.com/in/petra-j%C3%ADlkov%C3%A1-2229a8123/', photo: 'petra-jilkova.jpg' },
-		{ name: 'Dagmar Skokanová', affiliation: 'MIAS', linkedin: 'https://www.linkedin.com/in/dagmar-skokanova-047546235/', photo: 'dagmar-skokanova.jpg' },
-		{ name: 'Falk Maiwald', affiliation: 'Görlitz', linkedin: null, photo: 'falk-maiwald.jpeg' },
-		{ name: 'Tinno Schütte', affiliation: 'Görlitz', linkedin: null, photo: 'tino-schutte.jpg' },
-		{ name: 'Sophie Putcrabey', affiliation: 'La Mache', linkedin: 'https://www.linkedin.com/in/sophie-putcrabey-146515155/', photo: 'sophie-putcrabey.jpg' },
-		{ name: 'Jean-François Couvé', affiliation: 'La Mache', linkedin: 'https://www.linkedin.com/in/jfcouve/', photo: 'jean-francois-couve.jpg' },
-		{ name: 'Pavel Mužík', affiliation: 'MIAS', linkedin: 'https://www.linkedin.com/in/pavel-muzik-341a8620/', photo: 'pavel-muzik.jpg' }
+		{ name: 'Petr Fanta', affiliation: 'MIAS', universityLogo: 'mias_logo.png', linkedin: 'https://www.linkedin.com/in/petr-fanta-7a36162a/', photo: 'petr-fanta.jpg' },
+		{ name: 'Petra Jílková', affiliation: 'MIAS', universityLogo: 'mias_logo.png', linkedin: 'https://www.linkedin.com/in/petra-j%C3%ADlkov%C3%A1-2229a8123/', photo: 'petra-jilkova.jpg' },
+		{ name: 'Dagmar Skokanová', affiliation: 'MIAS', universityLogo: 'mias_logo.png', linkedin: 'https://www.linkedin.com/in/dagmar-skokanova-047546235/', photo: 'dagmar-skokanova.jpg' },
+		{ name: 'Falk Maiwald', affiliation: 'Görlitz', universityLogo: 'logo-gorlitz.svg', linkedin: null, photo: 'falk-maiwald.jpeg' },
+		{ name: 'Tinno Schütte', affiliation: 'Görlitz', universityLogo: 'logo-gorlitz.svg', linkedin: null, photo: 'tino-schutte.jpg' },
+		{ name: 'Sophie Putcrabey', affiliation: 'La Mache', universityLogo: 'logo-lamace.png', linkedin: 'https://www.linkedin.com/in/sophie-putcrabey-146515155/', photo: 'sophie-putcrabey.jpg' },
+		{ name: 'Jean-François Couvé', affiliation: 'La Mache', universityLogo: 'logo-lamace.png', linkedin: 'https://www.linkedin.com/in/jfcouve/', photo: 'jean-francois-couve.jpg' },
+		{ name: 'Pavel Mužík', affiliation: 'MIAS', universityLogo: 'mias_logo.png', linkedin: 'https://www.linkedin.com/in/pavel-muzik-341a8620/', photo: 'pavel-muzik.jpg' }
 	];
 </script>
 
@@ -194,7 +194,7 @@
 						</div>
 						
 						<div class="flex-1">
-							<div class="flex items-center justify-between gap-2 mb-1">
+							<div class="flex items-center justify-between gap-2 mb-2">
 								<h4 class="text-lg font-bold text-gray-900 group-hover:text-primary-600 transition-colors">
 									{tutor.name}
 								</h4>
@@ -212,10 +212,12 @@
 									</a>
 								{/if}
 							</div>
-							<div class="inline-block">
-								<span class="px-3 py-1 bg-primary-50 text-primary-700 text-sm font-medium rounded-full border border-primary-100">
-									{tutor.affiliation}
-								</span>
+							<div class="flex items-center h-8">
+								<img 
+									src="{base}/images/universities/{tutor.universityLogo}" 
+									alt={tutor.affiliation}
+									class="max-h-8 w-auto object-contain"
+								/>
 							</div>
 						</div>
 					</div>
