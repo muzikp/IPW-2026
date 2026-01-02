@@ -47,10 +47,43 @@
 		}
 	];
 
+	const projects2024 = [
+		{
+			company: 'Siemens Energy',
+			challenge: 'Market Entry into Small Modular Reactors',
+			description: 'Strategic analysis of market entry opportunities in the emerging field of small modular reactors and nuclear energy solutions.',
+			topics: ['Strategy', 'Innovation', 'Sustainability'],
+			year: '2024'
+		},
+		{
+			company: 'Komerční banka',
+			challenge: 'Group Financing Synergy Propositions',
+			description: 'Unifying consumer financing products across KB Group institutions to create comprehensive and attractive offerings for clients.',
+			topics: ['Strategy', 'Digital', 'Innovation'],
+			year: '2024'
+		},
+		{
+			company: 'Škoda Group',
+			challenge: 'Rolling Stock Business Development',
+			description: 'Strategic initiatives for designing, building and maintaining rolling stock products in the transportation sector.',
+			topics: ['Strategy', 'Operations', 'Innovation'],
+			year: '2024'
+		},
+		{
+			company: 'TotalEnergies',
+			challenge: 'Agricultural Product Range Marketing',
+			description: 'Creating a comprehensive marketing strategy and action plan for deployment of TotalEnergies agricultural product ranges in Czech Republic.',
+			topics: ['Marketing', 'Strategy', 'Branding'],
+			year: '2024'
+		}
+	];
+
+	const allProjects = [...projects2025, ...projects2024];
+
 	let selectedYear = 'All';
 	let selectedTopic = 'All';
 
-	$: filteredProjects = projects2025.filter(project => {
+	$: filteredProjects = allProjects.filter(project => {
 		const yearMatch = selectedYear === 'All' || project.year === selectedYear;
 		const topicMatch = selectedTopic === 'All' || project.topics.includes(selectedTopic);
 		return yearMatch && topicMatch;
