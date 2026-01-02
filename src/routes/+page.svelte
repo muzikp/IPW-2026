@@ -65,42 +65,120 @@
 	</div>
 
 	<Container class="relative z-10">
-		<div class="text-center animate-fade-in-up">
-			<div class="inline-block mb-6 px-6 py-2 bg-white/80 backdrop-blur-sm rounded-full shadow-lg border border-primary-100">
-				<span class="text-sm font-semibold text-primary-700">🎓 6 ECTS • 🌍 International • 🚀 Real Projects</span>
+		<div class="grid md:grid-cols-2 gap-12 items-start">
+			<!-- Left: Students Section -->
+			<div class="text-center md:text-left animate-fade-in-up">
+				<div class="inline-block mb-6">
+					<div class="w-20 h-20 bg-gradient-to-br from-primary-500 to-accent-500 rounded-3xl flex items-center justify-center shadow-2xl">
+						<span class="text-4xl">🎓</span>
+					</div>
+				</div>
+				
+				<h2 class="text-3xl md:text-4xl font-bold mb-6">
+					<span class="text-gradient">Are you a student?</span>
+				</h2>
+				
+				<div class="inline-block mb-6 px-6 py-2 bg-white/80 backdrop-blur-sm rounded-full shadow-lg border border-primary-100">
+					<span class="text-sm font-semibold text-primary-700">🎓 6 ECTS • 🌍 International • 🚀 Real Projects</span>
+				</div>
+				
+				<h1 class="text-4xl md:text-5xl font-extrabold mb-6 leading-tight">
+					<span class="block text-gray-900">International Project</span>
+					<span class="block text-gradient mt-2">Workshop</span>
+				</h1>
+				
+				<p class="text-lg md:text-xl text-gray-600 mb-8 leading-relaxed">
+					Join an <span class="font-semibold text-primary-700">elite international student team</span> for one semester, 
+					tackling <span class="font-semibold text-accent-700">real business challenges</span> from global brands. 
+					With <span class="font-semibold text-primary-700">Erasmus+</span>, spend two weeks in two European cities 
+					and earn <span class="font-semibold text-accent-700">6 ECTS</span>.
+				</p>
+				
+				<!-- Main CTA Button -->
+				<div class="mb-8">
+					<a 
+						href="{base}/apply"
+						class="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-primary-600 to-accent-600 text-white text-lg font-bold rounded-2xl shadow-2xl hover:shadow-primary-500/50 hover:scale-105 transition-all duration-300 group"
+					>
+						<span>Apply Now</span>
+						<svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+						</svg>
+					</a>
+				</div>
+				
+				<div class="flex flex-wrap gap-3 justify-center md:justify-start text-sm">
+					{#each ['6 ECTS', 'Real projects', 'International teams', 'Prague kick‑off', 'Erasmus+ mobility', 'Jury presentation'] as feature}
+						<span class="px-4 py-2 bg-white/80 backdrop-blur-sm rounded-full shadow-sm border border-gray-200 text-gray-700 hover:scale-110 transition-transform duration-300 hover:shadow-md">
+							✓ {feature}
+						</span>
+					{/each}
+				</div>
 			</div>
-			
-			<h1 class="text-5xl md:text-6xl lg:text-7xl font-extrabold mb-6 leading-tight">
-				<span class="block text-gray-900">International Project</span>
-				<span class="block text-gradient mt-2">Workshop</span>
-			</h1>
-			
-			<p class="text-xl md:text-2xl text-gray-600 mb-10 max-w-4xl mx-auto leading-relaxed">
-				Join an <span class="font-semibold text-primary-700">elite international student team</span> for one semester, 
-				tackling <span class="font-semibold text-accent-700">real business challenges</span> from global brands. 
-				With <span class="font-semibold text-primary-700">Erasmus+</span>, spend two weeks in two European cities 
-				and earn <span class="font-semibold text-accent-700">6 ECTS</span>.
-			</p>
-			
-			<!-- Main CTA Button -->
-			<div class="mb-10">
-				<a 
-					href="{base}/apply"
-					class="inline-flex items-center gap-3 px-10 py-5 bg-gradient-to-r from-primary-600 to-accent-600 text-white text-xl font-bold rounded-2xl shadow-2xl hover:shadow-primary-500/50 hover:scale-105 transition-all duration-300 group"
-				>
-					<span>Apply Now</span>
-					<svg class="w-6 h-6 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
-					</svg>
-				</a>
-			</div>
-			
-			<div class="flex flex-wrap gap-4 justify-center text-sm">
-				{#each ['6 ECTS', 'Real projects', 'International teams', 'Prague kick‑off', 'Erasmus+ mobility', 'Jury presentation'] as feature}
-					<span class="px-4 py-2 bg-white/80 backdrop-blur-sm rounded-full shadow-sm border border-gray-200 text-gray-700 hover:scale-110 transition-transform duration-300 hover:shadow-md">
-						✓ {feature}
-					</span>
-				{/each}
+
+			<!-- Right: Business Section -->
+			<div class="text-center md:text-left animate-fade-in-up" style="animation-delay: 0.2s;">
+				<div class="inline-block mb-6">
+					<div class="w-20 h-20 bg-gradient-to-br from-accent-500 to-primary-500 rounded-3xl flex items-center justify-center shadow-2xl">
+						<span class="text-4xl">💼</span>
+					</div>
+				</div>
+				
+				<h2 class="text-3xl md:text-4xl font-bold mb-6">
+					<span class="text-gradient">Are you a business?</span>
+				</h2>
+				
+				<p class="text-lg md:text-xl text-gray-600 mb-8 leading-relaxed">
+					Get <span class="font-semibold text-accent-700">fresh ideas</span> and discover 
+					<span class="font-semibold text-primary-700">talented candidates</span> for your positions. 
+					Our international teams bring innovative perspectives to your business challenges while you 
+					evaluate potential future employees in action.
+				</p>
+				
+				<div class="space-y-4 mb-8">
+					<div class="flex items-start gap-3">
+						<div class="w-12 h-12 bg-primary-100 rounded-xl flex items-center justify-center flex-shrink-0">
+							<span class="text-2xl">💡</span>
+						</div>
+						<div class="text-left">
+							<h3 class="font-semibold text-gray-900 mb-1">Fresh Perspectives</h3>
+							<p class="text-gray-600 text-sm">International teams tackle your challenges with innovative approaches</p>
+						</div>
+					</div>
+					
+					<div class="flex items-start gap-3">
+						<div class="w-12 h-12 bg-accent-100 rounded-xl flex items-center justify-center flex-shrink-0">
+							<span class="text-2xl">🎯</span>
+						</div>
+						<div class="text-left">
+							<h3 class="font-semibold text-gray-900 mb-1">Talent Pipeline</h3>
+							<p class="text-gray-600 text-sm">Identify and recruit exceptional candidates before graduation</p>
+						</div>
+					</div>
+					
+					<div class="flex items-start gap-3">
+						<div class="w-12 h-12 bg-primary-100 rounded-xl flex items-center justify-center flex-shrink-0">
+							<span class="text-2xl">🌍</span>
+						</div>
+						<div class="text-left">
+							<h3 class="font-semibold text-gray-900 mb-1">Global Network</h3>
+							<p class="text-gray-600 text-sm">Connect with top universities across Europe</p>
+						</div>
+					</div>
+				</div>
+				
+				<!-- Business CTA Button -->
+				<div>
+					<a 
+						href="{base}/contact"
+						class="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-accent-600 to-primary-600 text-white text-lg font-bold rounded-2xl shadow-2xl hover:shadow-accent-500/50 hover:scale-105 transition-all duration-300 group"
+					>
+						<span>Contact Us</span>
+						<svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+						</svg>
+					</a>
+				</div>
 			</div>
 		</div>
 	</Container>
