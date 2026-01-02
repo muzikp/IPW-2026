@@ -8,7 +8,7 @@
 			city: 'Prague',
 			country: 'Czech Republic',
 			flag: '🇨🇿',
-			logo: '/images/universities/masaryk_institute_of_advnced_studies.svg',
+			logo: `${base}/images/universities/masaryk_institute_of_advnced_studies.svg`,
 			role: 'Host Institution',
 			website: 'https://www.muvs.cvut.cz/en'
 		},
@@ -17,7 +17,7 @@
 			city: 'Lille',
 			country: 'France',
 			flag: '🇫🇷',
-			logo: '/images/universities/logo-lille.svg',
+			logo: `${base}/images/universities/logo-lille.svg`,
 			role: 'Partner',
 			website: 'https://www.univ-lille.fr/en'
 		},
@@ -26,7 +26,7 @@
 			city: 'Vilnius',
 			country: 'Lithuania',
 			flag: '🇱🇹',
-			logo: '/images/universities/MRU_EN_horizontalus_spalvotas_RGB.svg',
+			logo: `${base}/images/universities/MRU_EN_horizontalus_spalvotas_RGB.svg`,
 			role: 'Partner',
 			website: 'https://www.mruni.eu/en/'
 		},
@@ -35,7 +35,7 @@
 			city: 'Görlitz',
 			country: 'Germany',
 			flag: '🇩🇪',
-			logo: '/images/universities/logo-gorlitz.svg',
+			logo: `${base}/images/universities/logo-gorlitz.svg`,
 			role: 'Academic Partner',
 			website: 'https://www.hszg.de/en'
 		},
@@ -44,7 +44,7 @@
 			city: 'Lyon',
 			country: 'France',
 			flag: '🇫🇷',
-			logo: '/images/universities/logo-lamace.png',
+			logo: `${base}/images/universities/logo-lamace.png`,
 			role: 'Academic Partner',
 			website: 'https://www.lamache.fr'
 		}
