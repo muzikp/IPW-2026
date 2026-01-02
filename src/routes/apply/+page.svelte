@@ -49,23 +49,22 @@
 		try {
 			const formDataToSend = new FormData();
 			
-			// Create message with all form fields
-			const message = `
-First Name: ${formData.firstName}
-Last Name: ${formData.lastName}
-Email: ${formData.email}
-KOD ID: ${formData.kodId}
-Degree Programme: ${formData.degreeProgram}
-Year of Study: ${formData.yearOfStudy}
-English Level: ${formData.englishLevel}
-Motivation: ${formData.motivation || 'Not provided'}
-Erasmus+ Participation: ${formData.erasmusParticipation}
-			`.trim();
-
+			// Required fields
 			formDataToSend.append('name', `${formData.firstName} ${formData.lastName}`);
 			formDataToSend.append('email', formData.email);
-			formDataToSend.append('message', message);
+			formDataToSend.append('message', formData.motivation || 'Not provided');
 			formDataToSend.append('file', formData.cvFile);
+			
+			// Additional fields - API will format these as a table
+			formDataToSend.append('First Name', formData.firstName);
+			formDataToSend.append('Last Name', formData.lastName);
+			formDataToSend.append('KOD ID', formData.kodId);
+			formDataToSend.append('Degree Programme', formData.degreeProgram);
+			formDataToSend.append('Year of Study', formData.yearOfStudy);
+			formDataToSend.append('English Level', formData.englishLevel);
+			formDataToSend.append('Erasmus+ Participation', formData.erasmusParticipation);
+			
+			// Configuration
 			formDataToSend.append('subject', 'IPW 2026 Application');
 			formDataToSend.append('recipientEmail', 'ipw@cvut.cz');
 
@@ -78,6 +77,8 @@ Erasmus+ Participation: ${formData.erasmusParticipation}
 
 			if (response.ok && result.success) {
 				submitSuccess = true;
+				// Scroll to top to show success message
+				window.scrollTo({ top: 0, behavior: 'smooth' });
 				// Reset form
 				formData = {
 					firstName: '',
