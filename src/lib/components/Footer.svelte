@@ -84,7 +84,7 @@
 
 		<!-- Bottom bar -->
 		<div class="pt-8 border-t border-gray-700/50">
-			<div class="flex flex-col md:flex-row justify-between items-center gap-4">
+			<div class="flex flex-col md:flex-row justify-between items-center gap-4 mb-6">
 				<p class="text-sm text-gray-400">
 					© {new Date().getFullYear()} CTU / MIAS – International Project Workshop
 				</p>
@@ -94,6 +94,28 @@
 							{link.label}
 						</a>
 					{/each}
+				</div>
+			</div>
+			
+			<!-- Credits -->
+			<div class="pt-6 border-t border-gray-700/30">
+				<div class="flex flex-col md:flex-row justify-between items-center gap-4">
+					<p class="text-xs text-gray-500">
+						© Czech Technical University in Prague
+					</p>
+					<a 
+						href="https://www.evalytics.cz" 
+						target="_blank" 
+						rel="noopener noreferrer"
+						class="flex items-center gap-2 text-xs text-gray-500 hover:text-gray-300 transition-colors group"
+					>
+						<span>Web by Evalytics</span>
+						<img 
+							src="{base}/images/evalytics.svg" 
+							alt="Evalytics" 
+							class="h-4 opacity-60 group-hover:opacity-100 transition-opacity"
+						/>
+					</a>
 				</div>
 			</div>
 		</div>
