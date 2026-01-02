@@ -199,45 +199,45 @@
 		</div>
 		
 		<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 items-center justify-items-center">
-			<div class="flex items-center justify-center p-6 grayscale hover:grayscale-0 transition-all duration-300 hover:scale-110">
+			<a href="https://www.cofidis.cz/" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center p-6 transition-all duration-300 hover:scale-110">
 				<img src="{base}/images/companies/logo-cofidis.svg" alt="Cofidis" class="max-h-16 w-auto" />
-			</div>
-			<div class="flex items-center justify-center p-6 grayscale hover:grayscale-0 transition-all duration-300 hover:scale-110">
+			</a>
+			<a href="https://www.decathlon.com/" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center p-6 transition-all duration-300 hover:scale-110">
 				<img src="{base}/images/companies/logo-decathlon.svg" alt="Decathlon" class="max-h-16 w-auto" />
-			</div>
-			<div class="flex items-center justify-center p-6 grayscale hover:grayscale-0 transition-all duration-300 hover:scale-110">
+			</a>
+			<a href="https://klimchi.cz/" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center p-6 transition-all duration-300 hover:scale-110">
 				<img src="{base}/images/companies/logo-klimchi.png" alt="Klimchi" class="max-h-16 w-auto" />
-			</div>
-			<div class="flex items-center justify-center p-6 grayscale hover:grayscale-0 transition-all duration-300 hover:scale-110">
+			</a>
+			<a href="https://www.kb.cz/" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center p-6 transition-all duration-300 hover:scale-110">
 				<img src="{base}/images/companies/logo-komercni-banka.png" alt="Komerční Banka" class="max-h-16 w-auto" />
-			</div>
-			<div class="flex items-center justify-center p-6 grayscale hover:grayscale-0 transition-all duration-300 hover:scale-110">
+			</a>
+			<a href="https://www.linet.com/" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center p-6 transition-all duration-300 hover:scale-110">
 				<img src="{base}/images/companies/logo-linet.svg" alt="Linet" class="max-h-16 w-auto" />
-			</div>
-			<div class="flex items-center justify-center p-6 grayscale hover:grayscale-0 transition-all duration-300 hover:scale-110">
+			</a>
+			<a href="https://www.loreal.com/" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center p-6 transition-all duration-300 hover:scale-110">
 				<img src="{base}/images/companies/logo-loreal.svg" alt="L'Oréal" class="max-h-16 w-auto" />
-			</div>
-			<div class="flex items-center justify-center p-6 grayscale hover:grayscale-0 transition-all duration-300 hover:scale-110">
+			</a>
+			<a href="https://www.mattoni.cz/" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center p-6 transition-all duration-300 hover:scale-110">
 				<img src="{base}/images/companies/logo-mattoni.png" alt="Mattoni" class="max-h-16 w-auto" />
-			</div>
-			<div class="flex items-center justify-center p-6 grayscale hover:grayscale-0 transition-all duration-300 hover:scale-110">
+			</a>
+			<a href="https://www.novartis.com/" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center p-6 transition-all duration-300 hover:scale-110">
 				<img src="{base}/images/companies/logo-novartis.svg" alt="Novartis" class="max-h-16 w-auto" />
-			</div>
-			<div class="flex items-center justify-center p-6 grayscale hover:grayscale-0 transition-all duration-300 hover:scale-110">
+			</a>
+			<a href="https://www.renault-trucks.com/" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center p-6 transition-all duration-300 hover:scale-110">
 				<img src="{base}/images/companies/logo-renault-trucks.svg" alt="Renault Trucks" class="max-h-16 w-auto" />
-			</div>
-			<div class="flex items-center justify-center p-6 grayscale hover:grayscale-0 transition-all duration-300 hover:scale-110">
+			</a>
+			<a href="https://www.siemens-energy.com/" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center p-6 transition-all duration-300 hover:scale-110">
 				<img src="{base}/images/companies/logo-siemens-energy.svg" alt="Siemens Energy" class="max-h-16 w-auto" />
-			</div>
-			<div class="flex items-center justify-center p-6 grayscale hover:grayscale-0 transition-all duration-300 hover:scale-110">
+			</a>
+			<a href="https://www.skoda-auto.com/" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center p-6 transition-all duration-300 hover:scale-110">
 				<img src="{base}/images/companies/logo-skoda.svg" alt="Škoda" class="max-h-16 w-auto" />
-			</div>
-			<div class="flex items-center justify-center p-6 grayscale hover:grayscale-0 transition-all duration-300 hover:scale-110">
+			</a>
+			<a href="https://totalenergies.com/" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center p-6 transition-all duration-300 hover:scale-110">
 				<img src="{base}/images/companies/logo-totalenergies.png" alt="TotalEnergies" class="max-h-16 w-auto" />
-			</div>
-			<div class="flex items-center justify-center p-6 grayscale hover:grayscale-0 transition-all duration-300 hover:scale-110">
+			</a>
+			<a href="https://www.volvogroup.com/" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center p-6 transition-all duration-300 hover:scale-110">
 				<img src="{base}/images/companies/logo-volvo.jpg" alt="Volvo" class="max-h-16 w-auto" />
-			</div>
+			</a>
 		</div>
 		
 		<div class="text-center mt-12">
