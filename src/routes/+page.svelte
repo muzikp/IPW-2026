@@ -218,6 +218,9 @@
 			<a href="https://www.volvogroup.com/" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center p-6 transition-all duration-300 hover:scale-110">
 				<img src="{base}/images/companies/logo-volvo.jpg" alt="Volvo" class="max-h-16 w-auto" />
 			</a>
+			<a href="https://www.mattoni.cz/" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center p-6 transition-all duration-300 hover:scale-110">
+				<img src="{base}/images/companies/logo-mattoni.png" alt="Mattoni" class="max-h-16 w-auto" />
+			</a>
 			<a href="https://totalenergies.com/" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center p-6 transition-all duration-300 hover:scale-110">
 				<img src="{base}/images/companies/logo-totalenergies.png" alt="TotalEnergies" class="max-h-16 w-auto" />
 			</a>
@@ -232,9 +235,6 @@
 			</a>
 			<a href="https://www.linet.com/" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center p-6 transition-all duration-300 hover:scale-110">
 				<img src="{base}/images/companies/logo-linet.svg" alt="Linet" class="max-h-16 w-auto" />
-			</a>
-			<a href="https://www.mattoni.cz/" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center p-6 transition-all duration-300 hover:scale-110">
-				<img src="{base}/images/companies/logo-mattoni.png" alt="Mattoni" class="max-h-16 w-auto" />
 			</a>
 			<a href="https://www.renault-trucks.com/" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center p-6 transition-all duration-300 hover:scale-110">
 				<img src="{base}/images/companies/logo-renault-trucks.svg" alt="Renault Trucks" class="max-h-16 w-auto" />
