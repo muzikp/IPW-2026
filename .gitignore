@@ -21,6 +21,9 @@ Thumbs.db
 # Generated files
 static/downloads
 
+# Resources (source files, synced to static during build)
+resources
+
 # Internal documents
 instructions.md
 
