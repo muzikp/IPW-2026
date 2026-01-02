@@ -79,7 +79,7 @@
 					<div class="grid md:grid-cols-[300px_1fr] gap-8 items-start">
 						<!-- Photo -->
 						<div class="relative group">
-							<div class="aspect-square rounded-2xl bg-gradient-to-br from-primary-100 to-accent-100 overflow-hidden relative">
+						<div class="aspect-square rounded-full bg-gradient-to-br from-primary-100 to-accent-100 overflow-hidden relative">
 								{#if organizer.photo && !organizer.photo.startsWith('placeholder')}
 									<!-- Real photo -->
 									<img 
@@ -185,12 +185,12 @@
 						<div class="flex items-start gap-4">
 							<!-- Avatar -->
 							<div class="flex-shrink-0">
-								<div class="w-16 h-16 bg-gradient-to-br from-primary-100 to-accent-100 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 relative overflow-hidden">
-									{#if tutor.photo}
-										<img 
-											src="{base}/images/team/{tutor.photo}" 
-											alt={tutor.name}
-											class="w-full h-full object-cover rounded-2xl"
+							<div class="w-16 h-16 bg-gradient-to-br from-primary-100 to-accent-100 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300 relative overflow-hidden">
+								{#if tutor.photo}
+									<img 
+										src="{base}/images/team/{tutor.photo}" 
+										alt={tutor.name}
+										class="w-full h-full object-cover rounded-full"
 										/>
 									{:else}
 										<div class="absolute inset-0 bg-gradient-to-br from-primary-400 to-accent-400 opacity-10"></div>
