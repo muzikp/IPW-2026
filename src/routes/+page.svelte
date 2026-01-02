@@ -186,6 +186,68 @@
 	</Container>
 </Section>
 
+<!-- Partner Companies Section -->
+<Section class="bg-white">
+	<Container>
+		<div class="text-center mb-12">
+			<h2 class="text-3xl md:text-4xl font-bold mb-4">
+				<span class="text-gradient">Our Partner Companies</span>
+			</h2>
+			<p class="text-lg text-gray-600 max-w-2xl mx-auto">
+				Work on real challenges from leading companies across Europe
+			</p>
+		</div>
+		
+		<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 items-center justify-items-center">
+			<div class="flex items-center justify-center p-6 grayscale hover:grayscale-0 transition-all duration-300 hover:scale-110">
+				<img src="{base}/images/companies/logo-cofidis.svg" alt="Cofidis" class="max-h-16 w-auto" />
+			</div>
+			<div class="flex items-center justify-center p-6 grayscale hover:grayscale-0 transition-all duration-300 hover:scale-110">
+				<img src="{base}/images/companies/logo-decathlon.svg" alt="Decathlon" class="max-h-16 w-auto" />
+			</div>
+			<div class="flex items-center justify-center p-6 grayscale hover:grayscale-0 transition-all duration-300 hover:scale-110">
+				<img src="{base}/images/companies/logo-klimchi.png" alt="Klimchi" class="max-h-16 w-auto" />
+			</div>
+			<div class="flex items-center justify-center p-6 grayscale hover:grayscale-0 transition-all duration-300 hover:scale-110">
+				<img src="{base}/images/companies/logo-komercni-banka.png" alt="Komerční Banka" class="max-h-16 w-auto" />
+			</div>
+			<div class="flex items-center justify-center p-6 grayscale hover:grayscale-0 transition-all duration-300 hover:scale-110">
+				<img src="{base}/images/companies/logo-linet.svg" alt="Linet" class="max-h-16 w-auto" />
+			</div>
+			<div class="flex items-center justify-center p-6 grayscale hover:grayscale-0 transition-all duration-300 hover:scale-110">
+				<img src="{base}/images/companies/logo-loreal.svg" alt="L'Oréal" class="max-h-16 w-auto" />
+			</div>
+			<div class="flex items-center justify-center p-6 grayscale hover:grayscale-0 transition-all duration-300 hover:scale-110">
+				<img src="{base}/images/companies/logo-mattoni.png" alt="Mattoni" class="max-h-16 w-auto" />
+			</div>
+			<div class="flex items-center justify-center p-6 grayscale hover:grayscale-0 transition-all duration-300 hover:scale-110">
+				<img src="{base}/images/companies/logo-novartis.svg" alt="Novartis" class="max-h-16 w-auto" />
+			</div>
+			<div class="flex items-center justify-center p-6 grayscale hover:grayscale-0 transition-all duration-300 hover:scale-110">
+				<img src="{base}/images/companies/logo-renault-trucks.svg" alt="Renault Trucks" class="max-h-16 w-auto" />
+			</div>
+			<div class="flex items-center justify-center p-6 grayscale hover:grayscale-0 transition-all duration-300 hover:scale-110">
+				<img src="{base}/images/companies/logo-siemens-energy.svg" alt="Siemens Energy" class="max-h-16 w-auto" />
+			</div>
+			<div class="flex items-center justify-center p-6 grayscale hover:grayscale-0 transition-all duration-300 hover:scale-110">
+				<img src="{base}/images/companies/logo-skoda.svg" alt="Škoda" class="max-h-16 w-auto" />
+			</div>
+			<div class="flex items-center justify-center p-6 grayscale hover:grayscale-0 transition-all duration-300 hover:scale-110">
+				<img src="{base}/images/companies/logo-totalenergies.png" alt="TotalEnergies" class="max-h-16 w-auto" />
+			</div>
+			<div class="flex items-center justify-center p-6 grayscale hover:grayscale-0 transition-all duration-300 hover:scale-110">
+				<img src="{base}/images/companies/logo-volvo.jpg" alt="Volvo" class="max-h-16 w-auto" />
+			</div>
+		</div>
+		
+		<div class="text-center mt-12">
+			<Button href="{base}/companies" variant="outline">
+				Learn more about partnering with us
+			</Button>
+		</div>
+	</Container>
+</Section>
+
 <!-- Explore More Section -->
 <Section class="relative bg-gradient-to-br from-primary-50 to-accent-50">
 	<Container>
