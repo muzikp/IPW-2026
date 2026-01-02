@@ -13,16 +13,17 @@
 			name: 'Pavel Mužík',
 			role: 'Project Manager',
 			bio: 'Pavel is responsible for project organization and also serves as a tutor. He started as a statistician in education, then led media analysts at the largest Czech media agency for over 10 years. In 2018, he co-founded the successful Czech startup Testuj.to, where he held a position on the Board of Directors until his exit. He specializes in research and data analytics and is co-author of several patents in biomedicine. He has been teaching at MIAS since 2025, including courses in statistics, management fundamentals, How to Build a Startup, and Agile Bootcamp.',
-			photo: 'placeholder-pavel'
+			photo: 'placeholder-pavel',
+			linkedin: 'https://www.linkedin.com/in/pavel-muzik-341a8620/'
 		}
 	];
 
 	const currentTutors = [
-		{ name: 'Petr Fanta', affiliation: 'MIAS', linkedin: null },
-		{ name: 'Petra Jílková', affiliation: 'MIAS', linkedin: null },
+		{ name: 'Petr Fanta', affiliation: 'MIAS', linkedin: 'https://www.linkedin.com/in/petr-fanta-7a36162a/' },
+		{ name: 'Petra Jílková', affiliation: 'MIAS', linkedin: 'https://www.linkedin.com/in/petra-j%C3%ADlkov%C3%A1-2229a8123/' },
 		{ name: 'Falk Maiwald', affiliation: 'Görlitz', linkedin: null },
 		{ name: 'Tinno Schütte', affiliation: 'Görlitz', linkedin: null },
-		{ name: 'Sophie Putcrabey', affiliation: 'La Mache', linkedin: null },
+		{ name: 'Sophie Putcrabey', affiliation: 'La Mache', linkedin: 'https://www.linkedin.com/in/sophie-putcrabey-146515155/' },
 		{ name: 'Jean-François Couvé', affiliation: 'La Mache', linkedin: 'https://www.linkedin.com/in/jfcouve/' },
 		{ name: 'Pavel Mužík', affiliation: 'MIAS', linkedin: 'https://www.linkedin.com/in/pavel-muzik-341a8620/' }
 	];
