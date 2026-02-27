@@ -350,7 +350,7 @@
 		</div>
 		
 		<div class="text-center mt-12">
-			<Button href="{base}/companies" variant="outline">
+			<Button href="{base}/partners" variant="outline">
 				Learn more about partnering with us
 			</Button>
 		</div>
@@ -470,7 +470,7 @@
 		</div>
 		
 		<div class="text-center">
-			<Button href="{base}/universities" variant="gradient" size="lg">
+			<Button href="{base}/about" variant="gradient" size="lg">
 				Meet the university partners
 			</Button>
 		</div>

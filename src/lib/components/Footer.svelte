@@ -5,10 +5,8 @@
 	const quickLinks = [
 		{ label: 'Home', href: `${base}/` },
 		{ label: 'Students', href: `${base}/students` },
-		{ label: 'Companies', href: `${base}/companies` },
-		{ label: 'University partners', href: `${base}/universities` },
+		{ label: 'Partners', href: `${base}/partners` },
 		{ label: 'Projects', href: `${base}/projects` },
-		{ label: 'Archive', href: `${base}/archive` },
 		{ label: 'Contact', href: `${base}/contact` }
 	];
 </script>
