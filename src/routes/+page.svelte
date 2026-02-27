@@ -47,6 +47,15 @@
 			logo: `${base}/images/universities/logo-lamace.png`,
 			role: 'Academic Partner',
 			website: 'https://www.lamache.fr'
+		},
+		{
+			name: 'LUMSA Università',
+			city: 'Rome',
+			country: 'Italy',
+			flag: '🇮🇹',
+			logo: `${base}/images/universities/logo-lumsa.svg`,
+			role: 'Academic Partner',
+			website: 'https://www.lumsa.it/'
 		}
 	];
 </script>
@@ -96,7 +105,7 @@
 				<p class="text-lg md:text-xl text-gray-600 mb-8 leading-relaxed">
 					Join an <span class="font-semibold text-primary-700">elite international student team</span> for one semester, 
 					tackling <span class="font-semibold text-accent-700">real business challenges</span> from global brands. 
-					With <span class="font-semibold text-primary-700">Erasmus+</span>, spend two weeks in two European cities 
+					Spend <span class="font-semibold text-primary-700">two weeks in European cities</span> 
 					and earn <span class="font-semibold text-accent-700">6 ECTS</span>.
 				</p>
 				
@@ -114,7 +123,7 @@
 				</div>
 				
 				<div class="flex flex-wrap gap-3 justify-center md:justify-start text-sm">
-					{#each ['6 ECTS', 'Real projects', 'International teams', 'Prague kick‑off', 'Erasmus+ mobility', 'Jury presentation'] as feature}
+					{#each ['6 ECTS', 'Real projects', 'International teams', 'Prague kick‑off', 'European mobility', 'Jury presentation'] as feature}
 						<span class="px-4 py-2 bg-white/80 backdrop-blur-sm rounded-full shadow-sm border border-gray-200 text-gray-700 hover:scale-110 transition-transform duration-300 hover:shadow-md">
 							✓ {feature}
 						</span>
@@ -144,7 +153,9 @@
 				<div class="space-y-4 mb-8">
 					<div class="flex items-start gap-3">
 						<div class="w-12 h-12 bg-primary-100 rounded-xl flex items-center justify-center flex-shrink-0">
-							<span class="text-2xl">💡</span>
+							<svg class="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+							</svg>
 						</div>
 						<div class="text-left">
 							<h3 class="font-semibold text-gray-900 mb-1">Fresh Perspectives</h3>
@@ -154,7 +165,9 @@
 					
 					<div class="flex items-start gap-3">
 						<div class="w-12 h-12 bg-accent-100 rounded-xl flex items-center justify-center flex-shrink-0">
-							<span class="text-2xl">🎯</span>
+							<svg class="w-6 h-6 text-accent-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+							</svg>
 						</div>
 						<div class="text-left">
 							<h3 class="font-semibold text-gray-900 mb-1">Talent Pipeline</h3>
@@ -164,7 +177,9 @@
 					
 					<div class="flex items-start gap-3">
 						<div class="w-12 h-12 bg-primary-100 rounded-xl flex items-center justify-center flex-shrink-0">
-							<span class="text-2xl">🌍</span>
+							<svg class="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+							</svg>
 						</div>
 						<div class="text-left">
 							<h3 class="font-semibold text-gray-900 mb-1">Global Network</h3>
@@ -238,7 +253,7 @@
 						<div>
 							<h3 class="text-xl font-bold text-gray-900 mb-3">Mobility Element</h3>
 							<p class="text-gray-600 leading-relaxed">
-								Intensive in‑person start in Prague and a final week at a partner university abroad with Erasmus+ support.
+								Intensive in‑person start in Prague and a final week at a partner university abroad.
 							</p>
 						</div>
 					</div>
@@ -326,6 +341,12 @@
 			<a href="https://www.rheagroup.com/" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center p-6 transition-all duration-300 hover:scale-110">
 				<img src="{base}/images/companies/logo-rhea-group.png" alt="Rhea Group" class="max-h-16 w-auto" />
 			</a>
+			<a href="https://www.allwyn.com/" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center p-6 transition-all duration-300 hover:scale-110">
+				<img src="{base}/images/companies/logo-allwyn.svg" alt="Allwyn" class="max-h-16 w-auto" />
+			</a>
+			<a href="https://www.veolia.com/" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center p-6 transition-all duration-300 hover:scale-110">
+				<img src="{base}/images/companies/logo-veolia.svg" alt="Veolia" class="max-h-16 w-auto" />
+			</a>
 		</div>
 		
 		<div class="text-center mt-12">
@@ -336,32 +357,7 @@
 	</Container>
 </Section>
 
-<!-- Explore More Section -->
-<Section class="relative bg-gradient-to-br from-primary-50 to-accent-50">
-	<Container>
-		<div class="text-center mb-12">
-			<h2 class="text-3xl md:text-4xl font-bold mb-4">
-				<span class="text-gradient">Explore More</span>
-			</h2>
-			<p class="text-lg text-gray-600 max-w-2xl mx-auto">
-				Learn more about IPW from different perspectives
-			</p>
-		</div>
-		
-		<div class="flex flex-col sm:flex-row gap-4 justify-center">
-			<Button href="{base}/students" size="lg" variant="gradient">
-				<span class="flex items-center gap-2">
-					For students
-					<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
-					</svg>
-				</span>
-			</Button>
-			<Button href="{base}/companies" variant="secondary" size="lg">For companies</Button>
-			<Button href="{base}/universities" variant="outline" size="lg">For universities</Button>
-		</div>
-	</Container>
-</Section>
+
 
 <!-- How it works -->
 <Section class="relative bg-gradient-to-br from-gray-50 to-primary-50/30">
@@ -434,106 +430,9 @@
 	</Container>
 </Section>
 
-<!-- Erasmus+ mobility -->
-<Section class="bg-gradient-to-br from-primary-50 via-white to-accent-50 relative overflow-hidden">
-	<!-- Decorative background elements -->
-	<div class="absolute top-0 right-0 w-72 h-72 bg-primary-200 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-float"></div>
-	<div class="absolute bottom-0 left-0 w-72 h-72 bg-accent-200 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-float" style="animation-delay: 3s;"></div>
-	
-	<Container>
-		<div class="relative">
-			<div class="flex items-center gap-4 mb-6">
-				<div class="w-16 h-16 bg-gradient-to-br from-primary-500 to-accent-500 rounded-2xl flex items-center justify-center shadow-xl">
-					<span class="text-3xl">✈️</span>
-				</div>
-				<h2 class="text-3xl md:text-4xl font-bold">
-					<span class="bg-gradient-to-r from-primary-600 to-accent-600 bg-clip-text text-transparent">
-						Erasmus+ mobility
-					</span>
-				</h2>
-			</div>
-			
-			<Card class="glass">
-				<div class="flex items-start gap-6">
-					<div class="flex-shrink-0 w-12 h-12 bg-primary-100 rounded-xl flex items-center justify-center">
-						<svg class="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/>
-						</svg>
-					</div>
-					<div>
-						<p class="text-lg text-gray-700 leading-relaxed">
-							IPW includes an <span class="font-semibold text-primary-700">Erasmus+ mobility element</span>—students typically travel abroad at least once as
-							part of the course. Partner universities and destinations vary by cohort. Because Erasmus+
-							rules and grant rates are updated each year, the website communicates the principle (mobility
-							is included) while linking CTU students to official guidance and a contact person for
-							cohort‑specific questions.
-						</p>
-					</div>
-				</div>
-			</Card>
-		</div>
-	</Container>
-</Section>
 
-<!-- Who it is for -->
-<Section>
-	<Container>
-		<div class="text-center mb-12">
-			<h2 class="text-3xl md:text-4xl font-bold mb-4">
-				<span class="bg-gradient-to-r from-primary-600 to-accent-600 bg-clip-text text-transparent">
-					Who it is for
-				</span>
-			</h2>
-			<p class="text-lg text-gray-600 max-w-2xl mx-auto">
-				IPW brings together diverse participants with a common goal
-			</p>
-		</div>
-		
-		<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-			<Card class="group relative overflow-hidden">
-				<div class="absolute top-0 right-0 w-24 h-24 bg-primary-100 rounded-full -translate-y-12 translate-x-12 group-hover:scale-150 transition-transform duration-500"></div>
-				<div class="relative">
-					<div class="w-14 h-14 bg-gradient-to-br from-primary-500 to-primary-600 rounded-2xl flex items-center justify-center mb-4 shadow-lg group-hover:scale-110 transition-transform duration-300">
-						<span class="text-2xl">🎓</span>
-					</div>
-					<h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-primary-600 transition-colors">Students</h3>
-					<p class="text-gray-700 leading-relaxed">
-						Who want a real project with real stakeholders, enjoy teamwork, and can commit to a
-						semester‑long collaboration in English.
-					</p>
-				</div>
-			</Card>
-			
-			<Card class="group relative overflow-hidden">
-				<div class="absolute top-0 right-0 w-24 h-24 bg-accent-100 rounded-full -translate-y-12 translate-x-12 group-hover:scale-150 transition-transform duration-500"></div>
-				<div class="relative">
-					<div class="w-14 h-14 bg-gradient-to-br from-accent-500 to-accent-600 rounded-2xl flex items-center justify-center mb-4 shadow-lg group-hover:scale-110 transition-transform duration-300">
-						<span class="text-2xl">🏢</span>
-					</div>
-					<h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-accent-600 transition-colors">Companies</h3>
-					<p class="text-gray-700 leading-relaxed">
-						That have a concrete question worth exploring, can provide a mentor and basic access to
-						context/data, and value a structured recommendation.
-					</p>
-				</div>
-			</Card>
-			
-			<Card class="group relative overflow-hidden">
-				<div class="absolute top-0 right-0 w-24 h-24 bg-primary-100 rounded-full -translate-y-12 translate-x-12 group-hover:scale-150 transition-transform duration-500"></div>
-				<div class="relative">
-					<div class="w-14 h-14 bg-gradient-to-br from-primary-600 to-accent-500 rounded-2xl flex items-center justify-center mb-4 shadow-lg group-hover:scale-110 transition-transform duration-300">
-						<span class="text-2xl">🏛️</span>
-					</div>
-					<h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-primary-600 transition-colors">University partners</h3>
-					<p class="text-gray-700 leading-relaxed">
-						Who want an established, repeatable format for international project work with a mobility
-						element.
-					</p>
-				</div>
-			</Card>
-		</div>
-	</Container>
-</Section>
+
+
 
 <!-- Partner universities -->
 <Section class="bg-gray-50">
@@ -543,12 +442,7 @@
 				<span class="bg-gradient-to-r from-primary-600 to-accent-600 bg-clip-text text-transparent">
 					Partner universities
 				</span>
-				<span class="text-gray-600 text-xl block mt-2">(this cohort)</span>
 			</h2>
-			<p class="text-lg text-gray-600 max-w-2xl mx-auto">
-				Each cohort collaborates with a set of European university partners. The list below reflects
-				the upcoming cohort.
-			</p>
 		</div>
 		
 		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
@@ -583,313 +477,6 @@
 	</Container>
 </Section>
 
-<!-- This year's projects -->
-<Section>
-	<Container>
-		<div class="text-center mb-12">
-			<h2 class="text-3xl md:text-4xl font-bold mb-4">
-				<span class="bg-gradient-to-r from-primary-600 to-accent-600 bg-clip-text text-transparent">
-					This year's projects
-				</span>
-			</h2>
-			<p class="text-lg text-gray-600 max-w-2xl mx-auto">
-				Every team works on one company-submitted challenge. Topics vary across strategy, operations,
-				marketing, HR, innovation, sustainability, and data.
-			</p>
-		</div>
-		
-		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-			<Card class="group relative overflow-hidden">
-				<div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-primary-100 to-transparent rounded-full -translate-y-16 translate-x-16 group-hover:scale-150 transition-transform duration-500"></div>
-				<div class="relative">
-					<div class="flex items-center gap-3 mb-4">
-						<div class="w-10 h-10 bg-primary-600 rounded-lg flex items-center justify-center text-white font-bold text-sm">
-							01
-						</div>
-						<h3 class="text-lg font-bold text-gray-900 group-hover:text-primary-600 transition-colors">
-							[Company]
-						</h3>
-					</div>
-					<p class="text-gray-600 mb-4 leading-relaxed">One‑sentence challenge summary</p>
-					<div class="flex gap-2 flex-wrap">
-						<Tag>HR</Tag>
-						<Tag>Branding</Tag>
-					</div>
-				</div>
-			</Card>
-			
-			<Card class="group relative overflow-hidden">
-				<div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-accent-100 to-transparent rounded-full -translate-y-16 translate-x-16 group-hover:scale-150 transition-transform duration-500"></div>
-				<div class="relative">
-					<div class="flex items-center gap-3 mb-4">
-						<div class="w-10 h-10 bg-accent-600 rounded-lg flex items-center justify-center text-white font-bold text-sm">
-							02
-						</div>
-						<h3 class="text-lg font-bold text-gray-900 group-hover:text-accent-600 transition-colors">
-							[Company]
-						</h3>
-					</div>
-					<p class="text-gray-600 mb-4 leading-relaxed">One‑sentence challenge summary</p>
-					<div class="flex gap-2 flex-wrap">
-						<Tag>Sustainability</Tag>
-						<Tag>Strategy</Tag>
-					</div>
-				</div>
-			</Card>
-			
-			<Card class="group relative overflow-hidden">
-				<div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-primary-100 to-transparent rounded-full -translate-y-16 translate-x-16 group-hover:scale-150 transition-transform duration-500"></div>
-				<div class="relative">
-					<div class="flex items-center gap-3 mb-4">
-						<div class="w-10 h-10 bg-gradient-to-br from-primary-600 to-accent-600 rounded-lg flex items-center justify-center text-white font-bold text-sm">
-							03
-						</div>
-						<h3 class="text-lg font-bold text-gray-900 group-hover:text-primary-600 transition-colors">
-							[Company]
-						</h3>
-					</div>
-					<p class="text-gray-600 mb-4 leading-relaxed">One‑sentence challenge summary</p>
-					<div class="flex gap-2 flex-wrap">
-						<Tag>Operations</Tag>
-						<Tag>Data</Tag>
-					</div>
-				</div>
-			</Card>
-		</div>
-		<div class="text-center">
-			<Button href="{base}/projects" variant="gradient" size="lg">
-				View all projects
-			</Button>
-		</div>
-	</Container>
-</Section>
-
-<!-- Outcomes & benefits -->
-<Section class="bg-gradient-to-br from-gray-50 to-white">
-	<Container>
-		<div class="text-center mb-12">
-			<h2 class="text-3xl md:text-4xl font-bold mb-4">
-				<span class="bg-gradient-to-r from-primary-600 to-accent-600 bg-clip-text text-transparent">
-					Outcomes & benefits
-				</span>
-			</h2>
-			<p class="text-lg text-gray-600 max-w-2xl mx-auto">
-				Real-world experience and tangible outcomes for all participants
-			</p>
-		</div>
-		
-		<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-			<Card class="group hover:border-primary-300 transition-all">
-				<div class="mb-4">
-					<div class="w-12 h-12 bg-gradient-to-br from-primary-500 to-primary-600 rounded-2xl flex items-center justify-center mb-4 shadow-lg group-hover:scale-110 transition-transform">
-						<span class="text-2xl">🎓</span>
-					</div>
-					<h3 class="text-xl font-bold text-gray-900 mb-3">For students</h3>
-				</div>
-				<div class="space-y-3">
-					<div class="flex items-start gap-3">
-						<div class="flex-shrink-0 w-6 h-6 bg-primary-100 rounded-full flex items-center justify-center mt-0.5">
-							<svg class="w-3 h-3 text-primary-600" fill="currentColor" viewBox="0 0 20 20">
-								<path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-							</svg>
-						</div>
-						<p class="text-gray-700 text-sm leading-relaxed">
-							Earn <strong>6 ECTS</strong> while building portfolio‑ready outcome
-						</p>
-					</div>
-					<div class="flex items-start gap-3">
-						<div class="flex-shrink-0 w-6 h-6 bg-primary-100 rounded-full flex items-center justify-center mt-0.5">
-							<svg class="w-3 h-3 text-primary-600" fill="currentColor" viewBox="0 0 20 20">
-								<path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-							</svg>
-						</div>
-						<p class="text-gray-700 text-sm leading-relaxed">
-							Practice problem framing, research, and professional presenting
-						</p>
-					</div>
-					<div class="flex items-start gap-3">
-						<div class="flex-shrink-0 w-6 h-6 bg-primary-100 rounded-full flex items-center justify-center mt-0.5">
-							<svg class="w-3 h-3 text-primary-600" fill="currentColor" viewBox="0 0 20 20">
-								<path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-							</svg>
-						</div>
-						<p class="text-gray-700 text-sm leading-relaxed">
-							Work in international team under real constraints
-						</p>
-					</div>
-				</div>
-			</Card>
-			
-			<Card class="group hover:border-accent-300 transition-all">
-				<div class="mb-4">
-					<div class="w-12 h-12 bg-gradient-to-br from-accent-500 to-accent-600 rounded-2xl flex items-center justify-center mb-4 shadow-lg group-hover:scale-110 transition-transform">
-						<span class="text-2xl">🏢</span>
-					</div>
-					<h3 class="text-xl font-bold text-gray-900 mb-3">For companies</h3>
-				</div>
-				<div class="space-y-3">
-					<div class="flex items-start gap-3">
-						<div class="flex-shrink-0 w-6 h-6 bg-accent-100 rounded-full flex items-center justify-center mt-0.5">
-							<svg class="w-3 h-3 text-accent-600" fill="currentColor" viewBox="0 0 20 20">
-								<path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-							</svg>
-						</div>
-						<p class="text-gray-700 text-sm leading-relaxed">
-							Receive structured analysis and actionable recommendations
-						</p>
-					</div>
-					<div class="flex items-start gap-3">
-						<div class="flex-shrink-0 w-6 h-6 bg-accent-100 rounded-full flex items-center justify-center mt-0.5">
-							<svg class="w-3 h-3 text-accent-600" fill="currentColor" viewBox="0 0 20 20">
-								<path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-							</svg>
-						</div>
-						<p class="text-gray-700 text-sm leading-relaxed">
-							Gain visibility among talented students
-						</p>
-					</div>
-					<div class="flex items-start gap-3">
-						<div class="flex-shrink-0 w-6 h-6 bg-accent-100 rounded-full flex items-center justify-center mt-0.5">
-							<svg class="w-3 h-3 text-accent-600" fill="currentColor" viewBox="0 0 20 20">
-								<path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-							</svg>
-						</div>
-						<p class="text-gray-700 text-sm leading-relaxed">
-							Strengthen your employer brand
-						</p>
-					</div>
-				</div>
-			</Card>
-			
-			<Card class="group hover:border-primary-300 transition-all">
-				<div class="mb-4">
-					<div class="w-12 h-12 bg-gradient-to-br from-primary-600 to-accent-500 rounded-2xl flex items-center justify-center mb-4 shadow-lg group-hover:scale-110 transition-transform">
-						<span class="text-2xl">🏛️</span>
-					</div>
-					<h3 class="text-xl font-bold text-gray-900 mb-3">For university partners</h3>
-				</div>
-				<div class="space-y-3">
-					<div class="flex items-start gap-3">
-						<div class="flex-shrink-0 w-6 h-6 bg-primary-100 rounded-full flex items-center justify-center mt-0.5">
-							<svg class="w-3 h-3 text-primary-600" fill="currentColor" viewBox="0 0 20 20">
-								<path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-							</svg>
-						</div>
-						<p class="text-gray-700 text-sm leading-relaxed">
-							Strong course format supporting internationalization
-						</p>
-					</div>
-					<div class="flex items-start gap-3">
-						<div class="flex-shrink-0 w-6 h-6 bg-primary-100 rounded-full flex items-center justify-center mt-0.5">
-							<svg class="w-3 h-3 text-primary-600" fill="currentColor" viewBox="0 0 20 20">
-								<path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-							</svg>
-						</div>
-						<p class="text-gray-700 text-sm leading-relaxed">
-							Supports mobility with shared teaching
-						</p>
-					</div>
-					<div class="flex items-start gap-3">
-						<div class="flex-shrink-0 w-6 h-6 bg-primary-100 rounded-full flex items-center justify-center mt-0.5">
-							<svg class="w-3 h-3 text-primary-600" fill="currentColor" viewBox="0 0 20 20">
-								<path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-							</svg>
-						</div>
-						<p class="text-gray-700 text-sm leading-relaxed">
-							Evaluation shared across institutions
-						</p>
-					</div>
-				</div>
-			</Card>
-		</div>
-	</Container>
-</Section>
-
-<!-- Dates & application -->
-<Section class="relative overflow-hidden">
-	<!-- Decorative background -->
-	<div class="absolute inset-0 bg-gradient-to-br from-primary-50 via-white to-accent-50"></div>
-	<div class="absolute top-0 right-0 w-96 h-96 bg-primary-200 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-float"></div>
-	<div class="absolute bottom-0 left-0 w-96 h-96 bg-accent-200 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-float" style="animation-delay: 2s;"></div>
-	
-	<Container>
-		<div class="relative">
-			<div class="text-center mb-12">
-				<h2 class="text-3xl md:text-4xl font-bold mb-4">
-					<span class="bg-gradient-to-r from-primary-600 to-accent-600 bg-clip-text text-transparent">
-						Dates & application
-					</span>
-				</h2>
-				<p class="text-lg text-gray-600 max-w-2xl mx-auto">
-					Key dates are published for each cohort, together with the current application requirements.
-				</p>
-			</div>
-			
-			<Card class="glass mb-8">
-				<h3 class="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
-					<div class="w-10 h-10 bg-gradient-to-br from-primary-500 to-accent-500 rounded-xl flex items-center justify-center">
-						<span class="text-xl">📅</span>
-					</div>
-					Cohort timeline
-				</h3>
-				<div class="grid gap-4">
-					<div class="flex items-start gap-4 p-4 bg-white/50 rounded-lg hover:bg-white/80 transition-colors">
-						<div class="flex-shrink-0 w-8 h-8 bg-primary-100 rounded-lg flex items-center justify-center">
-							<span class="text-primary-600 font-bold text-sm">1</span>
-						</div>
-						<div>
-							<div class="font-semibold text-gray-900">Applications open</div>
-							<div class="text-gray-600 text-sm">[date]</div>
-						</div>
-					</div>
-					<div class="flex items-start gap-4 p-4 bg-white/50 rounded-lg hover:bg-white/80 transition-colors">
-						<div class="flex-shrink-0 w-8 h-8 bg-primary-100 rounded-lg flex items-center justify-center">
-							<span class="text-primary-600 font-bold text-sm">2</span>
-						</div>
-						<div>
-							<div class="font-semibold text-gray-900">Application deadline</div>
-							<div class="text-gray-600 text-sm">[date]</div>
-						</div>
-					</div>
-					<div class="flex items-start gap-4 p-4 bg-white/50 rounded-lg hover:bg-white/80 transition-colors">
-						<div class="flex-shrink-0 w-8 h-8 bg-accent-100 rounded-lg flex items-center justify-center">
-							<span class="text-accent-600 font-bold text-sm">3</span>
-						</div>
-						<div>
-							<div class="font-semibold text-gray-900">Interviews / selection</div>
-							<div class="text-gray-600 text-sm">[range]</div>
-						</div>
-					</div>
-					<div class="flex items-start gap-4 p-4 bg-white/50 rounded-lg hover:bg-white/80 transition-colors">
-						<div class="flex-shrink-0 w-8 h-8 bg-accent-100 rounded-lg flex items-center justify-center">
-							<span class="text-accent-600 font-bold text-sm">4</span>
-						</div>
-						<div>
-							<div class="font-semibold text-gray-900">Results published</div>
-							<div class="text-gray-600 text-sm">[date]</div>
-						</div>
-					</div>
-					<div class="flex items-start gap-4 p-4 bg-gradient-to-r from-primary-50 to-accent-50 rounded-lg border-2 border-primary-200">
-						<div class="flex-shrink-0 w-8 h-8 bg-gradient-to-br from-primary-500 to-accent-500 rounded-lg flex items-center justify-center shadow-lg">
-							<span class="text-white font-bold text-sm">🚀</span>
-						</div>
-						<div>
-							<div class="font-bold text-gray-900">Kick‑off week (Prague)</div>
-							<div class="text-gray-700 text-sm font-medium">[range]</div>
-						</div>
-					</div>
-				</div>
-			</Card>
-			
-			<div class="mt-8 text-center">
-				<Button href="{base}/students" variant="gradient" size="lg">
-					How to apply →
-				</Button>
-			</div>
-		</div>
-	</Container>
-</Section>
-
 <!-- Testimonials -->
 <Section class="bg-gray-50">
 	<Container>
@@ -902,23 +489,21 @@
 			<p class="text-lg text-gray-600">Hear from past participants</p>
 		</div>
 		
-		<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 			<Card class="relative overflow-hidden group">
 				<div class="absolute top-0 left-0 w-20 h-20 bg-primary-100 rounded-full -translate-x-10 -translate-y-10 group-hover:scale-150 transition-transform duration-500"></div>
 				<div class="relative">
-					<svg class="w-10 h-10 text-primary-200 mb-4" fill="currentColor" viewBox="0 0 24 24">
+					<svg class="w-8 h-8 text-primary-200 mb-3" fill="currentColor" viewBox="0 0 24 24">
 						<path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
 					</svg>
-					<p class="text-lg text-gray-700 italic mb-6 leading-relaxed">
-						"[Insert meaningful testimonial from a student about their IPW experience, international collaboration, and real-world learning]"
+					<p class="text-base text-gray-700 italic mb-4 leading-relaxed">
+						"The IPW gave both French and Czech students the opportunity to join forces and collaborate on real business case. A successful first glimpse into the professional world they will remember !"
 					</p>
-					<div class="flex items-center gap-4">
-						<div class="w-12 h-12 bg-gradient-to-br from-primary-500 to-primary-600 rounded-full flex items-center justify-center text-white font-bold">
-							S
-						</div>
+					<div class="flex items-center gap-3">
+						<img src="https://www.muvs.cvut.cz/wp-content/uploads/2022/06/portrety_kruh_12.jpg" alt="Sylvia Casado" class="w-10 h-10 rounded-full object-cover" />
 						<div>
-							<div class="font-semibold text-gray-900">Student Name</div>
-							<div class="text-sm text-gray-600">[University], IPW 2025</div>
+							<div class="font-semibold text-gray-900 text-sm">Sylvia Casado</div>
+							<div class="text-xs text-gray-600">Associate professor</div>
 						</div>
 					</div>
 				</div>
@@ -927,19 +512,93 @@
 			<Card class="relative overflow-hidden group">
 				<div class="absolute top-0 left-0 w-20 h-20 bg-accent-100 rounded-full -translate-x-10 -translate-y-10 group-hover:scale-150 transition-transform duration-500"></div>
 				<div class="relative">
-					<svg class="w-10 h-10 text-accent-200 mb-4" fill="currentColor" viewBox="0 0 24 24">
+					<svg class="w-8 h-8 text-accent-200 mb-3" fill="currentColor" viewBox="0 0 24 24">
 						<path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
 					</svg>
-					<p class="text-lg text-gray-700 italic mb-6 leading-relaxed">
-						"[Insert testimonial from a company representative about the value of IPW projects and student insights]"
+					<p class="text-base text-gray-700 italic mb-4 leading-relaxed">
+						"I enjoyed IPW despite some complications. It was a unique opportunity that gave me so much. I was excited about the cooperation in an internationally and culturally diverse environment, which broadened my horizons."
 					</p>
-					<div class="flex items-center gap-4">
-						<div class="w-12 h-12 bg-gradient-to-br from-accent-500 to-accent-600 rounded-full flex items-center justify-center text-white font-bold">
-							C
-						</div>
+					<div class="flex items-center gap-3">
+						<img src="https://www.muvs.cvut.cz/wp-content/uploads/2022/06/Jian-Wei-Qiu.jpg" alt="Jian Wei Qiu" class="w-10 h-10 rounded-full object-cover" />
 						<div>
-							<div class="font-semibold text-gray-900">[Name], [Role]</div>
-							<div class="text-sm text-gray-600">[Company]</div>
+							<div class="font-semibold text-gray-900 text-sm">Jian Wei Qiu</div>
+							<div class="text-xs text-gray-600">Student</div>
+						</div>
+					</div>
+				</div>
+			</Card>
+			
+			<Card class="relative overflow-hidden group">
+				<div class="absolute top-0 left-0 w-20 h-20 bg-primary-100 rounded-full -translate-x-10 -translate-y-10 group-hover:scale-150 transition-transform duration-500"></div>
+				<div class="relative">
+					<svg class="w-8 h-8 text-primary-200 mb-3" fill="currentColor" viewBox="0 0 24 24">
+						<path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+					</svg>
+					<p class="text-base text-gray-700 italic mb-4 leading-relaxed">
+						"This European project opened my eyes to what management really is. We do not work in the same way in the two countries. In France, we are taught to write a report while respecting a certain formalism. In the Czech Republic, they are much more synthetic."
+					</p>
+					<div class="flex items-center gap-3">
+						<img src="https://www.muvs.cvut.cz/wp-content/uploads/2022/06/Oumar.jpg" alt="Cheikh Oumar" class="w-10 h-10 rounded-full object-cover" />
+						<div>
+							<div class="font-semibold text-gray-900 text-sm">Cheikh Oumar</div>
+							<div class="text-xs text-gray-600">Student</div>
+						</div>
+					</div>
+				</div>
+			</Card>
+			
+			<Card class="relative overflow-hidden group">
+				<div class="absolute top-0 left-0 w-20 h-20 bg-accent-100 rounded-full -translate-x-10 -translate-y-10 group-hover:scale-150 transition-transform duration-500"></div>
+				<div class="relative">
+					<svg class="w-8 h-8 text-accent-200 mb-3" fill="currentColor" viewBox="0 0 24 24">
+						<path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+					</svg>
+					<p class="text-base text-gray-700 italic mb-4 leading-relaxed">
+						"PW gave me a unique opportunity to meet interesting students from around the world, look behind the scenes of an internationally known company and learn more about myself, my strengths and weaknesses, all within a creative and productive environment with like-minded people."
+					</p>
+					<div class="flex items-center gap-3">
+						<img src="https://www.muvs.cvut.cz/wp-content/uploads/2023/08/krutolova-ipw.png" alt="Emma Victoria Krutilová" class="w-10 h-10 rounded-full object-cover" />
+						<div>
+							<div class="font-semibold text-gray-900 text-sm">Emma Victoria Krutilová</div>
+							<div class="text-xs text-gray-600">Student</div>
+						</div>
+					</div>
+				</div>
+			</Card>
+			
+			<Card class="relative overflow-hidden group">
+				<div class="absolute top-0 left-0 w-20 h-20 bg-primary-100 rounded-full -translate-x-10 -translate-y-10 group-hover:scale-150 transition-transform duration-500"></div>
+				<div class="relative">
+					<svg class="w-8 h-8 text-primary-200 mb-3" fill="currentColor" viewBox="0 0 24 24">
+						<path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+					</svg>
+					<p class="text-base text-gray-700 italic mb-4 leading-relaxed">
+						"I was surprised by the amount of experience I had gained during such a short period of time. Thanks to the IPW I learned many useful skills for my future career in different fields such as communication, international cooperation and leadership. This project is proof that business life can be kicked off during studies in a pleasant way."
+					</p>
+					<div class="flex items-center gap-3">
+						<img src="https://www.muvs.cvut.cz/wp-content/uploads/2023/08/zdenovec-e.png" alt="Eduard Zdánovec" class="w-10 h-10 rounded-full object-cover" />
+						<div>
+							<div class="font-semibold text-gray-900 text-sm">Eduard Zdánovec</div>
+							<div class="text-xs text-gray-600">Student</div>
+						</div>
+					</div>
+				</div>
+			</Card>
+			
+			<Card class="relative overflow-hidden group">
+				<div class="absolute top-0 left-0 w-20 h-20 bg-accent-100 rounded-full -translate-x-10 -translate-y-10 group-hover:scale-150 transition-transform duration-500"></div>
+				<div class="relative">
+					<svg class="w-8 h-8 text-accent-200 mb-3" fill="currentColor" viewBox="0 0 24 24">
+						<path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+					</svg>
+					<p class="text-base text-gray-700 italic mb-4 leading-relaxed">
+						"Thanks to IPW, I was able to experience what it is like to work in a team with French colleagues. The international composition of the team gave us the opportunity to come up with creative proposals for solving tasks. Thanks to this project, I gained a lot of valuable experience, from which I draw in my current work."
+					</p>
+					<div class="flex items-center gap-3">
+						<img src="https://www.muvs.cvut.cz/wp-content/uploads/2022/06/portrety_kruh_15.jpg" alt="Miroslav Krček" class="w-10 h-10 rounded-full object-cover" />
+						<div>
+							<div class="font-semibold text-gray-900 text-sm">Miroslav Krček</div>
+							<div class="text-xs text-gray-600">Student</div>
 						</div>
 					</div>
 				</div>

@@ -90,7 +90,7 @@
 				fileSize: formData.cvFile.size
 			});
 
-			const response = await fetch('https://5dsrywp9e5.execute-api.eu-central-1.amazonaws.com/submit', {
+			const response = await fetch('https://api.evalytics.cz/v1/form-to-email/submit', {
 				method: 'POST',
 				headers: {
 					'Content-Type': 'application/json'

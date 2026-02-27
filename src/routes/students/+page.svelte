@@ -16,7 +16,7 @@
 				Solve a real company challenge in an international team, travel abroad with Erasmus+, and
 				earn 6 ECTS.
 			</p>
-			<Button href="{base}/contact">How to apply</Button>
+			<Button href="{base}/apply">Apply now</Button>
 		</div>
 	</Container>
 </Section>

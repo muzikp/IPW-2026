@@ -79,11 +79,11 @@
 				<div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-gray-700">
 					<div>
 						<p class="font-semibold mb-2">CZK Account</p>
-						<p class="font-mono text-sm">64450-6007550002/6300</p>
+						<p class="font-mono text-sm">19-8491620277/0100</p>
 					</div>
 					<div>
 						<p class="font-semibold mb-2">EUR Account</p>
-						<p class="font-mono text-sm">64450-6007550010/6300</p>
+						<p class="font-mono text-sm">115-840890237/0100</p>
 					</div>
 				</div>
 			</Card>

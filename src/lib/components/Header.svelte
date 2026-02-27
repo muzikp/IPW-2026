@@ -8,10 +8,7 @@
 	const navItems = [
 		{ label: 'Home', href: `${base}/` },
 		{ label: 'Students', href: `${base}/students` },
-		{ label: 'Companies', href: `${base}/companies` },
-		{ label: 'University partners', href: `${base}/universities` },
 		{ label: 'Projects', href: `${base}/projects` },
-		{ label: 'Archive', href: `${base}/archive` },
 		{ label: 'About', href: `${base}/about` },
 		{ label: 'Contact', href: `${base}/contact` }
 	];
