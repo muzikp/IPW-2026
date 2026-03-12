@@ -13,6 +13,42 @@
 			website: 'https://www.muvs.cvut.cz/en'
 		},
 		{
+			name: 'Hochschule Görlitz',
+			city: 'Görlitz',
+			country: 'Germany',
+			flag: '🇩🇪',
+			logo: `${base}/images/universities/logo-gorlitz.svg`,
+			role: 'Academic Partner',
+			website: 'https://www.hszg.de/en'
+		},
+		{
+			name: 'Hochschule Heilbronn',
+			city: 'Heilbronn',
+			country: 'Germany',
+			flag: '🇩🇪',
+			logo: `${base}/images/universities/heilbronn.png`,
+			role: 'Academic Partner',
+			website: 'https://www.hs-heilbronn.de/en'
+		},
+		{
+			name: 'LUMSA Università',
+			city: 'Rome',
+			country: 'Italy',
+			flag: '🇮🇹',
+			logo: `${base}/images/universities/logo-lumsa.svg`,
+			role: 'Academic Partner',
+			website: 'https://www.lumsa.it/'
+		},
+		{
+			name: 'La Mache',
+			city: 'Lyon',
+			country: 'France',
+			flag: '🇫🇷',
+			logo: `${base}/images/universities/logo-lamace.png`,
+			role: 'Academic Partner',
+			website: 'https://www.lamache.fr'
+		},
+		{
 			name: 'Université de Lille',
 			city: 'Lille',
 			country: 'France',
@@ -29,42 +65,6 @@
 			logo: `${base}/images/universities/MRU_EN_horizontalus_spalvotas_RGB.svg`,
 			role: 'Partner',
 			website: 'https://www.mruni.eu/en/'
-		},
-		{
-			name: 'Hochschule Görlitz',
-			city: 'Görlitz',
-			country: 'Germany',
-			flag: '🇩🇪',
-			logo: `${base}/images/universities/logo-gorlitz.svg`,
-			role: 'Academic Partner',
-			website: 'https://www.hszg.de/en'
-		},
-		{
-			name: 'La Mache',
-			city: 'Lyon',
-			country: 'France',
-			flag: '🇫🇷',
-			logo: `${base}/images/universities/logo-lamace.png`,
-			role: 'Academic Partner',
-			website: 'https://www.lamache.fr'
-		},
-		{
-			name: 'LUMSA Università',
-			city: 'Rome',
-			country: 'Italy',
-			flag: '🇮🇹',
-			logo: `${base}/images/universities/logo-lumsa.svg`,
-			role: 'Academic Partner',
-			website: 'https://www.lumsa.it/'
-		},
-		{
-			name: 'Hochschule Heilbronn',
-			city: 'Heilbronn',
-			country: 'Germany',
-			flag: '🇩🇪',
-			logo: `${base}/images/universities/heilbronn.png`,
-			role: 'Academic Partner',
-			website: 'https://www.hs-heilbronn.de/en'
 		}
 	];
 </script>
