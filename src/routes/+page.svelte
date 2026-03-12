@@ -481,6 +481,124 @@
 			{/each}
 		</div>
 		
+		<!-- Europe map -->
+		<div class="mt-10 mb-8 rounded-2xl overflow-hidden border border-gray-200 bg-white shadow-sm">
+			<svg
+				viewBox="0 0 820 600"
+				xmlns="http://www.w3.org/2000/svg"
+				class="w-full h-auto"
+				aria-label="Map of Europe showing partner university locations"
+			>
+				<!-- Simplified Europe outline -->
+				<rect width="820" height="600" fill="#f0f4f8"/>
+
+				<!-- Landmass paths – simplified but recognisable Europe -->
+				<!-- Iberian Peninsula -->
+				<path d="M180,310 L160,330 L155,355 L170,375 L195,385 L225,380 L245,360 L255,335 L245,315 L225,305 Z" fill="#dbe9f4" stroke="#a8c4d8" stroke-width="1"/>
+				<!-- France -->
+				<path d="M240,220 L215,230 L200,255 L210,285 L235,305 L250,315 L270,310 L295,295 L305,270 L295,245 L275,228 Z" fill="#dbe9f4" stroke="#a8c4d8" stroke-width="1"/>
+				<!-- UK & Ireland -->
+				<path d="M195,160 L180,175 L185,200 L200,210 L215,205 L225,188 L215,168 Z" fill="#dbe9f4" stroke="#a8c4d8" stroke-width="1"/>
+				<path d="M165,178 L155,188 L158,200 L170,205 L178,195 L175,180 Z" fill="#dbe9f4" stroke="#a8c4d8" stroke-width="1"/>
+				<!-- Benelux / Germany / Austria / Switzerland -->
+				<path d="M275,175 L255,185 L248,205 L255,228 L278,232 L302,242 L320,235 L338,220 L340,198 L325,180 L305,172 Z" fill="#dbe9f4" stroke="#a8c4d8" stroke-width="1"/>
+				<!-- Scandinavia -->
+				<path d="M310,80 L295,100 L290,130 L300,155 L320,162 L340,150 L355,125 L345,95 L325,75 Z" fill="#dbe9f4" stroke="#a8c4d8" stroke-width="1"/>
+				<path d="M355,90 L345,110 L350,135 L365,145 L380,135 L385,110 L370,90 Z" fill="#dbe9f4" stroke="#a8c4d8" stroke-width="1"/>
+				<!-- Denmark -->
+				<path d="M305,155 L298,168 L308,178 L320,170 L318,158 Z" fill="#dbe9f4" stroke="#a8c4d8" stroke-width="1"/>
+				<!-- Poland / Baltics -->
+				<path d="M338,155 L322,168 L325,195 L345,205 L375,200 L395,188 L400,165 L385,150 L362,145 Z" fill="#dbe9f4" stroke="#a8c4d8" stroke-width="1"/>
+				<!-- Czech Republic / Slovakia / Hungary -->
+				<path d="M340,205 L328,218 L332,238 L350,248 L375,245 L398,238 L405,220 L395,205 L372,200 Z" fill="#dbe9f4" stroke="#a8c4d8" stroke-width="1"/>
+				<!-- Italy -->
+				<path d="M300,265 L285,280 L280,305 L288,330 L300,355 L315,370 L330,360 L335,335 L325,305 L318,278 Z" fill="#dbe9f4" stroke="#a8c4d8" stroke-width="1"/>
+				<!-- Balkans -->
+				<path d="M355,248 L338,258 L335,280 L345,305 L365,318 L390,315 L410,298 L415,272 L400,255 Z" fill="#dbe9f4" stroke="#a8c4d8" stroke-width="1"/>
+				<!-- Romania / Ukraine -->
+				<path d="M400,200 L408,225 L415,250 L440,258 L468,248 L480,225 L470,200 L448,188 L422,190 Z" fill="#dbe9f4" stroke="#a8c4d8" stroke-width="1"/>
+				<!-- Baltic states -->
+				<path d="M368,128 L358,145 L375,158 L392,150 L395,132 L380,120 Z" fill="#dbe9f4" stroke="#a8c4d8" stroke-width="1"/>
+				<!-- Finland -->
+				<path d="M370,68 L355,90 L360,115 L378,125 L398,118 L415,95 L408,68 L390,55 Z" fill="#dbe9f4" stroke="#a8c4d8" stroke-width="1"/>
+				<!-- Greece -->
+				<path d="M378,320 L365,335 L368,355 L382,362 L398,355 L402,335 L392,320 Z" fill="#dbe9f4" stroke="#a8c4d8" stroke-width="1"/>
+				<!-- Turkey (partial) -->
+				<path d="M415,310 L408,328 L418,345 L440,348 L462,338 L468,318 L450,308 Z" fill="#dbe9f4" stroke="#a8c4d8" stroke-width="1"/>
+				<!-- Belarus / Moldova -->
+				<path d="M402,162 L395,180 L400,200 L422,205 L445,195 L450,172 L432,158 Z" fill="#dbe9f4" stroke="#a8c4d8" stroke-width="1"/>
+
+				<!-- University pins
+				     Approximate SVG coords derived from lat/lon mapped to viewBox 820×600
+				     lon: -25..45 → x: 60..760  (range 800, offset 60)  x = (lon+25)/70 * 700 + 60
+				     lat: 71..35   → y: 30..560  (range 530, offset 30)  y = (71-lat)/36 * 530 + 30
+				     Prague   50.08N 14.44E  → x≈345  y≈237
+				     Görlitz  51.15N 14.97E  → x≈355  y≈219
+				     Heilbronn 49.14N 9.22E  → x≈327  y≈251
+				     Rome     41.90N 12.50E  → x≈337  y≈369
+				     Lyon     45.75N 4.83E   → x≈309  y≈291
+				     Lille    50.63N 3.06E   → x≈294  y≈228
+				     Vilnius  54.69N 25.28E  → x≈424  y≈183
+				-->
+
+				<!-- Connecting lines -->
+				<g stroke="#6366f1" stroke-width="0.8" stroke-dasharray="4 3" opacity="0.35">
+					<line x1="345" y1="237" x2="355" y2="219"/>
+					<line x1="345" y1="237" x2="327" y2="251"/>
+					<line x1="345" y1="237" x2="337" y2="369"/>
+					<line x1="345" y1="237" x2="309" y2="291"/>
+					<line x1="345" y1="237" x2="294" y2="228"/>
+					<line x1="345" y1="237" x2="424" y2="183"/>
+				</g>
+
+				<!-- Pins -->
+				<!-- Prague / CTU MIAS (host – accent colour) -->
+				<g transform="translate(345,237)">
+					<circle r="10" fill="#6366f1" stroke="white" stroke-width="2"/>
+					<text y="-15" text-anchor="middle" font-size="10" font-family="sans-serif" fill="#1e293b" font-weight="600">CTU MIAS</text>
+				</g>
+				<!-- Görlitz -->
+				<g transform="translate(355,219)">
+					<circle r="8" fill="#0ea5e9" stroke="white" stroke-width="2"/>
+					<text y="-13" text-anchor="middle" font-size="9" font-family="sans-serif" fill="#1e293b">Görlitz</text>
+				</g>
+				<!-- Heilbronn -->
+				<g transform="translate(327,251)">
+					<circle r="8" fill="#0ea5e9" stroke="white" stroke-width="2"/>
+					<text y="-13" text-anchor="end" font-size="9" font-family="sans-serif" fill="#1e293b">Heilbronn</text>
+				</g>
+				<!-- Rome / LUMSA -->
+				<g transform="translate(337,369)">
+					<circle r="8" fill="#0ea5e9" stroke="white" stroke-width="2"/>
+					<text y="-13" text-anchor="middle" font-size="9" font-family="sans-serif" fill="#1e293b">Rome</text>
+				</g>
+				<!-- Lyon / La Mache -->
+				<g transform="translate(309,291)">
+					<circle r="8" fill="#0ea5e9" stroke="white" stroke-width="2"/>
+					<text y="-13" text-anchor="end" font-size="9" font-family="sans-serif" fill="#1e293b">Lyon</text>
+				</g>
+				<!-- Lille -->
+				<g transform="translate(294,228)">
+					<circle r="8" fill="#0ea5e9" stroke="white" stroke-width="2"/>
+					<text y="-13" text-anchor="middle" font-size="9" font-family="sans-serif" fill="#1e293b">Lille</text>
+				</g>
+				<!-- Vilnius / MRU -->
+				<g transform="translate(424,183)">
+					<circle r="8" fill="#0ea5e9" stroke="white" stroke-width="2"/>
+					<text y="-13" text-anchor="middle" font-size="9" font-family="sans-serif" fill="#1e293b">Vilnius</text>
+				</g>
+
+				<!-- Legend -->
+				<g transform="translate(600,480)">
+					<rect x="0" y="0" width="175" height="60" rx="8" fill="white" stroke="#e2e8f0" stroke-width="1"/>
+					<circle cx="16" cy="18" r="7" fill="#6366f1" stroke="white" stroke-width="1.5"/>
+					<text x="28" y="22" font-size="10" font-family="sans-serif" fill="#334155">Host institution</text>
+					<circle cx="16" cy="42" r="7" fill="#0ea5e9" stroke="white" stroke-width="1.5"/>
+					<text x="28" y="46" font-size="10" font-family="sans-serif" fill="#334155">Partner university</text>
+				</g>
+			</svg>
+		</div>
+
 		<div class="text-center">
 			<Button href="{base}/about" variant="gradient" size="lg">
 				Meet the university partners
