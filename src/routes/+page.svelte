@@ -356,6 +356,9 @@
 			<a href="https://www.veolia.com/" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center p-6 transition-all duration-300 hover:scale-110">
 				<img src="{base}/images/companies/logo-veolia.svg" alt="Veolia" class="max-h-16 w-auto" />
 			</a>
+			<a href="https://amaris.com/" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center p-6 transition-all duration-300 hover:scale-110">
+				<img src="{base}/images/companies/logo-amaris.svg" alt="Amaris" class="max-h-16 w-auto" />
+			</a>
 		</div>
 		
 		<div class="text-center mt-12">
