@@ -56,6 +56,15 @@
 			logo: `${base}/images/universities/logo-lumsa.svg`,
 			role: 'Academic Partner',
 			website: 'https://www.lumsa.it/'
+		},
+		{
+			name: 'Hochschule Heilbronn',
+			city: 'Heilbronn',
+			country: 'Germany',
+			flag: '🇩🇪',
+			logo: `${base}/images/universities/heilbronn.png`,
+			role: 'Academic Partner',
+			website: 'https://www.hs-heilbronn.de/en'
 		}
 	];
 </script>
