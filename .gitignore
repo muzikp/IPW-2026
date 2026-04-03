@@ -30,6 +30,7 @@ resources
 
 # Internal documents
 instructions.md
+_tmp
 
 # Vite
 vite.config.js.timestamp-*

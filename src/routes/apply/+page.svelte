@@ -83,13 +83,6 @@
 				]
 			};
 
-			console.log('Submitting application:', {
-				name: `${formData.firstName} ${formData.lastName}`,
-				email: formData.email,
-				fileName: formData.cvFile.name,
-				fileSize: formData.cvFile.size
-			});
-
 			const response = await fetch('https://api.evalytics.cz/v1/form-to-email/submit', {
 				method: 'POST',
 				headers: {
@@ -98,9 +91,7 @@
 				body: JSON.stringify(payload)
 			});
 
-			console.log('Response status:', response.status);
 			const result = await response.json();
-			console.log('Response result:', result);
 
 			if (response.ok && result.success) {
 				submitSuccess = true;

@@ -92,6 +92,17 @@
 			<p class="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto">
 				Fresh ideas for companies, real experience for students.
 			</p>
+			<div class="mt-8">
+				<a
+					href="{base}/apply"
+					class="inline-flex items-center gap-3 px-10 py-5 bg-gradient-to-r from-primary-600 to-accent-600 text-white text-2xl md:text-3xl font-extrabold rounded-3xl shadow-2xl hover:shadow-primary-500/50 hover:scale-105 transition-all duration-300 group"
+				>
+					<span>Apply now</span>
+					<svg class="w-7 h-7 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+					</svg>
+				</a>
+			</div>
 		</div>
 
 		<div class="grid md:grid-cols-2 gap-12 items-start">
@@ -124,7 +135,7 @@
 						href="{base}/apply"
 						class="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-primary-600 to-accent-600 text-white text-lg font-bold rounded-2xl shadow-2xl hover:shadow-primary-500/50 hover:scale-105 transition-all duration-300 group"
 					>
-						<span>Apply Now</span>
+						<span>Apply now</span>
 						<svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
 						</svg>
@@ -353,9 +364,6 @@
 			<a href="https://www.allwyn.com/" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center p-6 transition-all duration-300 hover:scale-110">
 				<img src="{base}/images/companies/logo-allwyn.svg" alt="Allwyn" class="max-h-16 w-auto" />
 			</a>
-			<a href="https://www.veolia.com/" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center p-6 transition-all duration-300 hover:scale-110">
-				<img src="{base}/images/companies/logo-veolia.svg" alt="Veolia" class="max-h-16 w-auto" />
-			</a>
 			<a href="https://amaris.com/" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center p-6 transition-all duration-300 hover:scale-110">
 				<img src="{base}/images/companies/logo-amaris.svg" alt="Amaris" class="max-h-16 w-auto" />
 			</a>
@@ -389,12 +397,12 @@
 			<div class="absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-gradient-to-b from-primary-300 via-accent-300 to-primary-300 hidden md:block"></div>
 
 			{#each [
-				{ num: '01', title: 'Company project proposals', desc: 'Companies submit a short project brief describing a concrete challenge and the desired output.', time: 'Early year', side: 'left' },
-				{ num: '02', title: 'Student selection', desc: 'Students apply with a form and CV. Shortlisted candidates are invited to an interview in English.', time: 'Spring / early summer', side: 'right' },
-				{ num: '03', title: 'Admission & allocation', desc: 'The IPW team decides admission and assigns students to projects and teams of around five students.', time: 'Summer', side: 'left' },
-				{ num: '04', title: 'Kick‑off week in Prague', desc: 'Teams meet in person, align with company partners, and build an action plan. Often includes a company visit.', time: 'Start of winter semester', side: 'right' },
-				{ num: '05', title: 'Remote collaboration', desc: 'Teams work online with regular check‑ins, deliver interim outputs, and iterate with mentor feedback.', time: '~2 months', side: 'left' },
-				{ num: '06', title: 'Final week abroad', desc: 'Teams meet in person at a partner university, finalise deliverables, and present to a jury.', time: 'End of semester', side: 'right' }
+				{ num: '01', title: 'Student selection', desc: 'In April, the IPW team reviews applications and selects students for the cohort.', time: 'April', side: 'left', cta: true },
+				{ num: '02', title: 'Kick-off week in Prague', desc: 'The Prague part starts on Monday, October 5, 2026, and runs through Friday. During the week, students meet their teams and tutors, join team-building activities, attend partner presentations, visit companies, prepare and validate action plans, and finish with a farewell party.', time: 'October 5-9, 2026', side: 'right' },
+				{ num: '03', title: 'Online teamwork and mentoring', desc: 'From mid-October onward, teams work online every week, with a dedicated training session and regular collaboration with academic and company mentors.', time: 'From October 12, 2026', side: 'left' },
+				{ num: '04', title: 'Mid-term review', desc: 'In the week of November 2, 2026, each team meets with its partner company to review progress, confirm direction, and exchange feedback.', time: 'Week of November 2, 2026', side: 'right' },
+				{ num: '05', title: 'Results preparation', desc: 'About one week before the final presentations, teams meet with mentors to check the coherence and readiness of their results.', time: 'Late semester', side: 'left' },
+				{ num: '06', title: 'Project Showcase Week in Gorlitz', desc: 'Starting Monday, December 7, 2026, teams gather in Gorlitz for partner visits, final jury presentations, and closing feedback.', time: 'December 7-11, 2026', side: 'right' }
 			] as step, i}
 				<div class="relative mb-12 md:mb-16 animate-fade-in-up" style="animation-delay: {i * 100}ms">
 					<div class="md:grid md:grid-cols-2 md:gap-12 items-center">
@@ -411,6 +419,13 @@
 										</div>
 										<h3 class="text-xl font-bold text-gray-900 mb-2">{step.title}</h3>
 										<p class="text-gray-600 leading-relaxed">{step.desc}</p>
+										{#if step.cta}
+											<div class="mt-4">
+												<Button href="{base}/apply" variant="gradient">
+													Apply now
+												</Button>
+											</div>
+										{/if}
 									</div>
 								</div>
 							</Card>

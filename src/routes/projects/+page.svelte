@@ -121,8 +121,9 @@
 			<div class="flex flex-wrap gap-4">
 				<!-- Year Filter -->
 				<div>
-					<label class="block text-sm font-semibold text-gray-700 mb-2">Year</label>
+					<label for="projects-year" class="block text-sm font-semibold text-gray-700 mb-2">Year</label>
 					<select 
+						id="projects-year"
 						bind:value={selectedYear}
 						class="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
 					>
@@ -134,8 +135,9 @@
 
 				<!-- Topic Filter -->
 				<div>
-					<label class="block text-sm font-semibold text-gray-700 mb-2">Topic</label>
+					<label for="projects-topic" class="block text-sm font-semibold text-gray-700 mb-2">Topic</label>
 					<select 
+						id="projects-topic"
 						bind:value={selectedTopic}
 						class="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
 					>
@@ -166,9 +168,9 @@
 							<div class="w-10 h-10 bg-gradient-to-br from-primary-500 to-accent-500 rounded-lg flex items-center justify-center text-white font-bold text-sm">
 								{String(i + 1).padStart(2, '0')}
 							</div>
-							<h3 class="text-2xl font-bold text-gray-900 group-hover:text-primary-600 transition-colors">
-								{project.company}
-							</h3>
+							<p class="text-sm font-semibold uppercase tracking-[0.2em] text-gray-500">
+								Project brief
+							</p>
 						</div>
 						
 						<h4 class="text-lg font-semibold text-gray-800 mb-3">{project.challenge}</h4>
