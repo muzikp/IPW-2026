@@ -18,17 +18,51 @@
 	let isSubmitting = false;
 	let submitSuccess = false;
 	let submitError = '';
+	let submitAttempted = false;
+
+	function isBlank(value: string) {
+		return !value.trim();
+	}
+
+	function hasFieldError(field: keyof typeof formData) {
+		if (!submitAttempted) return false;
+
+		const value = formData[field];
+
+		if (field === 'cvFile') {
+			return !value;
+		}
+
+		return typeof value === 'string' ? isBlank(value) : false;
+	}
+
+	function getMissingRequiredFields() {
+		const missingFields: string[] = [];
+
+		if (isBlank(formData.firstName)) missingFields.push('First name');
+		if (isBlank(formData.lastName)) missingFields.push('Last name');
+		if (isBlank(formData.email)) missingFields.push('Email address');
+		if (isBlank(formData.kodId)) missingFields.push('KOD ID');
+		if (isBlank(formData.degreeProgram)) missingFields.push('Degree programme');
+		if (isBlank(formData.yearOfStudy)) missingFields.push('Year of study');
+		if (isBlank(formData.englishLevel)) missingFields.push('English level');
+		if (isBlank(formData.erasmusParticipation)) missingFields.push('Erasmus+ participation');
+		if (!formData.cvFile) missingFields.push('CV upload');
+
+		return missingFields;
+	}
 
 	async function handleSubmit(event: Event) {
 		event.preventDefault();
 		
 		if (isSubmitting) return;
+		submitAttempted = true;
 		
 		// Validation
-		if (!formData.firstName || !formData.lastName || !formData.email || !formData.kodId || 
-		    !formData.degreeProgram || !formData.yearOfStudy || !formData.englishLevel || 
-		    !formData.erasmusParticipation || !formData.cvFile) {
-			submitError = 'Please fill in all required fields and upload your CV.';
+		const missingFields = getMissingRequiredFields();
+
+		if (missingFields.length > 0) {
+			submitError = `Please fill in the following required fields: ${missingFields.join(', ')}.`;
 			scrollToMessage();
 			return;
 		}
@@ -65,15 +99,17 @@
 			const payload = {
 				fields: [
 					{ rank: 1, property: 'recipientEmail', value: 'ipw@cvut.cz' },
-					{ rank: 2, property: 'subject', value: 'IPW 2026 Application' },
-					{ rank: 3, property: 'name', label: 'Name', value: `${formData.firstName} ${formData.lastName}` },
-					{ rank: 4, property: 'email', label: 'Email', value: formData.email },
-					{ rank: 5, property: 'kodId', label: 'KOD ID', value: formData.kodId },
-					{ rank: 6, property: 'degreeProgram', label: 'Degree Programme', value: formData.degreeProgram },
-					{ rank: 7, property: 'yearOfStudy', label: 'Year of Study', value: formData.yearOfStudy },
-					{ rank: 8, property: 'englishLevel', label: 'English Level (CEFR)', value: formData.englishLevel },
-					{ rank: 9, property: 'erasmusParticipation', label: 'Erasmus+ Participation (Winter 2026/2027)', value: formData.erasmusParticipation },
-					{ rank: 10, property: 'message', label: 'Motivation', value: formData.motivation || 'Not provided' }
+					{ rank: 2, property: 'ccEmail', value: formData.email },
+					{ rank: 3, property: 'bccEmail', value: 'pavel.muzik@evalytics.cz' },
+					{ rank: 4, property: 'subject', value: 'IPW 2026 Application' },
+					{ rank: 5, property: 'name', label: 'Name', value: `${formData.firstName} ${formData.lastName}` },
+					{ rank: 6, property: 'email', label: 'Email', value: formData.email },
+					{ rank: 7, property: 'kodId', label: 'KOD ID', value: formData.kodId },
+					{ rank: 8, property: 'degreeProgram', label: 'Degree Programme', value: formData.degreeProgram },
+					{ rank: 9, property: 'yearOfStudy', label: 'Year of Study', value: formData.yearOfStudy },
+					{ rank: 10, property: 'englishLevel', label: 'English Level (CEFR)', value: formData.englishLevel },
+					{ rank: 11, property: 'erasmusParticipation', label: 'Erasmus+ Participation (Winter 2026/2027)', value: formData.erasmusParticipation },
+					{ rank: 12, property: 'message', label: 'Motivation', value: formData.motivation || 'Not provided' }
 				],
 				attachments: [
 					{
@@ -95,6 +131,7 @@
 
 			if (response.ok && result.success) {
 				submitSuccess = true;
+				submitAttempted = false;
 				// Scroll to message
 				scrollToMessage();
 				// Reset form
@@ -137,6 +174,8 @@
 		const target = event.target as HTMLInputElement;
 		if (target.files && target.files[0]) {
 			formData.cvFile = target.files[0];
+		} else {
+			formData.cvFile = null;
 		}
 	}
 
@@ -212,7 +251,9 @@
 								</svg>
 								<div>
 									<h3 class="font-semibold text-green-900">Application submitted successfully!</h3>
-									<p class="text-green-800 text-sm mt-1">We'll review your application and get back to you soon.</p>
+									<p class="text-green-800 text-sm mt-1">
+										We'll review your application and get back to you soon. A copy of your application has also been sent to your email address.
+									</p>
 								</div>
 							</div>
 						</div>
@@ -244,9 +285,15 @@
 								type="text"
 								bind:value={formData.firstName}
 								required
+								aria-invalid={hasFieldError('firstName')}
+								class:border-red-400={hasFieldError('firstName')}
+								class:bg-red-50={hasFieldError('firstName')}
 								class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all"
 								placeholder="Enter your first name"
 							/>
+							{#if hasFieldError('firstName')}
+								<p class="mt-2 text-sm font-medium text-red-700">Please fill in your first name.</p>
+							{/if}
 						</div>
 
 						<!-- Last Name -->
@@ -259,9 +306,15 @@
 								type="text"
 								bind:value={formData.lastName}
 								required
+								aria-invalid={hasFieldError('lastName')}
+								class:border-red-400={hasFieldError('lastName')}
+								class:bg-red-50={hasFieldError('lastName')}
 								class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all"
 								placeholder="Enter your last name"
 							/>
+							{#if hasFieldError('lastName')}
+								<p class="mt-2 text-sm font-medium text-red-700">Please fill in your last name.</p>
+							{/if}
 						</div>
 
 						<!-- Email -->
@@ -274,9 +327,15 @@
 								type="email"
 								bind:value={formData.email}
 								required
+								aria-invalid={hasFieldError('email')}
+								class:border-red-400={hasFieldError('email')}
+								class:bg-red-50={hasFieldError('email')}
 								class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all"
 								placeholder="your.email@example.com"
 							/>
+							{#if hasFieldError('email')}
+								<p class="mt-2 text-sm font-medium text-red-700">Please fill in your email address.</p>
+							{/if}
 						</div>
 
 						<!-- KOD ID -->
@@ -289,13 +348,23 @@
 								type="text"
 								bind:value={formData.kodId}
 								required
+								aria-invalid={hasFieldError('kodId')}
+								class:border-red-400={hasFieldError('kodId')}
+								class:bg-red-50={hasFieldError('kodId')}
 								class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all"
 								placeholder="Enter your KOD ID"
 							/>
+							{#if hasFieldError('kodId')}
+								<p class="mt-2 text-sm font-medium text-red-700">Please fill in your KOD ID.</p>
+							{/if}
 						</div>
 
 						<!-- Degree Programme -->
-						<div class="p-4 border border-gray-200 rounded-xl">
+						<div
+							class="p-4 border border-gray-200 rounded-xl"
+							class:border-red-400={hasFieldError('degreeProgram')}
+							class:bg-red-50={hasFieldError('degreeProgram')}
+						>
 							<label class="block text-base font-semibold text-gray-900 mb-3">
 								5. Degree programme *
 							</label>
@@ -321,10 +390,17 @@
 									<span class="text-sm text-gray-700">Master's</span>
 								</label>
 							</div>
+							{#if hasFieldError('degreeProgram')}
+								<p class="mt-3 text-sm font-medium text-red-700">Please choose your degree programme.</p>
+							{/if}
 						</div>
 
 						<!-- Year of Study -->
-						<div class="p-4 border border-gray-200 rounded-xl">
+						<div
+							class="p-4 border border-gray-200 rounded-xl"
+							class:border-red-400={hasFieldError('yearOfStudy')}
+							class:bg-red-50={hasFieldError('yearOfStudy')}
+						>
 							<label class="block text-base font-semibold text-gray-900 mb-3">
 								6. Year of study *
 							</label>
@@ -360,10 +436,17 @@
 									<span class="text-sm text-gray-700">3rd year or higher</span>
 								</label>
 							</div>
+							{#if hasFieldError('yearOfStudy')}
+								<p class="mt-3 text-sm font-medium text-red-700">Please choose your year of study.</p>
+							{/if}
 						</div>
 
 						<!-- English Level -->
-						<div class="p-4 border border-gray-200 rounded-xl">
+						<div
+							class="p-4 border border-gray-200 rounded-xl"
+							class:border-red-400={hasFieldError('englishLevel')}
+							class:bg-red-50={hasFieldError('englishLevel')}
+						>
 							<label class="block text-base font-semibold text-gray-900 mb-3">
 								7. What is your English level? * <span class="text-sm font-normal text-gray-600">(CEFR)</span>
 							</label>
@@ -421,6 +504,9 @@
 									</div>
 								</label>
 							</div>
+							{#if hasFieldError('englishLevel')}
+								<p class="mt-3 text-sm font-medium text-red-700">Please choose your English level.</p>
+							{/if}
 						</div>
 
 						<!-- Motivation -->
@@ -438,7 +524,11 @@
 						</div>
 
 						<!-- Erasmus Participation -->
-						<div class="p-4 border border-gray-200 rounded-xl">
+						<div
+							class="p-4 border border-gray-200 rounded-xl"
+							class:border-red-400={hasFieldError('erasmusParticipation')}
+							class:bg-red-50={hasFieldError('erasmusParticipation')}
+						>
 							<label class="block text-base font-semibold text-gray-900 mb-3">
 								9. Do you expect to participate in another Erasmus+ programme during the winter semester of the academic year 2026/2027? *
 							</label>
@@ -464,6 +554,9 @@
 									<span class="text-sm text-gray-700">Yes</span>
 								</label>
 							</div>
+							{#if hasFieldError('erasmusParticipation')}
+								<p class="mt-3 text-sm font-medium text-red-700">Please choose one of the options.</p>
+							{/if}
 						</div>
 
 						<!-- CV Upload -->
@@ -478,8 +571,14 @@
 								accept="application/pdf"
 								on:change={handleFileChange}
 								required
+								aria-invalid={hasFieldError('cvFile')}
+								class:border-red-400={hasFieldError('cvFile')}
+								class:bg-red-50={hasFieldError('cvFile')}
 								class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-sm file:font-semibold file:bg-primary-50 file:text-primary-700 hover:file:bg-primary-100"
 							/>
+							{#if hasFieldError('cvFile')}
+								<p class="mt-2 text-sm font-medium text-red-700">Please upload your CV in PDF format.</p>
+							{/if}
 							{#if formData.cvFile}
 								<div class="mt-2 text-sm text-gray-600">
 									Selected: {formData.cvFile.name} ({(formData.cvFile.size / 1024 / 1024).toFixed(2)} MB)
