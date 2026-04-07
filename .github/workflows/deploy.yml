@@ -53,9 +53,6 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     needs: build
-    environment:
-      name: github-pages
-      url: https://ipw.muvs.cvut.cz
     permissions:
       pages: write
       id-token: write
