@@ -4,7 +4,7 @@ Modern static website for the International Project Workshop program, featuring 
 
 ## 🚀 Live Site
 
-The site will be available at: `https://[your-username].github.io/IPW-2026/`
+The site will be available at: `https://ipw.muvs.cvut.cz`
 
 ## ✨ Features
 
@@ -73,30 +73,27 @@ static/                # Public files
 
 ## 🌐 Deployment to GitHub Pages
 
-### Initial Setup
+Production URL: `https://ipw.muvs.cvut.cz`
 
-1. **Create GitHub repository** named `IPW-2026`
-
-2. **Add remote and push**:
-   ```bash
-   git remote add origin https://github.com/[your-username]/IPW-2026.git
-   git branch -M main
-   git add .
-   git commit -m "Initial commit: IPW 2026 website"
-   git push -u origin main
-   ```
-
-3. **Configure GitHub Pages**:
+1. **Configure GitHub Pages**:
    - Go to repository Settings → Pages
    - Source: "GitHub Actions"
-   - The site will automatically deploy on push to main branch
+   - Custom domain: `ipw.muvs.cvut.cz`
+   - Enable Enforce HTTPS after certificate provisioning
 
-4. **Set BASE_PATH (if needed)**:
-   - If deploying to `username.github.io/IPW-2026/`:
-   - Go to Settings → Secrets and variables → Actions
-   - Add repository secret: `BASE_PATH` = `/IPW-2026`
+2. **Configure DNS**:
+   - `ipw.muvs.cvut.cz CNAME muzikp.github.io`
 
-### Automatic Deployment
+3. **Deploy**:
+   ```bash
+   git add .
+   git commit -m "Prepare GitHub Pages custom domain deployment"
+   git push origin main
+   ```
+
+4. **BASE_PATH**:
+   - Do not set `BASE_PATH` for the custom domain deployment.
+   - The workflow intentionally builds with `BASE_PATH: ""` because the site is served from `/`.
 
 Every push to `main` branch triggers automatic deployment via GitHub Actions.
 
@@ -266,11 +263,11 @@ Edit `src/routes/archive/+page.svelte`, add to `cohorts` array.
 
 ### 404 on subpages after deployment
 
-Make sure `BASE_PATH` secret is set correctly in GitHub repository settings.
+Confirm the latest GitHub Pages workflow completed successfully and that `404.html` exists in the deployed artifact.
 
 ### Images not loading
 
-Check that paths start with `/` and don't include the base path (it's added automatically).
+Confirm the workflow is building with `BASE_PATH: ""`; a `/IPW-2026` base path is only for `github.io` subpath deployments, not for `ipw.muvs.cvut.cz`.
 
 ### Build fails on GitHub
 

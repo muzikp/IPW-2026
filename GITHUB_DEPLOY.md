@@ -1,120 +1,48 @@
-# ⚡ Quick Deployment Guide
+# Quick Deployment Guide
 
-## Krok 1: Vytvořte GitHub repositář
+Production URL: `https://ipw.muvs.cvut.cz`
 
-1. Jděte na https://github.com/new
-2. Název repositáře: **IPW-2026** (nebo dle vlastního výběru)
-3. **Public** nebo **Private** - dle potřeby
-4. ❌ **NEVYTVÁŘEJTE** README, .gitignore ani licenci (už je máme)
-5. Klikněte **Create repository**
+## 1. GitHub Pages
 
-## Krok 2: Push na GitHub
+1. Open the GitHub repository: `muzikp/IPW-2026`
+2. Go to Settings -> Pages
+3. Set Source to GitHub Actions
+4. Set Custom domain to `ipw.muvs.cvut.cz`
+5. Enable Enforce HTTPS once GitHub finishes certificate provisioning
 
-Zkopírujte a spusťte tyto příkazy v PowerShell (v adresáři projektu):
+## 2. DNS
+
+The DNS record for the custom domain should be:
+
+```text
+ipw.muvs.cvut.cz CNAME muzikp.github.io
+```
+
+This usually needs to be configured by the DNS administrator for `muvs.cvut.cz`.
+
+## 3. Deploy
+
+Push to `main`:
 
 ```powershell
-# Přidáme všechny soubory
 git add .
-
-# Vytvoříme initial commit
-git commit -m "Initial commit: IPW 2026 - Modern website with real projects and university logos"
-
-# Přidáme remote (NAHRAĎTE [your-username] svým GitHub uživatelským jménem!)
-git remote add origin https://github.com/[your-username]/IPW-2026.git
-
-# Přejmenujeme branch na main
-git branch -M main
-
-# Push na GitHub
-git push -u origin main
+git commit -m "Prepare GitHub Pages custom domain deployment"
+git push origin main
 ```
 
-## Krok 3: Nastavte GitHub Pages
+The `Deploy to GitHub Pages` workflow runs automatically and publishes the `build/` artifact.
 
-1. V repositáři na GitHubu jděte do **Settings** (nastavení)
-2. V levé liště klikněte na **Pages**
-3. Pod **Source** vyberte: **GitHub Actions**
-4. Hotovo! ✅
+## 4. BASE_PATH
 
-## Krok 4: Nastavte BASE_PATH
+Do not add a `BASE_PATH` secret for this custom-domain deployment.
 
-⚠️ **DŮLEŽITÉ** - bez tohoto kroku web nebude správně fungovat!
+`BASE_PATH` is only needed when deploying under a repository path such as `https://muzikp.github.io/IPW-2026/`. The custom domain `https://ipw.muvs.cvut.cz` is served from `/`, so the workflow intentionally builds with an empty base path.
 
-1. V repositáři jděte do **Settings** → **Secrets and variables** → **Actions**
-2. Klikněte **New repository secret**
-3. **Name:** `BASE_PATH`
-4. **Value:** `/IPW-2026` (pokud se váš repositář jmenuje jinak, použijte `/nazev-vaseho-repo`)
-5. Klikněte **Add secret**
+## Checklist
 
-## Krok 5: Vyčkejte na deployment
-
-1. Jděte na záložku **Actions** v repositáři
-2. Uvidíte workflow "Deploy to GitHub Pages" - běží cca 2-3 minuty
-3. Po dokončení (zelená fajfka ✓) je web dostupný na:
-
-```
-https://[your-username].github.io/IPW-2026/
-```
-
----
-
-## 🔄 Jak aktualizovat web v budoucnu
-
-Po změnách v kódu stačí:
-
-```powershell
-# Zkontrolujte, co se změnilo
-git status
-
-# Přidejte změněné soubory
-git add .
-
-# Commitněte s popisem změn
-git commit -m "Update: popis vašich změn"
-
-# Push na GitHub (automaticky spustí nový build)
-git push
-```
-
-Web se automaticky znovu sestaví a nasadí za ~2-3 minuty.
-
----
-
-## ✅ Checklist
-
-- [ ] Vytvořen GitHub repositář
-- [ ] Provedeny git příkazy (add, commit, remote, push)
-- [ ] V Settings → Pages nastaven Source na "GitHub Actions"
-- [ ] V Settings → Secrets přidán `BASE_PATH` secret
-- [ ] Workflow v Actions záložce dokončen úspěšně (zelená fajfka)
-- [ ] Web otevřen na `https://[username].github.io/IPW-2026/`
-
----
-
-## 🆘 Řešení problémů
-
-### Web zobrazuje 404 na podstránkách
-→ Zkontrolujte, že jste nastavili `BASE_PATH` secret správně
-
-### Obrázky se nezobrazují
-→ Hard refresh prohlížeče (Ctrl+Shift+R) nebo zkuste inkognito režim
-
-### Workflow selhal (červené X)
-→ Klikněte na workflow v Actions, podívejte se na error log
-→ Nejčastější příčina: zapomenuté `BASE_PATH` nastavení
-
-### Stará verze webu se pořád zobrazuje
-→ Hard refresh (Ctrl+Shift+R)
-→ Zkontrolujte, že workflow v Actions dokončil (zelená fajfka)
-
----
-
-## 📝 Poznámky
-
-- První deployment trvá ~3-5 minut
-- Další deploymenty ~2-3 minuty
-- Web je plně statický = super rychlý
-- Automatický deployment při každém push na main
-- Později lze přidat vlastní doménu v Settings → Pages
-
-**Hotovo! 🎉**
+- [ ] Repository Settings -> Pages uses GitHub Actions
+- [ ] Custom domain is `ipw.muvs.cvut.cz`
+- [ ] DNS CNAME points to `muzikp.github.io`
+- [ ] Latest workflow run completed successfully
+- [ ] Enforce HTTPS is enabled after certificate provisioning
+- [ ] Site opens at `https://ipw.muvs.cvut.cz`

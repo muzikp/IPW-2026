@@ -79,6 +79,13 @@
 			return;
 		}
 
+		const cvFile = formData.cvFile;
+		if (!cvFile) {
+			submitError = 'Please upload your CV.';
+			scrollToMessage();
+			return;
+		}
+
 		isSubmitting = true;
 		submitError = '';
 		submitSuccess = false;
@@ -92,7 +99,7 @@
 					resolve(base64);
 				};
 				reader.onerror = reject;
-				reader.readAsDataURL(formData.cvFile!);
+				reader.readAsDataURL(cvFile);
 			});
 
 			// Prepare JSON payload according to API specification
@@ -113,7 +120,7 @@
 				],
 				attachments: [
 					{
-						name: formData.cvFile.name,
+						name: cvFile.name,
 						value: fileBase64
 					}
 				]
@@ -360,14 +367,14 @@
 						</div>
 
 						<!-- Degree Programme -->
-						<div
+						<fieldset
 							class="p-4 border border-gray-200 rounded-xl"
 							class:border-red-400={hasFieldError('degreeProgram')}
 							class:bg-red-50={hasFieldError('degreeProgram')}
 						>
-							<label class="block text-base font-semibold text-gray-900 mb-3">
+							<legend class="block text-base font-semibold text-gray-900 mb-3">
 								5. Degree programme *
-							</label>
+							</legend>
 							<div class="space-y-2">
 								<label class="flex items-center gap-3 p-2 cursor-pointer hover:bg-gray-50 rounded-lg transition-colors">
 									<input
@@ -393,17 +400,17 @@
 							{#if hasFieldError('degreeProgram')}
 								<p class="mt-3 text-sm font-medium text-red-700">Please choose your degree programme.</p>
 							{/if}
-						</div>
+						</fieldset>
 
 						<!-- Year of Study -->
-						<div
+						<fieldset
 							class="p-4 border border-gray-200 rounded-xl"
 							class:border-red-400={hasFieldError('yearOfStudy')}
 							class:bg-red-50={hasFieldError('yearOfStudy')}
 						>
-							<label class="block text-base font-semibold text-gray-900 mb-3">
+							<legend class="block text-base font-semibold text-gray-900 mb-3">
 								6. Year of study *
-							</label>
+							</legend>
 							<div class="space-y-2">
 								<label class="flex items-center gap-3 p-2 cursor-pointer hover:bg-gray-50 rounded-lg transition-colors">
 									<input
@@ -439,17 +446,17 @@
 							{#if hasFieldError('yearOfStudy')}
 								<p class="mt-3 text-sm font-medium text-red-700">Please choose your year of study.</p>
 							{/if}
-						</div>
+						</fieldset>
 
 						<!-- English Level -->
-						<div
+						<fieldset
 							class="p-4 border border-gray-200 rounded-xl"
 							class:border-red-400={hasFieldError('englishLevel')}
 							class:bg-red-50={hasFieldError('englishLevel')}
 						>
-							<label class="block text-base font-semibold text-gray-900 mb-3">
+							<legend class="block text-base font-semibold text-gray-900 mb-3">
 								7. What is your English level? * <span class="text-sm font-normal text-gray-600">(CEFR)</span>
-							</label>
+							</legend>
 							<div class="space-y-2">
 								<label class="flex items-start gap-3 p-2 cursor-pointer hover:bg-gray-50 rounded-lg transition-colors">
 									<input
@@ -507,7 +514,7 @@
 							{#if hasFieldError('englishLevel')}
 								<p class="mt-3 text-sm font-medium text-red-700">Please choose your English level.</p>
 							{/if}
-						</div>
+						</fieldset>
 
 						<!-- Motivation -->
 						<div>
@@ -524,14 +531,14 @@
 						</div>
 
 						<!-- Erasmus Participation -->
-						<div
+						<fieldset
 							class="p-4 border border-gray-200 rounded-xl"
 							class:border-red-400={hasFieldError('erasmusParticipation')}
 							class:bg-red-50={hasFieldError('erasmusParticipation')}
 						>
-							<label class="block text-base font-semibold text-gray-900 mb-3">
+							<legend class="block text-base font-semibold text-gray-900 mb-3">
 								9. Do you expect to participate in another Erasmus+ programme during the winter semester of the academic year 2026/2027? *
-							</label>
+							</legend>
 							<div class="space-y-2">
 								<label class="flex items-center gap-3 p-2 cursor-pointer hover:bg-gray-50 rounded-lg transition-colors">
 									<input
@@ -557,7 +564,7 @@
 							{#if hasFieldError('erasmusParticipation')}
 								<p class="mt-3 text-sm font-medium text-red-700">Please choose one of the options.</p>
 							{/if}
-						</div>
+						</fieldset>
 
 						<!-- CV Upload -->
 						<div>

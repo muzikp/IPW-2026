@@ -1,102 +1,88 @@
 # Deployment Guide
 
-## GitHub Pages Setup
+## Target
 
-### 1. Repository Configuration
+Production URL: `https://ipw.muvs.cvut.cz`
 
-1. Go to your repository on GitHub
-2. Navigate to **Settings** → **Pages**
-3. Under "Build and deployment":
-   - Source: **GitHub Actions**
+The site is deployed from GitHub Actions to GitHub Pages. Because it uses a custom domain, it is served from the domain root and does not need a `BASE_PATH` secret.
 
-### 2. Base Path Configuration (if needed)
+## GitHub Repository Setup
 
-If deploying to a subdirectory (e.g., `https://username.github.io/ipw-web/`):
+1. Open the repository on GitHub: `muzikp/IPW-2026`
+2. Go to Settings -> Pages
+3. Under Build and deployment, set Source to GitHub Actions
+4. Under Custom domain, use `ipw.muvs.cvut.cz`
+5. Enable Enforce HTTPS after GitHub finishes issuing the certificate
 
-1. Go to **Settings** → **Secrets and variables** → **Actions**
-2. Click **New repository secret**
-3. Add:
-   - Name: `BASE_PATH`
-   - Value: `/ipw-web` (replace with your actual path)
+## DNS Setup
 
-If deploying to root domain (e.g., `https://username.github.io/`), no BASE_PATH needed.
+Ask the DNS administrator for `muvs.cvut.cz` to point:
 
-### 3. Deploy
+```text
+ipw.muvs.cvut.cz CNAME muzikp.github.io
+```
+
+DNS and HTTPS certificate provisioning can take several minutes, sometimes longer depending on DNS propagation.
+
+## Important BASE_PATH Note
+
+Do not set `BASE_PATH` for this deployment.
+
+The GitHub Actions workflow now forces:
+
+```yaml
+BASE_PATH: ""
+```
+
+This is intentional. A custom domain such as `https://ipw.muvs.cvut.cz` is served from `/`, while `BASE_PATH=/IPW-2026` is only for repository subpath deployments such as `https://muzikp.github.io/IPW-2026/`.
+
+If a repository secret named `BASE_PATH` exists from an older setup, it is ignored by the workflow.
+
+## Deploy
 
 Push to the `main` branch:
 
 ```bash
 git add .
-git commit -m "Initial commit"
+git commit -m "Prepare GitHub Pages custom domain deployment"
 git push origin main
 ```
 
-The GitHub Action will automatically build and deploy your site.
-
-### 4. Monitor Deployment
-
-1. Go to **Actions** tab in your repository
-2. Watch the "Deploy to GitHub Pages" workflow
-3. Once complete, your site will be live at:
-   - Root: `https://username.github.io/`
-   - Subdirectory: `https://username.github.io/ipw-web/`
+The GitHub Action will build and deploy the static site automatically.
 
 ## Local Preview
 
-Before deploying, test the production build locally:
-
 ```bash
-# Build
 pnpm build
-
-# Preview
 pnpm preview
 ```
 
-Visit `http://localhost:4173` to preview the built site.
+Visit `http://localhost:4173` to preview the built site locally.
 
-## Adding Content
+## What Makes Custom Domain Work
 
-### Partner Download Files
-
-1. Add actual DOCX/ZIP files to `resources/partners/`:
-   - `IPW_Project_Description_Template_blank.docx`
-   - `IPW_Memorandum_of_Cooperation_Template_blank.docx`
-   - `IPW_Donation_Agreement_Template_blank.docx`
-   - `IPW_partner_downloads_templates.zip`
-
-2. Files are automatically copied to `static/downloads/partners/` during build
-
-### Update Content
-
-Edit the page files in `src/routes/`:
-- `+page.svelte` - Home page
-- `students/+page.svelte` - Students page
-- `companies/+page.svelte` - Companies page
-- `universities/+page.svelte` - Universities page
-- `partners/+page.svelte` - Partner guide
-- `projects/+page.svelte` - Projects hub
-- `archive/+page.svelte` - Cohorts archive
-- `contact/+page.svelte` - Contact page
-
-Replace placeholder text (e.g., `[date]`, `[University 1]`) with actual content.
+- `static/CNAME` contains `ipw.muvs.cvut.cz` and is copied into the build output.
+- `static/.nojekyll` disables Jekyll processing so SvelteKit assets under `_app/` are served correctly.
+- `.github/workflows/deploy.yml` uploads the `build/` directory via `actions/upload-pages-artifact` and deploys it with `actions/deploy-pages`.
 
 ## Troubleshooting
 
-### Build Fails
+### Site still opens on `github.io`
 
-- Check that all placeholder files exist in `resources/partners/`
-- Run `pnpm sync:downloads` manually to test the sync script
-- Check for TypeScript errors: `pnpm check`
+Check Settings -> Pages and confirm the custom domain is set to `ipw.muvs.cvut.cz`. Also confirm the DNS CNAME points to `muzikp.github.io`.
 
-### 404 Errors on GitHub Pages
+### CSS or JS does not load
 
-- Ensure fallback is configured in `svelte.config.js` (already done)
-- Check that BASE_PATH matches your repository setup
-- Wait a few minutes after deployment for DNS propagation
+Confirm the Actions build used `BASE_PATH: ""`. A leftover `/IPW-2026` base path will break assets on the custom domain.
 
-### Styling Issues
+### HTTPS is not available yet
 
-- Clear browser cache
-- Check that Tailwind classes are properly scoped
-- Run development server to see detailed errors
+Wait for GitHub Pages to finish certificate provisioning, then enable Enforce HTTPS in Settings -> Pages.
+
+### Subpages return 404
+
+The SvelteKit static adapter creates `404.html` as a fallback. Confirm the latest workflow completed successfully and the deployed artifact contains `404.html`.
+
+### Download files are missing
+
+Run `pnpm sync:downloads` locally or check the build log. Partner files from `resources/partners/` are copied to `static/downloads/partners/` during `pnpm build`.
