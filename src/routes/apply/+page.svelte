@@ -197,11 +197,6 @@
 	}
 </script>
 
-<svelte:head>
-	<title>Apply Now - IPW</title>
-	<meta name="description" content="Apply for International Project Workshop" />
-</svelte:head>
-
 <!-- Hero Section -->
 <Section class="relative overflow-hidden bg-gradient-to-br from-primary-50 via-white to-accent-50">
 	<div class="absolute top-0 right-0 w-96 h-96 bg-primary-200 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-float"></div>

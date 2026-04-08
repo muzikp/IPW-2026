@@ -92,10 +92,6 @@
 	const allTopics = ['Strategy', 'Marketing', 'Operations', 'Innovation', 'Sustainability', 'Data', 'Digital', 'Branding', 'HR'];
 </script>
 
-<svelte:head>
-	<title>Projects - IPW</title>
-</svelte:head>
-
 <!-- Hero -->
 <Section class="bg-gradient-to-br from-primary-50 via-white to-accent-50">
 	<Container>

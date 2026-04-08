@@ -3,10 +3,6 @@
 	import { Container, Section, Card, Callout } from '$lib/components';
 </script>
 
-<svelte:head>
-	<title>Partner Guide - IPW</title>
-</svelte:head>
-
 <Section class="bg-gradient-to-br from-blue-50 to-indigo-100">
 	<Container>
 		<Callout type="info" class="mb-6">

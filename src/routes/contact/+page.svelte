@@ -2,10 +2,6 @@
 	import { Container, Section, Card } from '$lib/components';
 </script>
 
-<svelte:head>
-	<title>Contact - IPW</title>
-</svelte:head>
-
 <Section class="bg-gradient-to-br from-blue-50 to-indigo-100">
 	<Container>
 		<div class="text-center">

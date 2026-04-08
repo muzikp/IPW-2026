@@ -62,10 +62,6 @@
 	];
 </script>
 
-<svelte:head>
-	<title>Students - IPW</title>
-</svelte:head>
-
 <Section class="relative overflow-hidden bg-gradient-to-br from-primary-50 via-white to-accent-50">
 	<div class="absolute inset-0 overflow-hidden">
 		<div class="absolute top-12 -left-24 h-72 w-72 rounded-full bg-primary-200/40 blur-3xl"></div>

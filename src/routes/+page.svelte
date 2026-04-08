@@ -69,10 +69,6 @@
 	];
 </script>
 
-<svelte:head>
-	<title>IPW - International Project Workshop</title>
-</svelte:head>
-
 <!-- Hero Section -->
 <Section class="relative overflow-hidden bg-gradient-to-br from-primary-50 via-white to-accent-50 min-h-[90vh] flex items-center">
 	<!-- Animated background elements -->
