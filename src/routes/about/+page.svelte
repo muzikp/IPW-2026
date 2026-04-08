@@ -53,7 +53,7 @@
 			</h1>
 			
 			<p class="text-xl text-gray-600 leading-relaxed">
-				Meet the passionate team behind International Project Workshop
+				Meet the team behind the International Project Workshop
 			</p>
 		</div>
 	</Container>
@@ -68,7 +68,7 @@
 					Organizers
 				</span>
 			</h2>
-			<p class="text-lg text-gray-600">The visionaries who made IPW possible</p>
+			<p class="text-lg text-gray-600">The people coordinating and supporting IPW</p>
 		</div>
 
 		<div class="space-y-12">
@@ -240,7 +240,7 @@
 			</h2>
 			
 			<p class="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-				IPW is always looking for passionate tutors and partners
+				IPW welcomes tutors and partners interested in collaboration
 			</p>
 			
 			<div class="flex flex-wrap gap-4 justify-center">
