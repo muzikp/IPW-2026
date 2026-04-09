@@ -149,7 +149,8 @@
 	<Container>
 		<h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Downloads & documents</h2>
 		<p class="text-lg text-gray-700 mb-8">
-			Download the templates and documents you need for your IPW partnership.
+			Download the templates and documents you need for your IPW partnership. The memorandum
+			of cooperation and donation agreement are currently available in Czech.
 		</p>
 
 		<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -168,7 +169,7 @@
 
 			<Card>
 				<h3 class="text-lg font-semibold text-gray-900 mb-3">
-					2) Memorandum of cooperation (blank template)
+					2) Memorandum of cooperation (blank template, Czech)
 				</h3>
 				<a
 					href="{base}/downloads/partners/IPW_Memorandum_of_Cooperation_Template_blank.docx"
@@ -181,7 +182,7 @@
 
 			<Card>
 				<h3 class="text-lg font-semibold text-gray-900 mb-3">
-					3) Donation agreement (blank template)
+					3) Donation agreement (blank template, Czech)
 				</h3>
 				<a
 					href="{base}/downloads/partners/IPW_Donation_Agreement_Template_blank.docx"
@@ -192,16 +193,6 @@
 				</a>
 			</Card>
 
-			<Card>
-				<h3 class="text-lg font-semibold text-gray-900 mb-3">Optional: All templates (ZIP)</h3>
-				<a
-					href="{base}/downloads/partners/IPW_partner_downloads_templates.zip"
-					class="text-blue-600 hover:text-blue-700 font-medium"
-					download
-				>
-					Download ZIP →
-				</a>
-			</Card>
 		</div>
 	</Container>
 </Section>

@@ -1,4 +1,4 @@
-import { cpSync, existsSync, mkdirSync } from 'fs';
+import { cpSync, existsSync, mkdirSync, rmSync } from 'fs';
 import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
 
@@ -28,6 +28,8 @@ if (!existsSync(resourcesDir)) {
 
 // Copy files from resources/partners to static/downloads/partners
 try {
+	rmSync(staticDownloadsDir, { recursive: true, force: true });
+	mkdirSync(staticDownloadsDir, { recursive: true });
 	cpSync(resourcesDir, staticDownloadsDir, { recursive: true, force: true });
 	console.log('✓ Downloads synced successfully!');
 } catch (error) {
