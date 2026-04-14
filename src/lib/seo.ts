@@ -73,6 +73,18 @@ const seoByPath: Record<string, SeoEntry> = {
 			'company challenge examples'
 		]
 	},
+	'/faq': {
+		title: 'FAQ | International Project Workshop',
+		description:
+			'Find practical FAQ information for IPW participants, including the Prague kick-off, venue details, transport, and accommodation recommendations.',
+		keywords: [
+			...DEFAULT_KEYWORDS,
+			'IPW FAQ',
+			'Prague kick-off',
+			'CIIRC Respirium',
+			'Masaryk Dormitory'
+		]
+	},
 	'/about': {
 		title: 'About IPW | Team and Tutors',
 		description:
@@ -134,4 +146,4 @@ export function getSeo(pathname: string) {
 	};
 }
 
-export const sitemapPages = ['/', '/students', '/apply', '/projects', '/about', '/contact'];
+export const sitemapPages = ['/', '/students', '/apply', '/projects', '/faq', '/about', '/contact'];

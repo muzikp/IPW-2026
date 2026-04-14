@@ -9,6 +9,7 @@
 		{ label: 'Home', href: `${base}/` },
 		{ label: 'Students', href: `${base}/students` },
 		{ label: 'Projects', href: `${base}/projects` },
+		{ label: 'FAQ', href: `${base}/faq` },
 		{ label: 'About', href: `${base}/about` },
 		{ label: 'Contact', href: `${base}/contact` }
 	];
