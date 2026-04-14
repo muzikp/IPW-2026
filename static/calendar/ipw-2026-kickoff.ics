@@ -1,0 +1,16 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//IPW 2026//Kick-off//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:ipw-2026-kickoff@ipw.muvs.cvut.cz
+DTSTAMP:20260414T120000Z
+DTSTART;TZID=Europe/Prague:20261005T090000
+DTEND;TZID=Europe/Prague:20261005T160000
+SUMMARY:IPW 2026 Kick-off
+LOCATION:Respirium, CIIRC CTU in Prague, Jugoslavskych partyzanu 1580/3, 160 00 Praha 6, Dejvice, Czech Republic
+DESCRIPTION:International Project Workshop 2026 kick-off in Prague.\nVenue: Respirium at CIIRC, CTU in Prague.\nAddress: Jugoslavskych partyzanu 1580/3, 160 00 Praha 6, Dejvice.\nMap: https://maps.app.goo.gl/qL3Cz3EkNWWd37JT6
+URL:https://ipw.muvs.cvut.cz/faq
+END:VEVENT
+END:VCALENDAR

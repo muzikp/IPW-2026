@@ -1,4 +1,4 @@
-const SITE_URL = 'https://ipw.muvs.cvut.cz';
+﻿const SITE_URL = 'https://ipw.muvs.cvut.cz';
 const DEFAULT_TITLE = 'International Project Workshop | IPW at MIAS CTU';
 const DEFAULT_DESCRIPTION =
 	'International Project Workshop (IPW) at Masaryk Institute of Advanced Studies, CTU in Prague, connects students, universities, and companies through real international projects.';
@@ -12,7 +12,7 @@ const DEFAULT_KEYWORDS = [
 	'Masarykův ústav vyšších studií',
 	'CTU in Prague',
 	'MUVS CVUT',
-	'MUVS ČVUT',
+	'MÚVS ČVUT',
 	'international student projects',
 	'company challenges',
 	'project workshop Prague',

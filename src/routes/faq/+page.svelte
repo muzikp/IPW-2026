@@ -1,5 +1,15 @@
-<script lang="ts">
+﻿<script lang="ts">
+	import { base } from '$app/paths';
+	import { PUBLIC_GOOGLE_MAPS_API_KEY } from '$env/static/public';
 	import { Container, Section, Card } from '$lib/components';
+
+	const venueAddress = 'Respirium, CIIRC CTU in Prague, Jugoslavskych partyzanu 1580/3, 160 00 Praha 6, Dejvice';
+	const venueMapLink = 'https://maps.app.goo.gl/qL3Cz3EkNWWd37JT6';
+	const venueEmbedQuery = encodeURIComponent(venueAddress);
+	const directionsQuery = encodeURIComponent(venueAddress);
+	const accommodationCenter = 'Masaryk Institute of Advanced Studies, Kolejní 2637/2a, 160 00 Praha 6, Czech Republic';
+	const accommodationSearchQuery = encodeURIComponent(`accommodation near ${accommodationCenter}`);
+	const accommodationSearchLink = `https://www.google.com/maps/search/?api=1&query=${accommodationSearchQuery}`;
 </script>
 
 <Section class="relative overflow-hidden bg-gradient-to-br from-primary-50 via-white to-accent-50">
@@ -38,9 +48,19 @@
 		<div class="space-y-8">
 			<Card>
 				<h3 class="mb-4 text-2xl font-bold text-gray-900">When it starts</h3>
-				<p class="text-lg leading-relaxed text-gray-700">
-					The Prague part starts on <strong>Monday, October 5, 2026, at 9:00</strong>.
-				</p>
+				<div class="space-y-4 text-lg leading-relaxed text-gray-700">
+					<p>
+						The Prague part starts on <strong>Monday, October 5, 2026, at 9:00</strong>.
+					</p>
+					<p>
+						<a
+							href="{base}/calendar/ipw-2026-kickoff.ics"
+							class="inline-flex items-center rounded-full bg-primary-600 px-5 py-2.5 text-base font-semibold text-white transition-colors duration-300 hover:bg-primary-700"
+						>
+							Add IPW 2026 Kick-off to calendar
+						</a>
+					</p>
+				</div>
 			</Card>
 
 			<Card>
@@ -58,17 +78,37 @@
 						<p>160 00 Praha 6, Dejvice</p>
 					</div>
 
-					<p>
-						Location of Respirium:
+					{#if PUBLIC_GOOGLE_MAPS_API_KEY}
+						<div class="overflow-hidden rounded-3xl border border-gray-200 shadow-sm">
+							<iframe
+								title="Map of the IPW 2026 kick-off venue"
+								src={`https://www.google.com/maps/embed/v1/place?key=${PUBLIC_GOOGLE_MAPS_API_KEY}&q=${venueEmbedQuery}`}
+								class="h-80 w-full border-0"
+								loading="lazy"
+								referrerpolicy="no-referrer-when-downgrade"
+								allowfullscreen
+							></iframe>
+						</div>
+					{/if}
+
+					<div class="flex flex-wrap gap-3">
 						<a
-							href="https://maps.app.goo.gl/qL3Cz3EkNWWd37JT6"
+							href={venueMapLink}
 							target="_blank"
 							rel="noopener noreferrer"
-							class="font-medium text-blue-600 hover:text-blue-700"
+							class="inline-flex items-center rounded-full border border-primary-200 bg-primary-50 px-4 py-2 text-base font-semibold text-primary-700 transition-colors duration-300 hover:bg-primary-100"
 						>
-							Google Maps link
+							Open in Google Maps
 						</a>
-					</p>
+						<a
+							href={`https://www.google.com/maps/dir/?api=1&destination=${directionsQuery}`}
+							target="_blank"
+							rel="noopener noreferrer"
+							class="inline-flex items-center rounded-full border border-gray-300 bg-white px-4 py-2 text-base font-semibold text-gray-700 transition-colors duration-300 hover:bg-gray-50"
+						>
+							Navigate to venue
+						</a>
+					</div>
 
 					<p>
 						There will be signs from the entrance guiding you upstairs via the glass staircase.
@@ -122,6 +162,33 @@
 						<p>
 							You can also look up other accommodation nearby using Google Maps.
 						</p>
+						<p>
+							The map below is centered on MIAS / Dejvice and highlights accommodation options in the surrounding area.
+						</p>
+					</div>
+
+					{#if PUBLIC_GOOGLE_MAPS_API_KEY}
+						<div class="overflow-hidden rounded-3xl border border-gray-200 shadow-sm">
+							<iframe
+								title="Accommodation options near MIAS CTU"
+								src={`https://www.google.com/maps/embed/v1/search?key=${PUBLIC_GOOGLE_MAPS_API_KEY}&q=${accommodationSearchQuery}`}
+								class="h-96 w-full border-0"
+								loading="lazy"
+								referrerpolicy="no-referrer-when-downgrade"
+								allowfullscreen
+							></iframe>
+						</div>
+					{/if}
+
+					<div class="flex flex-wrap gap-3">
+						<a
+							href={accommodationSearchLink}
+							target="_blank"
+							rel="noopener noreferrer"
+							class="inline-flex items-center rounded-full border border-primary-200 bg-primary-50 px-4 py-2 text-base font-semibold text-primary-700 transition-colors duration-300 hover:bg-primary-100"
+						>
+							Search accommodation near MIAS
+						</a>
 					</div>
 				</div>
 			</Card>
