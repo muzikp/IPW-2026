@@ -1,8 +1,8 @@
 ﻿<script lang="ts">
 	import { base } from '$app/paths';
-	import { PUBLIC_GOOGLE_MAPS_API_KEY } from '$env/static/public';
 	import { Container, Section, Card } from '$lib/components';
 
+	const googleMapsApiKey = 'AIzaSyDaOWyFEtrBvDClGBuCBDJ8Q8HcvuctLSI';
 	const venueAddress = 'Respirium, CIIRC CTU in Prague, Jugoslavskych partyzanu 1580/3, 160 00 Praha 6, Dejvice';
 	const venueMapLink = 'https://maps.app.goo.gl/qL3Cz3EkNWWd37JT6';
 	const venueEmbedQuery = encodeURIComponent(venueAddress);
@@ -78,18 +78,16 @@
 						<p>160 00 Praha 6, Dejvice</p>
 					</div>
 
-					{#if PUBLIC_GOOGLE_MAPS_API_KEY}
-						<div class="overflow-hidden rounded-3xl border border-gray-200 shadow-sm">
-							<iframe
-								title="Map of the IPW 2026 kick-off venue"
-								src={`https://www.google.com/maps/embed/v1/place?key=${PUBLIC_GOOGLE_MAPS_API_KEY}&q=${venueEmbedQuery}`}
-								class="h-80 w-full border-0"
-								loading="lazy"
-								referrerpolicy="no-referrer-when-downgrade"
-								allowfullscreen
-							></iframe>
-						</div>
-					{/if}
+					<div class="overflow-hidden rounded-3xl border border-gray-200 shadow-sm">
+						<iframe
+							title="Map of the IPW 2026 kick-off venue"
+							src={`https://www.google.com/maps/embed/v1/place?key=${googleMapsApiKey}&q=${venueEmbedQuery}`}
+							class="h-80 w-full border-0"
+							loading="lazy"
+							referrerpolicy="no-referrer-when-downgrade"
+							allowfullscreen
+						></iframe>
+					</div>
 
 					<div class="flex flex-wrap gap-3">
 						<a
@@ -167,18 +165,16 @@
 						</p>
 					</div>
 
-					{#if PUBLIC_GOOGLE_MAPS_API_KEY}
-						<div class="overflow-hidden rounded-3xl border border-gray-200 shadow-sm">
-							<iframe
-								title="Accommodation options near MIAS CTU"
-								src={`https://www.google.com/maps/embed/v1/search?key=${PUBLIC_GOOGLE_MAPS_API_KEY}&q=${accommodationSearchQuery}`}
-								class="h-96 w-full border-0"
-								loading="lazy"
-								referrerpolicy="no-referrer-when-downgrade"
-								allowfullscreen
-							></iframe>
-						</div>
-					{/if}
+					<div class="overflow-hidden rounded-3xl border border-gray-200 shadow-sm">
+						<iframe
+							title="Accommodation options near MIAS CTU"
+							src={`https://www.google.com/maps/embed/v1/search?key=${googleMapsApiKey}&q=${accommodationSearchQuery}`}
+							class="h-96 w-full border-0"
+							loading="lazy"
+							referrerpolicy="no-referrer-when-downgrade"
+							allowfullscreen
+						></iframe>
+					</div>
 
 					<div class="flex flex-wrap gap-3">
 						<a
