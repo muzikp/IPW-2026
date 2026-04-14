@@ -421,6 +421,12 @@
 													Apply now
 												</Button>
 											</div>
+										{:else if step.title === 'Kick-off week in Prague'}
+											<div class="mt-4">
+												<Button href="{base}/faq" variant="outline">
+													See details
+												</Button>
+											</div>
 										{/if}
 									</div>
 								</div>
