@@ -83,14 +83,14 @@
 
 		<!-- Bottom bar -->
 		<div class="pt-8 border-t border-gray-700/50">
-			<div class="mb-6 flex justify-center">
-				<div class="inline-flex items-center gap-3 text-gray-400/80">
+			<div class="mb-8 flex justify-center">
+				<div class="inline-flex flex-col items-center gap-4 text-gray-300/90 sm:flex-row sm:gap-6">
 					<img
 						src="{base}/images/eu-emblem.svg"
 						alt="European Union"
-						class="h-8 w-8 shrink-0 opacity-80"
+						class="h-20 w-20 shrink-0 opacity-90 sm:h-24 sm:w-24"
 					/>
-					<p class="text-center text-xs font-medium leading-snug sm:text-sm">
+					<p class="text-center text-2xl font-semibold leading-tight sm:text-left sm:text-4xl">
 						Co-funded by the European Union
 					</p>
 				</div>
