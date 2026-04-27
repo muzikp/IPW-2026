@@ -83,9 +83,22 @@
 
 		<!-- Bottom bar -->
 		<div class="pt-8 border-t border-gray-700/50">
+			<div class="mb-6 flex justify-center">
+				<div class="inline-flex items-center gap-3 text-gray-400/80">
+					<img
+						src="{base}/images/eu-emblem.svg"
+						alt="European Union"
+						class="h-8 w-8 shrink-0 opacity-80"
+					/>
+					<p class="text-center text-xs font-medium leading-snug sm:text-sm">
+						Co-funded by the European Union
+					</p>
+				</div>
+			</div>
+
 			<div class="flex flex-col md:flex-row justify-between items-center gap-4 mb-6">
 				<p class="text-sm text-gray-400">
-					© {new Date().getFullYear()} CTU / MIAS – International Project Workshop
+					&copy; {new Date().getFullYear()} CTU / MIAS &ndash; International Project Workshop
 				</p>
 				<div class="flex gap-6 text-sm text-gray-400">
 					{#each quickLinks.slice(4) as link}
@@ -100,7 +113,7 @@
 			<div class="pt-6 border-t border-gray-700/30">
 				<div class="flex flex-col md:flex-row justify-between items-center gap-4">
 					<p class="text-xs text-gray-500">
-						© Czech Technical University in Prague
+						&copy; Czech Technical University in Prague
 					</p>
 					<a 
 						href="https://www.evalytics.cz" 
