@@ -23,9 +23,11 @@
 		<div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
 			<!-- Brand -->
 			<div>
-				<h3 class="text-2xl font-bold text-white mb-4 bg-gradient-to-r from-primary-400 to-accent-400 bg-clip-text text-transparent">
-					IPW
-				</h3>
+				<img
+					src="{base}/images/logos/ipw-logo-white-text.svg"
+					alt="International Project Workshop"
+					class="mb-5 h-auto w-48 max-w-full"
+				/>
 				<p class="text-gray-400 leading-relaxed mb-4">
 					International Project Workshop bringing together students, companies, and universities for real-world collaboration.
 				</p>

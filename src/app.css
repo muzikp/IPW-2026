@@ -1,7 +1,7 @@
 @import 'tailwindcss';
 
 @theme {
-	/* Primary color palette (ČVUT Navy Blue #003876) */
+	/* Primary color palette (CVUT Navy Blue #003876) */
 	--color-primary-50: #e6edf7;
 	--color-primary-100: #cddaee;
 	--color-primary-200: #9ab5de;
@@ -14,18 +14,18 @@
 	--color-primary-900: #001530;
 	--color-primary-950: #000c1e;
 
-	/* Accent color palette (ČVUT Red #C8102E) */
-	--color-accent-50: #fef2f3;
-	--color-accent-100: #fde2e5;
-	--color-accent-200: #fbc3c9;
-	--color-accent-300: #f7929c;
-	--color-accent-400: #f2576a;
-	--color-accent-500: #e62641;
-	--color-accent-600: #C8102E;
-	--color-accent-700: #a50d26;
-	--color-accent-800: #830a1e;
-	--color-accent-900: #5e0715;
-	--color-accent-950: #32040c;
+	/* Accent color palette (IPW Bordeaux #8a3328) */
+	--color-accent-50: #fbf4f2;
+	--color-accent-100: #f4dfdb;
+	--color-accent-200: #e9c1ba;
+	--color-accent-300: #d8958b;
+	--color-accent-400: #c36759;
+	--color-accent-500: #a9473a;
+	--color-accent-600: #8a3328;
+	--color-accent-700: #752c23;
+	--color-accent-800: #60261f;
+	--color-accent-900: #4f221d;
+	--color-accent-950: #2c100c;
 }
 
 @layer base {
@@ -67,4 +67,3 @@
 		@apply opacity-100 translate-y-0 transition-all duration-700;
 	}
 }
-

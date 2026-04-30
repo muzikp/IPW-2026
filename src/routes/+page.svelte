@@ -81,9 +81,12 @@
 	<Container class="relative z-10">
 		<!-- Common Header -->
 		<div class="text-center mb-12 animate-fade-in-up">
-			<h1 class="text-5xl md:text-6xl lg:text-7xl font-extrabold mb-4 leading-tight">
-				<span class="block text-gray-900">International Project</span>
-				<span class="block text-gradient mt-2">Workshop</span>
+			<h1 class="mb-5 flex justify-center">
+				<img
+					src="{base}/images/logos/ipw-logo-burgundy-text.svg"
+					alt="International Project Workshop"
+					class="w-full max-w-[18rem] sm:max-w-[24rem] md:max-w-[30rem] lg:max-w-[34rem]"
+				/>
 			</h1>
 			<p class="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto">
 				Fresh ideas for companies, real experience for students.

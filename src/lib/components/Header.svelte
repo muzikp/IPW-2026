@@ -21,9 +21,14 @@
 			<div class="flex items-center">
 				<a
 					href="{base}/"
-					class="text-2xl font-bold bg-gradient-to-r from-primary-600 to-accent-600 bg-clip-text text-transparent hover:scale-110 transition-transform duration-300"
+					class="inline-flex items-center hover:scale-105 transition-transform duration-300"
+					aria-label="IPW home"
 				>
-					IPW
+					<img
+						src="{base}/images/logos/ipw-logo-burgundy-mark.svg"
+						alt="IPW"
+						class="h-8 w-auto sm:h-9"
+					/>
 				</a>
 			</div>
 

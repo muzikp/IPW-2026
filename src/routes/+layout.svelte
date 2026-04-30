@@ -17,7 +17,7 @@
 	<meta name="keywords" content={seo.keywords} />
 	<meta name="robots" content={seo.robots} />
 	<meta name="author" content="International Project Workshop" />
-	<meta name="theme-color" content="#1d4ed8" />
+	<meta name="theme-color" content="#8a3328" />
 	<link rel="canonical" href={seo.canonical} />
 
 	<meta property="og:type" content="website" />
