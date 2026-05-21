@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { base } from '$app/paths';
 	import { Container, Section, Card, Button, Tag } from '$lib/components';
+	import { isApplicationOpen } from '$lib/config/application';
 
 	const partnerUniversities = [
 		{
@@ -92,15 +93,30 @@
 				Fresh ideas for companies, real experience for students.
 			</p>
 			<div class="mt-8">
-				<a
-					href="{base}/apply"
-					class="inline-flex items-center gap-3 px-10 py-5 bg-gradient-to-r from-primary-600 to-accent-600 text-white text-2xl md:text-3xl font-extrabold rounded-3xl shadow-2xl hover:shadow-primary-500/50 hover:scale-105 transition-all duration-300 group"
-				>
-					<span>Apply now</span>
-					<svg class="w-7 h-7 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
-					</svg>
-				</a>
+				{#if isApplicationOpen}
+					<a
+						href="{base}/apply"
+						class="inline-flex items-center gap-3 px-10 py-5 bg-gradient-to-r from-primary-600 to-accent-600 text-white text-2xl md:text-3xl font-extrabold rounded-3xl shadow-2xl hover:shadow-primary-500/50 hover:scale-105 transition-all duration-300 group"
+					>
+						<span>Apply now</span>
+						<svg class="w-7 h-7 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+						</svg>
+					</a>
+				{:else}
+					<div class="inline-flex flex-col items-center gap-3">
+						<span class="inline-flex items-center rounded-full bg-red-100 px-4 py-1 text-sm font-semibold text-red-700 border border-red-200">
+							Applications closed
+						</span>
+						<button
+							type="button"
+							disabled
+							class="inline-flex items-center gap-3 px-10 py-5 bg-gray-300 text-gray-600 text-2xl md:text-3xl font-extrabold rounded-3xl shadow-lg cursor-not-allowed"
+						>
+							<span>Apply now</span>
+						</button>
+					</div>
+				{/if}
 			</div>
 		</div>
 
@@ -130,15 +146,30 @@
 				
 				<!-- Main CTA Button -->
 				<div class="mb-8">
-					<a 
-						href="{base}/apply"
-						class="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-primary-600 to-accent-600 text-white text-lg font-bold rounded-2xl shadow-2xl hover:shadow-primary-500/50 hover:scale-105 transition-all duration-300 group"
-					>
-						<span>Apply now</span>
-						<svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
-						</svg>
-					</a>
+					{#if isApplicationOpen}
+						<a 
+							href="{base}/apply"
+							class="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-primary-600 to-accent-600 text-white text-lg font-bold rounded-2xl shadow-2xl hover:shadow-primary-500/50 hover:scale-105 transition-all duration-300 group"
+						>
+							<span>Apply now</span>
+							<svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+							</svg>
+						</a>
+					{:else}
+						<div class="inline-flex flex-col items-center md:items-start gap-2">
+							<span class="inline-flex items-center rounded-full bg-red-100 px-3 py-1 text-xs font-semibold text-red-700 border border-red-200">
+								Applications closed
+							</span>
+							<button
+								type="button"
+								disabled
+								class="inline-flex items-center gap-3 px-8 py-4 bg-gray-300 text-gray-600 text-lg font-bold rounded-2xl shadow-lg cursor-not-allowed"
+							>
+								<span>Apply now</span>
+							</button>
+						</div>
+					{/if}
 				</div>
 				
 				<div class="flex flex-wrap gap-3 justify-center md:justify-start text-sm">
@@ -420,9 +451,24 @@
 										<p class="text-gray-600 leading-relaxed">{step.desc}</p>
 										{#if step.cta}
 											<div class="mt-4">
-												<Button href="{base}/apply" variant="gradient">
-													Apply now
-												</Button>
+												{#if isApplicationOpen}
+													<Button href="{base}/apply" variant="gradient">
+														Apply now
+													</Button>
+												{:else}
+													<div class="inline-flex flex-col items-start gap-2">
+														<span class="inline-flex items-center rounded-full bg-red-100 px-3 py-1 text-xs font-semibold text-red-700 border border-red-200">
+															Applications closed
+														</span>
+														<button
+															type="button"
+															disabled
+															class="inline-flex items-center justify-center font-semibold rounded-lg px-6 py-3 text-base bg-gray-300 text-gray-600 cursor-not-allowed"
+														>
+															Apply now
+														</button>
+													</div>
+												{/if}
 											</div>
 										{:else if step.title === 'Kick-off week in Prague'}
 											<div class="mt-4">

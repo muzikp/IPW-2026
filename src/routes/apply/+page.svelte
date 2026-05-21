@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { Container, Section } from '$lib/components';
 	import { base } from '$app/paths';
+	import { isApplicationOpen } from '$lib/config/application';
 
 	let formData = {
 		firstName: '',
@@ -54,6 +55,12 @@
 
 	async function handleSubmit(event: Event) {
 		event.preventDefault();
+
+		if (!isApplicationOpen) {
+			submitError = 'Applications are currently closed.';
+			scrollToMessage();
+			return;
+		}
 		
 		if (isSubmitting) return;
 		submitAttempted = true;
@@ -220,6 +227,15 @@
 				Ready to solve real company challenges in international teams? Fill out the application form below to join IPW 2026.
 			</p>
 
+			{#if !isApplicationOpen}
+				<div class="mb-8 p-4 bg-red-50 border border-red-200 rounded-xl text-left">
+					<h2 class="font-semibold text-red-900">Applications are closed</h2>
+					<p class="text-red-800 text-sm mt-1">
+						The application window is currently closed. Please check back when the next cohort opens.
+					</p>
+				</div>
+			{/if}
+
 			<!-- Back link -->
 			<div class="mb-8">
 				<a 
@@ -276,7 +292,7 @@
 					{/if}
 					</div>
 
-					<div class="space-y-6">
+					<fieldset class="space-y-6" disabled={!isApplicationOpen}>
 						<!-- First Name -->
 						<div>
 							<label for="firstName" class="block text-sm font-semibold text-gray-900 mb-2">
@@ -587,16 +603,18 @@
 								</div>
 							{/if}
 						</div>
-					</div>
+					</fieldset>
 
 					<!-- Submit Button -->
 					<div class="mt-8 pt-8 border-t border-gray-200">
 						<button
 							type="submit"
-							disabled={isSubmitting}
+							disabled={isSubmitting || !isApplicationOpen}
 							class="w-full md:w-auto px-8 py-4 bg-gradient-to-r from-primary-600 to-accent-600 text-white font-bold rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
 						>
-							{#if isSubmitting}
+							{#if !isApplicationOpen}
+								Applications closed
+							{:else if isSubmitting}
 								<span class="flex items-center justify-center gap-2">
 									<svg class="animate-spin h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
 										<circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
