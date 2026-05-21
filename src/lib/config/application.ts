@@ -1,3 +1,3 @@
-import { PUBLIC_APPLICATION_OPEN } from '$env/static/public';
+import { env } from '$env/dynamic/public';
 
-export const isApplicationOpen = PUBLIC_APPLICATION_OPEN === '1';
+export const isApplicationOpen = env.PUBLIC_APPLICATION_OPEN !== '0';
