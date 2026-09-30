@@ -397,6 +397,12 @@
 			<a href="https://amaris.com/" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center p-6 transition-all duration-300 hover:scale-110">
 				<img src="{base}/images/companies/logo-amaris.svg" alt="Amaris" class="max-h-16 w-auto" />
 			</a>
+			<a href="https://servier.com/en/servier/" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center p-6 transition-all duration-300 hover:scale-110">
+				<img src="{base}/images/companies/logo-servier.png" alt="Servier" class="max-h-16 max-w-full w-auto object-contain" />
+			</a>
+			<a href="https://www.essilor.com/" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center p-6 transition-all duration-300 hover:scale-110">
+				<img src="{base}/images/companies/logo-essilor.png" alt="Essilor" class="max-h-16 max-w-full w-auto object-contain" />
+			</a>
 		</div>
 		
 		<div class="text-center mt-12">
@@ -428,7 +434,7 @@
 
 			{#each [
 				{ num: '01', title: 'Student selection', desc: 'In April, the IPW team reviews applications and selects students for the cohort.', time: 'April', side: 'left', cta: true },
-				{ num: '02', title: 'Kick-off week in Prague', desc: 'The Prague part starts on Monday, October 5, 2026, and runs through Friday. During the week, students meet their teams and tutors, join team-building activities, attend partner presentations, visit companies, prepare and validate action plans, and finish with a farewell party.', time: 'October 5-9, 2026', side: 'right' },
+				{ num: '02', title: 'Kick-off week in Prague', desc: 'Meet your team and tutors, visit your partner company, and develop your project together. Join the Prague Castle walk on Monday and the farewell dinner on Wednesday.', time: 'October 5-9, 2026', side: 'right' },
 				{ num: '03', title: 'Online teamwork and mentoring', desc: 'From mid-October onward, teams work online every week, with a dedicated training session and regular collaboration with academic and company mentors.', time: 'From October 12, 2026', side: 'left' },
 				{ num: '04', title: 'Mid-term review', desc: 'In the week of November 2, 2026, each team meets with its partner company to review progress, confirm direction, and exchange feedback.', time: 'Week of November 2, 2026', side: 'right' },
 				{ num: '05', title: 'Results preparation', desc: 'About one week before the final presentations, teams meet with mentors to check the coherence and readiness of their results.', time: 'Late semester', side: 'left' },
@@ -471,8 +477,25 @@
 												{/if}
 											</div>
 										{:else if step.title === 'Kick-off week in Prague'}
+											<ol aria-label="Prague week programme" class="mt-4 space-y-3 border-l-2 border-primary-200 pl-4 text-sm">
+												{#each [
+													{ anchor: 'monday', when: 'Mon, Oct 5 · 09:00', label: 'Kick-off at Respirium' },
+													{ anchor: 'monday-evening', when: 'Mon, Oct 5 · 17:00–20:00', label: 'Prague Castle guided walk' },
+													{ anchor: 'tuesday', when: 'Tue, Oct 6', label: 'Company visits with tutors and team work at MIAS' },
+													{ anchor: 'wednesday', when: 'Wed, Oct 7 · Daytime', label: 'Team work in MIAS classrooms' },
+													{ anchor: 'wednesday-evening', when: 'Wed, Oct 7 · 18:00', label: 'IPW Prague Farewell Dinner' },
+													{ anchor: 'thursday', when: 'Thu, Oct 8 · 09:00–14:00', label: 'Finalise project action plans in the Blue Room, CTU Rectorate' }
+												] as event}
+													<li>
+														<a href="{base}/faq#{event.anchor}" class="block rounded text-primary-700 hover:text-primary-900 hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary-600">
+															<span class="block font-semibold">{event.when}</span>
+															<span>{event.label}</span>
+														</a>
+													</li>
+												{/each}
+											</ol>
 											<div class="mt-4">
-												<Button href="{base}/faq" variant="outline">
+												<Button href="{base}/faq#monday" variant="outline">
 													See details
 												</Button>
 											</div>

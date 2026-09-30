@@ -1,0 +1,24 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//IPW 2026//Social Programme//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:ipw-2026-prague-castle-walk@ipw.muvs.cvut.cz
+DTSTAMP:20260930T120000Z
+DTSTART:20261005T150000Z
+DTEND:20261005T180000Z
+SUMMARY:IPW Prague Castle Guided Walk
+LOCATION:Outside the building housing Respirium\, CIIRC CTU\, Jugoslavskych
+  partyzanu 1580/3\, Prague 6
+GEO:50.1031749;14.3947512
+DESCRIPTION:Optional guided walk around Prague Castle and the surrounding a
+ rea.\nMonday\, October 5\, 2026\, 17:00-20:00 Prague local time (approxima
+ tely three hours). Meet outside the building housing Respirium at street l
+ evel.\nIncludes a short bus ride: please have a valid public transport tic
+ ket.\nFinish at Malostranska metro station (line A)\, two stops from Dejvi
+ cka near MIAS\; returning by tram is also possible.\nMeeting point: https:
+ //www.google.com/maps/search/?api=1&query=50.1031749%2C14.3947512
+URL:https://ipw.muvs.cvut.cz/faq
+END:VEVENT
+END:VCALENDAR

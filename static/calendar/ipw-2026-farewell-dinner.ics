@@ -1,0 +1,24 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//IPW 2026//Social Programme//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:ipw-2026-farewell-dinner@ipw.muvs.cvut.cz
+DTSTAMP:20260930T120000Z
+DTSTART:20261007T160000Z
+SUMMARY:IPW Prague Farewell Dinner
+LOCATION:Petrinske terasy\, Petrinske sady 393\, Prague 1\, Czech Republic
+GEO:50.083775;14.398441
+DESCRIPTION:A shared buffet dinner at Petrinske terasy.\nWednesday\, Octobe
+ r 7\, 2026\, from 18:00 Prague local time. End time has not been specified
+ .\nRestaurant: https://petrinsketerasy.cz/\nMap: https://www.google.com/ma
+ ps/search/?api=1&query=50.083775%2C14.398441\nPublic transport directions 
+ from Masaryk Dormitory: https://www.google.com/maps/dir/?api=1&origin=Masa
+ rykova+kolej\,+Thakurova+1\,+Prague&destination=Petrinske+terasy\,+Prague&
+ travelmode=transit\nThe Petrin funicular can shorten the uphill walk. Vali
+ d 24-hour and 72-hour Prague tickets and long-term Prague passes cover it\
+ ; ordinary 30-minute and 90-minute tickets do not.
+URL:https://ipw.muvs.cvut.cz/faq
+END:VEVENT
+END:VCALENDAR
